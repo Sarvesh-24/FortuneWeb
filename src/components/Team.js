@@ -59,80 +59,105 @@ const Team = () => {
   const Modal = ({ member, onClose }) => {
     return (
       <div
-        className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
-        onClick={onClose}
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby={`modal-${member.id}`}
-      >
-        <div
-          className="bg-white dark:bg-gray-800 rounded-lg max-w-md w-full p-6 relative transform transition-all"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <button
-            onClick={onClose}
-            className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
-            aria-label="Close modal"
-          >
-            <IoClose size={24} />
-          </button>
+  className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+  onClick={onClose}
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby={`modal-${member.id}`}
+>
+  <div
+    className="bg-white dark:bg-gray-800 rounded-lg max-w-md w-full p-6 relative transform transition-all"
+    onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
+  >
+    {/* Close Button */}
+    <button
+      onClick={onClose}
+      className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 transition-colors"
+      aria-label="Close modal"
+    >
+      <IoClose size={24} />
+    </button>
 
-          <div className="flex flex-col items-center">
-            <img
-              src={member.image}
-              alt={member.name}
-              className="rounded-full object-cover mb-4"
-              style={{ width: '128px', height: '128px' }} // Fix size directly
-            />
-            <h2 id={`modal-${member.id}`} className="text-2xl font-bold text-[#384f4b] dark:text-white mb-2">{member.name}</h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-4">{member.position}</p>
-            <p className="text-gray-700 dark:text-gray-300 mb-6 text-center">{member.bio}</p>
-          </div>
-        </div>
-      </div>
+    {/* Modal Content */}
+    <div className="flex flex-col items-center">
+      {/* Profile Image */}
+      <img
+        src={member.image}
+        alt={member.name}
+        className="rounded-full object-cover mb-4"
+        style={{ width: '128px', height: '128px' }} // Fixed image size
+      />
+      {/* Member Name */}
+      <h2
+        id={`modal-${member.id}`}
+        className="text-2xl font-bold text-[#384f4b] dark:text-white mb-2"
+      >
+        {member.name}
+      </h2>
+      {/* Member Position */}
+      <p className="text-gray-600 dark:text-gray-400 mb-4">{member.position}</p>
+      {/* Member Bio */}
+      <p className="text-gray-700 dark:text-gray-300 mb-6 text-center">
+        {member.bio}
+      </p>
+    </div>
+  </div>
+</div>
+
+    
     );
   };
 
   return (
-    <section id="team" className="about section mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 font-roboto text-[#444444] dark:bg-gray-900 dark:text-gray-300">
-      <div className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#384f4b] dark:text-white text-center mb-4 font-inter">
-          Our Team
-        </h2>
-        <div className="w-24 h-1 bg-blue-600 mx-auto mb-8 dark:bg-blue-400"></div>
+    <section
+  id="team"
+  className="w-full min-h-screen px-4 py-16 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-300 font-roboto transition-colors duration-300"
+>
+  <div className="w-full max-w-screen-xl mx-auto px-4 py-16">
+    {/* Section Title */}
+    <h2 className="text-3xl md:text-4xl font-bold text-[#384f4b] dark:text-white text-center mb-4 font-inter">
+      Our Team
+    </h2>
+    <div className="w-24 h-1 bg-blue-600 mx-auto mb-8 dark:bg-blue-400"></div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member) => (
-            <button
-              key={member.id}
-              className="group bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-left focus:outline-none focus:ring-2 focus:ring-blue-500"
-              onClick={() => setSelectedMember(member)}
-              aria-haspopup="dialog"
-            >
-              <div className="flex flex-col items-center">
-                <div className="relative w-32 h-32 mb-4 rounded-full overflow-hidden">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                    style={{ width: '128px', height: '128px' }} // Fixed size directly
-                  />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">{member.name}</h3>
-                <p className="text-gray-600 dark:text-gray-400">{member.position}</p>
-              </div>
-            </button>
-          ))}
-        </div>
+    {/* Team Members Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {teamMembers.map((member) => (
+        <button
+          key={member.id}
+          className="group bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-left focus:outline-none focus:ring-2 focus:ring-blue-500"
+          onClick={() => setSelectedMember(member)}
+          aria-haspopup="dialog"
+        >
+          <div className="flex flex-col items-center">
+            {/* Profile Image */}
+            <div className="relative w-32 h-32 mb-4 rounded-full overflow-hidden">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Name and Position */}
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+              {member.name}
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400">{member.position}</p>
+          </div>
+        </button>
+      ))}
+    </div>
 
-        {selectedMember && (
-          <Modal
-            member={selectedMember}
-            onClose={() => setSelectedMember(null)}
-          />
-        )}
-      </div>
-    </section>
+    {/* Modal for Selected Team Member */}
+    {selectedMember && (
+      <Modal
+        member={selectedMember}
+        onClose={() => setSelectedMember(null)}
+      />
+    )}
+  </div>
+</section>
+
   );
 };
 
