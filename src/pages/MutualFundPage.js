@@ -163,9 +163,6 @@ const MutualFundPage = () => {
 </section>
 
 
-  <section className="dark:bg-gray-900 text-[#444444] dark:text-gray-300 font-roboto transition-colors duration-300">
-    <SIPCalculator />
-  </section>
 
   {/* Enquire Now Button Section */}
   <section className="text-center py-16 bg-blue-600 text-white">
