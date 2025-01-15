@@ -11,7 +11,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="about section mx-auto max-w-screen-xl px-6 py-16 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors duration-300"
+      className=" section mx-auto max-w-screen-xl px-6 py-16 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors duration-300"
     >
       <div
         className="container mx-auto mb-12 text-center"
