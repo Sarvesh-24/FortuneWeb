@@ -91,7 +91,7 @@ const Gallery = () => {
                 <img
                   src={item.imgSrc}
                   alt={item.title}
-                  className="w-full h-60 object-cover transition-transform duration-300 transform group-hover:scale-105"
+                  className="w-full h-60 object-cover transition-transform duration-300 transform group-hover:scale-105 rounded-lg" // Added rounded-lg for border radius
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-white dark:bg-gray-800 opacity-0 group-hover:opacity-90 transition-all duration-300 flex justify-center items-center">
@@ -112,6 +112,7 @@ const Gallery = () => {
       )}
     </div>
   </section>
+  
   
   );
 };
