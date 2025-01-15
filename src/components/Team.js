@@ -21,7 +21,7 @@ const Team = () => {
       id: 2,
       name: "BHAGESH GIRI",
       position: "Partner | Co-Founder",
-      image: '/assets/profile/profile2.webp',
+      image: '/assets/profile/Profile2.webp',
       bio: "Bhagesh Giri brings over 16 years of extensive experience in Stock Market Industry, Specializing in Operations & Information Technology. As a Bachelor of Computer Applications, he has held key leadership roles in prominent corporate organizations, including Operations Head and Vice President. Throughout his career, He has provided strategic direction, streamlined processes, and empowered teams to embrace a culture of excellence and continuous improvement. As an ambitious and detail-oriented professional, Bhagesh has consistently delivered exceptional results, achieving high standards and fostering a strong work ethic. His proven track record highlights his ability to drive organizational success through operational efficiency and effective leadership.",
       social: {
         twitter: "https://twitter.com",
