@@ -83,7 +83,7 @@ const MutualFundPage = () => {
 </section>
 
 {/* Investment Options Section */}
-<section className="bg-blue-50 dark:bg-gray-800 py-12 px-6 md:px-20 mt-0">
+<section className="bg-blue-50 dark:bg-gray-800 py-12 px-6 md:px-20 mt-0 dark:bg-gray-900 text-[#444444] dark:text-gray-300 font-roboto transition-colors duration-300">
   <h2 className="text-3xl font-extrabold text-center text-blue-600 dark:text-blue-300 mb-8">Mutual Funds to Invest In</h2>
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
     {/* Lumpsum Investment */}
@@ -159,7 +159,7 @@ const MutualFundPage = () => {
 </section>
 
 
-  <section>
+  <section className="dark:bg-gray-900 text-[#444444] dark:text-gray-300 font-roboto transition-colors duration-300">
     <SIPCalculator />
   </section>
 
