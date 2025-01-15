@@ -17,7 +17,7 @@ const Indicator = () => {
     >
       {/* Section Title */}
       <h2 className="text-3xl md:text-4xl font-bold text-[#384f4b] dark:text-gray-100 text-center mb-4 font-inter">
-        Trade With Power Time Trading
+        Trade With Power Of Time Trading
       </h2>
       <div className="w-24 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-8"></div>
 
