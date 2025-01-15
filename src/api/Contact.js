@@ -208,9 +208,9 @@ const Contact = () => {
 
   return (
     <div
-    id="contact"
-    className="min-h-screen bg-white dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8 font-roboto text-[#444444] dark:text-gray-300 transition-colors duration-300 mt-0 mb-0"
-  >
+  id="contact"
+  className="w-full px-4 py-16 max-w-7xl font-sans bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 mt-0 mb-0"
+>
 
       <ToastContainer />
 
