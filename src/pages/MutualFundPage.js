@@ -14,7 +14,7 @@ const MutualFundPage = () => {
   id="mutualfunds"
 >
   {/* Hero Section */}
-  <section className="bg-blue-600 text-white text-center py-16 mt-24">
+  <section className="bg-blue-600 text-white text-center py-16 mt-0">
     <h1 className="text-4xl md:text-5xl font-bold">
       Crafting Your Investment Future
     </h1>
@@ -39,7 +39,7 @@ const MutualFundPage = () => {
   </section>
 
   {/* Benefits Section */}
-  <section className="py-12 px-6 md:px-20">
+  <section className="py-12 px-6 md:px-20 mt-0">
     <h2 className="text-3xl font-extrabold text-center text-blue-600 mb-8">
       What are the potential benefits of investing in mutual funds?
     </h2>
@@ -83,7 +83,7 @@ const MutualFundPage = () => {
   </section>
 
   {/* Investment Options Section */}
-  <section className="bg-blue-50 py-12 px-6 md:px-20">
+  <section className="bg-blue-50 py-12 px-6 md:px-20 mt-0">
     <h2 className="text-3xl font-extrabold text-center text-blue-600 mb-8">Mutual Funds to Invest In</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
       {/* Lumpsum Investment */}
@@ -178,6 +178,7 @@ const MutualFundPage = () => {
     </motion.a>
   </section>
 </motion.div>
+
 
   
   );
