@@ -14,7 +14,7 @@ const MutualFundPage = () => {
   id="mutualfunds"
 >
   {/* Hero Section */}
-  <section className="bg-blue-600 text-white text-center py-16 mt-0">
+  <section className="bg-blue-600 text-white text-center py-16 mt-20">
     <h1 className="text-4xl md:text-5xl font-bold">
       Crafting Your Investment Future
     </h1>
