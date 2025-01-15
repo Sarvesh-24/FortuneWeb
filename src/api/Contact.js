@@ -209,10 +209,8 @@ const Contact = () => {
   return (
     <div
   id="contact"
-  className=" min-h-screen px-4 py-16 max-w-7xl font-sans bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 mt-0 mb-0"
+  className="container mx-auto px-4 py-16 max-w-7xl font-sans bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 mt-0 mb-0"
 >
-
-
       <ToastContainer />
 
       <div className="text-center mb-12">
