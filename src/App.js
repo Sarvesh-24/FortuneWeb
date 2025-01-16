@@ -64,7 +64,7 @@ import Gallery from "./components/Gallery";
 import Team from "./components/Team";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
-import Contact from "./components/Contact";
+import Contact from "./api/Contact.js";
 
 
 
