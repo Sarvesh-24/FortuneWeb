@@ -2,6 +2,7 @@
   "name": "new-project",
   "version": "0.1.0",
   "private": true,
+  "main": "server.js",
   "dependencies": {
     "aos": "^2.3.4",
     "axios": "^1.7.9",
