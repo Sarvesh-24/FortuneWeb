@@ -35,63 +35,63 @@ const services = [
 const ServicesPage = () => {
   return (
     <div className="pt-10">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="bg-gradient-to-r from-cblue to-blue-600 text-white py-20 px-6 sm:px-8 lg:px-10"
-      >
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">About Us</h1>
-          <p className="text-xl md:text-2xl">Trade Like An Expert Right From The Start</p>
-        </div>
-      </motion.div>
-
-      <div className="bg-gray-100 dark:bg-gray-900 about section mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-        {/* Heading and Content Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
-              Capturing Big Moves & Still Making Losses?{' '}
-              <span className="text-red-600">STOP CHASING RETURNS</span>
-            </h1>
-            <p className="text-lg text-gray-600 font-semibold dark:text-gray-300 mb-6">
-              Capture Big Moves In All Time Frames With Exact Entry, Target & Stop Loss. Time Big Market Moves In Advance With the #1 Time Trade Technique.
-            </p>
-            <p className="text-lg text-gray-600 font-semibold dark:text-gray-300">
-              Trying Hard To Capture Big Moves & Still Getting Trapped Between Entry, Target & Stop Loss? Get Ready To Time Market In Advance.
-            </p>
-          </div>
-        </div>
-
-        {/* Services Section */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">Our Services</h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
-            We provide a range of services to help you succeed in the trading world.
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="bg-gradient-to-r from-cblue to-blue-600 text-white py-20 px-6 sm:px-8 lg:px-10"
+    >
+      <div className="max-w-6xl mx-auto text-center">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6">About Us</h1>
+        <p className="text-xl md:text-2xl">Trade Like An Expert Right From The Start</p>
+      </div>
+    </motion.div>
+  
+    <div className="bg-gray-100 dark:bg-gray-900 about section mx-auto w-full px-4 py-16 sm:px-6 lg:px-8">
+      {/* Heading and Content Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
+            Capturing Big Moves & Still Making Losses?{' '}
+            <span className="text-red-600">STOP CHASING RETURNS</span>
+          </h1>
+          <p className="text-lg text-gray-600 font-semibold dark:text-gray-300 mb-6">
+            Capture Big Moves In All Time Frames With Exact Entry, Target & Stop Loss. Time Big Market Moves In Advance With the #1 Time Trade Technique.
+          </p>
+          <p className="text-lg text-gray-600 font-semibold dark:text-gray-300">
+            Trying Hard To Capture Big Moves & Still Getting Trapped Between Entry, Target & Stop Loss? Get Ready To Time Market In Advance.
           </p>
         </div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
-            >
-              <div className="text-4xl mb-4 text-blue-600 dark:text-blue-400">{service.icon}</div>
-              <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-2">{service.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* New "What Exactly You’ll Get Inside" Section */}
-        <div className="mt-16">
-      <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-12 text-center">
-        What Exactly You’ll Get Inside?
-      </h2>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8">
+      </div>
+  
+      {/* Services Section */}
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">Our Services</h2>
+        <p className="text-lg text-gray-600 dark:text-gray-300">
+          We provide a range of services to help you succeed in the trading world.
+        </p>
+      </div>
+  
+      {/* Services Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div className="text-4xl mb-4 text-blue-600 dark:text-blue-400">{service.icon}</div>
+            <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-2">{service.title}</h3>
+            <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
+          </div>
+        ))}
+      </div>
+  
+      {/* New "What Exactly You’ll Get Inside" Section */}
+      <div className="mt-16">
+        <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-12 text-center">
+          What Exactly You’ll Get Inside?
+        </h2>
+  
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8">
         {[
           {
             title: "Trading Techniques",
