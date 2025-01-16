@@ -14,11 +14,17 @@
     "routes": [
       {
         "src": "/api/contact",
-        "dest": "api/contact.js"
+        "dest": "/api/contact.js"
       },
       {
         "src": "/(.*)",
         "dest": "/index.html"
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/"
       }
     ]
   }
