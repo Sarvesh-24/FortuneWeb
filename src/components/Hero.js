@@ -233,6 +233,7 @@
 
 // export default Hero;
 
+
 import { useState, useRef } from "react";
 
 const Hero = () => {
@@ -244,13 +245,6 @@ const Hero = () => {
 
   const slides = [
     {
-      // Updated the iframe with autoplay enabled
-      iframe: "https://www.youtube.com/embed/6QOUtHKjaq0?autoplay=1&si=XiDuWAge5BIzZl8G", // The YouTube video URL with autoplay parameter
-      title: "Watch Our Expert Video",
-      description: "Learn more about our services and how we can help you achieve your financial goals.",
-    },
-
-    {
       image: "/assets/background img/compressed2.webp",
       title: "Expert Mentorship and Guidance",
       description: "Unlock the secrets to successful trading with personalized mentorship. Learn directly from experts who guide you through every market phase with tailored strategies.",
@@ -261,7 +255,12 @@ const Hero = () => {
       description:
         "Start your search today for the best financial planners, investment advisors, or stock market experts near you.",
     },
-    
+    {
+      // Added the iframe slide
+      iframe: "https://www.youtube.com/embed/6QOUtHKjaq0?si=XiDuWAge5BIzZl8G", // The YouTube video URL
+      title: "Watch Our Expert Video",
+      description: "Learn more about our services and how we can help you achieve your financial goals.",
+    },
   ];
 
   const handlePrev = () => {
@@ -394,4 +393,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
