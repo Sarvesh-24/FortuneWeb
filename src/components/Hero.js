@@ -109,9 +109,8 @@ const Hero = () => {
     },
     {
       image: "/assets/background img/bgimg3.webp",
-      title: "Cutting-Edge Tools and Resources",
-      description:
-        "Access a suite of powerful tools and resources designed to enhance your trading decisions. From real-time market data to comprehensive analysis tools, we've got you covered.",
+      title: "Cutting-Edge Tools and Resources"
+      
     },
   ];
 
