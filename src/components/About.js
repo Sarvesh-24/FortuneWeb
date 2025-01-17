@@ -11,19 +11,19 @@ const About = () => {
   return (
     <section
     id="about"
-    className="w-full min-h-screen px-6 py-16 bg-white dark:bg-gray-900 transition-colors duration-300"
+    className="w-full px-6 py-8 bg-white dark:bg-gray-900 transition-colors duration-300"
   >
     <div
-      className="w-full max-w-screen-xl mx-auto mb-12 text-center"
+      className="w-full max-w-screen-xl mx-auto mb-8 text-center"
       data-aos="fade-up"
     >
       <h2 className="text-3xl md:text-4xl font-bold text-[#384f4b] dark:text-white font-['Inter', sans-serif] mb-4">
         About
       </h2>
-      <div className="w-24 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-8"></div>
+      <div className="w-24 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
     </div>
   
-    <div className="w-full max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div className="w-full max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
       {/* Image Section */}
       <div
         className="order-1 md:order-2 px-4"
@@ -58,7 +58,7 @@ const About = () => {
           href="/company" // Regular anchor tag for navigation
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="mt-8 inline-block px-8 py-3 bg-blue-600 dark:bg-blue-400 text-white dark:text-gray-900 md:rounded-md font-semibold shadow-lg hover:bg-blue-700 dark:hover:bg-blue-500 hover:text-white dark:hover:text-gray-100 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+          className="mt-6 inline-block px-8 py-3 bg-blue-600 dark:bg-blue-400 text-white dark:text-gray-900 md:rounded-md font-semibold shadow-lg hover:bg-blue-700 dark:hover:bg-blue-500 hover:text-white dark:hover:text-gray-100 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
           aria-label="Learn more about Fortune Advisorz"
         >
           Know More
@@ -66,6 +66,7 @@ const About = () => {
       </div>
     </div>
   </section>
+  
   
   );
 };
