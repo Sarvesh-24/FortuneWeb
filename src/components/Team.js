@@ -111,7 +111,7 @@ const Team = () => {
   return (
     <section
   id="team"
-  className="w-full px-4 py-12 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-300 font-roboto transition-colors duration-300"
+  className="w-full px-4 py-8 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-300 font-roboto transition-colors duration-300"
 >
   <div className="w-full max-w-screen-xl mx-auto px-4 py-8">
     {/* Section Title */}
@@ -125,13 +125,13 @@ const Team = () => {
       {teamMembers.map((member) => (
         <button
           key={member.id}
-          className="group bg-white dark:bg-gray-800 rounded-lg p-4 shadow-lg hover:shadow-xl transition-shadow duration-300 text-left focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="group bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-left focus:outline-none focus:ring-2 focus:ring-blue-500"
           onClick={() => setSelectedMember(member)}
           aria-haspopup="dialog"
         >
           <div className="flex flex-col items-center">
             {/* Profile Image */}
-            <div className="relative w-28 h-28 mb-3 rounded-full overflow-hidden">
+            <div className="relative w-32 h-32 mb-4 rounded-full overflow-hidden">
               <img
                 src={member.image}
                 alt={member.name}
@@ -139,12 +139,10 @@ const Team = () => {
               />
             </div>
             {/* Name and Position */}
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-1">
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
               {member.name}
             </h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              {member.position}
-            </p>
+            <p className="text-gray-600 dark:text-gray-400">{member.position}</p>
           </div>
         </button>
       ))}
@@ -159,6 +157,7 @@ const Team = () => {
     )}
   </div>
 </section>
+
 
 
   );
