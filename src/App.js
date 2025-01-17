@@ -109,6 +109,7 @@ const App = () => {
           path="/"
           element={
             <>
+            <div className="space-y-8">
               <Hero />
               <About />
               <Program />
@@ -144,7 +145,7 @@ const App = () => {
                     chatboxStyle={{ borderRadius: '10px' }}
                   />
 
-
+              </div>
           
             </>
           }
