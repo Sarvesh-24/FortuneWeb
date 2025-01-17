@@ -6,9 +6,9 @@ import { motion } from 'framer-motion';
 const Services = () => {
   return (
     <section
-  id="services"
-  className="w-full min-h-screen px-4 py-16 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-300 font-roboto transition-colors duration-300"
->
+    id="services"
+    className="w-full min-h-screen px-4 py-8 m-0 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-300 font-roboto transition-colors duration-300"
+  >
   <div className="w-full max-w-screen-xl mx-auto px-6 py-12">
     {/* Section Title */}
     <h2 className="text-3xl md:text-4xl font-bold text-[#384f4b] text-center mb-4 font-inter dark:text-white">
