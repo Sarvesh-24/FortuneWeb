@@ -119,7 +119,7 @@ const FAQ = () => {
       {showBackToTop && (
         <button
           onClick={handleBackToTop}
-          className="fixed bottom-16 right-6 p-3 bg-blue-500 dark:bg-blue-400 text-white dark:text-gray-900 rounded-full shadow-lg hover:bg-blue-600 dark:hover:bg-blue-500 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 z-50"
+          className="fixed bottom-24 right-8 p-3 bg-blue-500 dark:bg-blue-400 text-white dark:text-gray-900 rounded-full shadow-lg hover:bg-blue-600 dark:hover:bg-blue-500 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 z-60"
           aria-label="Back to top"
         >
           <IoArrowUpCircleOutline size={40} />
