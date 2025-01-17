@@ -42,90 +42,92 @@ const FAQ = () => {
 
   return (
     <div
-  id="faq"
-  className="min-h-screen bg-white dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8 font-roboto text-[#444444] dark:text-gray-300 transition-colors duration-300 mt-0 mb-0"
->
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#384f4b] dark:text-white text-center mb-4 font-inter">
-          Frequently Asked Questions
-        </h2>
-        <div className="w-24 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-8 transition-colors duration-300"></div>
-
-        {/* Search Bar */}
-        <div className="relative mb-8">
-          <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500" />
-          <input
-            type="text"
-            placeholder="Search FAQs..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all"
-            aria-label="Search FAQs"
-          />
-        </div>
-
-        {/* Category Filters */}
-        <div className="flex flex-wrap gap-2 mb-8">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                selectedCategory === category
-                  ? "bg-blue-500 dark:bg-blue-400 text-white dark:text-gray-900"
-                  : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600"
-              }`}
-              aria-pressed={selectedCategory === category}
-            >
-              {category.charAt(0).toUpperCase() + category.slice(1)}
-            </button>
-          ))}
-        </div>
-
-        {/* FAQ List */}
-        <div className="space-y-4">
-          {filteredFAQs.map((faq) => (
-            <div
-              key={faq.id}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all duration-200"
-            >
-              <button
-                className="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 rounded-lg"
-                onClick={() => setExpandedId(expandedId === faq.id ? null : faq.id)}
-                aria-expanded={expandedId === faq.id}
-              >
-                <span className="font-medium text-[#384f4b] dark:text-white font-inter">{faq.question}</span>
-                {expandedId === faq.id ? (
-                  <FiChevronUp className="text-gray-500 dark:text-gray-400" />
-                ) : (
-                  <FiChevronDown className="text-gray-500 dark:text-gray-400" />
-                )}
-              </button>
-              <div
-                className={`px-6 overflow-hidden transition-all duration-200 ${
-                  expandedId === faq.id ? "py-4" : "max-h-0"
-                }`}
-              >
-                <p className="text-[#444444] dark:text-gray-300">{faq.answer}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Back to Top Button */}
-        {showBackToTop && (
-          <button
-            onClick={handleBackToTop}
-            className="fixed bottom-24 right-8 p-3 bg-blue-500 dark:bg-blue-400 text-white dark:text-gray-900 rounded-full shadow-lg hover:bg-blue-600 dark:hover:bg-blue-500 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 z-60"
-            aria-label="Back to top"
-          >
-            <IoArrowUpCircleOutline size={40} />
-          </button>
-        )}
+    id="faq"
+    className="w-full bg-white dark:bg-gray-900 py-8 px-4 sm:px-6 lg:px-8 font-roboto text-[#444444] dark:text-gray-300 transition-colors duration-300"
+  >
+    <div className="max-w-3xl mx-auto">
+      {/* Section Title */}
+      <h2 className="text-3xl md:text-4xl font-bold text-[#384f4b] dark:text-white text-center mb-4 font-inter">
+        Frequently Asked Questions
+      </h2>
+      <div className="w-24 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6 transition-colors duration-300"></div>
+  
+      {/* Search Bar */}
+      <div className="relative mb-6">
+        <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500" />
+        <input
+          type="text"
+          placeholder="Search FAQs..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all"
+          aria-label="Search FAQs"
+        />
       </div>
-
-      
+  
+      {/* Category Filters */}
+      <div className="flex flex-wrap gap-2 mb-6">
+        {categories.map((category) => (
+          <button
+            key={category}
+            onClick={() => setSelectedCategory(category)}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+              selectedCategory === category
+                ? "bg-blue-500 dark:bg-blue-400 text-white dark:text-gray-900"
+                : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600"
+            }`}
+            aria-pressed={selectedCategory === category}
+          >
+            {category.charAt(0).toUpperCase() + category.slice(1)}
+          </button>
+        ))}
+      </div>
+  
+      {/* FAQ List */}
+      <div className="space-y-4">
+        {filteredFAQs.map((faq) => (
+          <div
+            key={faq.id}
+            className="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all duration-200"
+          >
+            <button
+              className="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 rounded-lg"
+              onClick={() => setExpandedId(expandedId === faq.id ? null : faq.id)}
+              aria-expanded={expandedId === faq.id}
+            >
+              <span className="font-medium text-[#384f4b] dark:text-white font-inter">
+                {faq.question}
+              </span>
+              {expandedId === faq.id ? (
+                <FiChevronUp className="text-gray-500 dark:text-gray-400" />
+              ) : (
+                <FiChevronDown className="text-gray-500 dark:text-gray-400" />
+              )}
+            </button>
+            <div
+              className={`px-6 overflow-hidden transition-all duration-200 ${
+                expandedId === faq.id ? "py-4" : "max-h-0"
+              }`}
+            >
+              <p className="text-[#444444] dark:text-gray-300">{faq.answer}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+  
+      {/* Back to Top Button */}
+      {showBackToTop && (
+        <button
+          onClick={handleBackToTop}
+          className="fixed bottom-16 right-6 p-3 bg-blue-500 dark:bg-blue-400 text-white dark:text-gray-900 rounded-full shadow-lg hover:bg-blue-600 dark:hover:bg-blue-500 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 z-50"
+          aria-label="Back to top"
+        >
+          <IoArrowUpCircleOutline size={40} />
+        </button>
+      )}
     </div>
+  </div>
+  
   );
 };
 
