@@ -103,65 +103,69 @@ const App = () => {
 
   return (
     <Router>
-    <Header />
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <div className="space-y-4 px-4 m-0">
-            <Hero />
-            <About />
-            <Program />
-            <Indicator />
-            <Services />
-            <Book />
-            {/* <Feedback /> */}
-            <Gallery />
-            <Team />
-            <FAQ />
-            <Contact />
-            <FloatingWhatsApp
-              phoneNumber="+91 9702625115"
-              accountName="FORTUNE ADVISORZ"
-              onSubmit={handleChatSubmit}
-              onClose={handleChatClose}
-              onNotification={handleNotification}
-              avatar="/assets/logo/Profile.webp"
-              statusMessage="Typically replies within 1 hour"
-              chatMessage={`How can we help?`}
-              placeholder="Type your message here..."
-              messageDelay={2}
-              darkMode={false}
-              allowClickAway={true}
-              allowEsc={true}
-              className="fixed bottom-8 right-8 z-50"
-              chatboxHeight={300}
-              notification={true}
-              notificationDelay={60}
-              notificationSound={true}
-              notificationLoop={3}
-              notificationStyle={{ backgroundColor: "#007bff", color: "white" }}
-              chatboxStyle={{ borderRadius: "10px" }}
-            />
-          </div>
-        }
-      />
-      <Route path="/testimonials" element={<Testimonials />} />
-      <Route path="/company" element={<Company />} />
-      <Route path="/policies" element={<PrivacyPolicy />} />
-      <Route path="/refundpolicy" element={<RefundsAndCancellations />} />
-      <Route path="/riskdisclaimer" element={<RiskDisclaimer />} />
-      <Route path="/termsandConditions" element={<TermsAndConditions />} />
-      <Route path="/serviceprovide" element={<ServicesProvide />} />
-      <Route path="/services" element={<ServicesPage />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/videos" element={<VideoYT />} />
-      <Route path="/yt" element={<VideoCarousel />} />
-      <Route path="/mutualfunds" element={<MutualFundPage />} />
-    </Routes>
-    <Footer />
-  </Router>
-  
+      <Header />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+            
+              <Hero />
+              <About />
+              <Program />
+              <Indicator />
+              <Services />
+              <Book />
+              {/* <Feedback /> */}
+              <Gallery />
+              <Team />
+              <FAQ />
+              <Contact/>
+              <FloatingWhatsApp
+                    phoneNumber="+91 9702625115"
+                    accountName="FORTUNE ADVISORZ"
+                    onSubmit={handleChatSubmit}
+                    onClose={handleChatClose}
+                    onNotification={handleNotification}
+                    avatar="/assets/logo/Profile.webp"
+                    statusMessage="Typically replies within 1 hour"
+                    chatMessage={`How can we help?`}
+                    placeholder="Type your message here..."
+                    messageDelay={2}
+                    darkMode={false}
+                    allowClickAway={true}
+                    allowEsc={true}
+                    className="fixed bottom-8 right-8 z-50" // Ensure proper positioning
+                    chatboxHeight={300} // Adjust height if needed
+                    notification={true}
+                    notificationDelay={60}
+                    notificationSound={true}
+                    notificationLoop={3}
+                    notificationStyle={{ backgroundColor: '#007bff', color: 'white' }}
+                    chatboxStyle={{ borderRadius: '10px' }}
+                  />
+
+
+          
+            </>
+          }
+        />
+        <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/company" element={<Company />} />
+        <Route path="/policies" element={<PrivacyPolicy />} />
+        <Route path="/refundpolicy" element={<RefundsAndCancellations />} />
+        <Route path="/riskdisclaimer" element={<RiskDisclaimer />} />
+        <Route path="/termsandConditions" element={<TermsAndConditions />} />
+        <Route path="/serviceprovide" element={<ServicesProvide />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/videos" element={<VideoYT />} />
+        <Route path="/yt" element={<VideoCarousel />} />
+        <Route path="/mutualfunds" element={<MutualFundPage/>}/>
+      </Routes>
+      <Footer />
+      
+    </Router>
   );
 };
 
