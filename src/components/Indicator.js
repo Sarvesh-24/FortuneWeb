@@ -14,7 +14,7 @@ const Indicator = () => {
    
 <section
   id="about"
-  className="w-full min-h-screen px-6 py-8 m-0 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-100 font-roboto transition-colors duration-300"
+  className="w-full px-6 py-8 m-0 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-100 font-roboto transition-colors duration-300"
 >
   {/* Section Title */}
   <h2 className="text-3xl md:text-4xl font-bold text-[#384f4b] dark:text-gray-100 text-center mb-4 font-inter">
@@ -104,6 +104,7 @@ const Indicator = () => {
     </div>
   </div>
 </section>
+
 
   );
 };
