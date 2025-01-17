@@ -107,12 +107,12 @@ const Hero = () => {
       description:
         "Start your search today for the best financial planners, investment advisors, or stock market experts near you.",
     },
-    // {
-    //   image: "/assets/logo/Profile.webp",
-    //   title: "Cutting-Edge Tools and Resources",
-    //   description:
-    //     "Access a suite of powerful tools and resources designed to enhance your trading decisions. From real-time market data to comprehensive analysis tools, we've got you covered.",
-    // },
+    {
+      image: "/assets/background img/bgimg3.webp",
+      title: "Cutting-Edge Tools and Resources",
+      description:
+        "Access a suite of powerful tools and resources designed to enhance your trading decisions. From real-time market data to comprehensive analysis tools, we've got you covered.",
+    },
   ];
 
   const handlePrev = () => {
