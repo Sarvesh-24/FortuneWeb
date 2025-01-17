@@ -111,27 +111,27 @@ const Team = () => {
   return (
     <section
   id="team"
-  className="w-full min-h-screen px-4 py-16 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-300 font-roboto transition-colors duration-300"
+  className="w-full px-4 py-12 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-300 font-roboto transition-colors duration-300"
 >
-  <div className="w-full max-w-screen-xl mx-auto px-4 py-16">
+  <div className="w-full max-w-screen-xl mx-auto px-4 py-8">
     {/* Section Title */}
     <h2 className="text-3xl md:text-4xl font-bold text-[#384f4b] dark:text-white text-center mb-4 font-inter">
       Our Team
     </h2>
-    <div className="w-24 h-1 bg-blue-600 mx-auto mb-8 dark:bg-blue-400"></div>
+    <div className="w-24 h-1 bg-blue-600 mx-auto mb-6 dark:bg-blue-400"></div>
 
     {/* Team Members Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {teamMembers.map((member) => (
         <button
           key={member.id}
-          className="group bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-left focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="group bg-white dark:bg-gray-800 rounded-lg p-4 shadow-lg hover:shadow-xl transition-shadow duration-300 text-left focus:outline-none focus:ring-2 focus:ring-blue-500"
           onClick={() => setSelectedMember(member)}
           aria-haspopup="dialog"
         >
           <div className="flex flex-col items-center">
             {/* Profile Image */}
-            <div className="relative w-32 h-32 mb-4 rounded-full overflow-hidden">
+            <div className="relative w-28 h-28 mb-3 rounded-full overflow-hidden">
               <img
                 src={member.image}
                 alt={member.name}
@@ -139,10 +139,12 @@ const Team = () => {
               />
             </div>
             {/* Name and Position */}
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-1">
               {member.name}
             </h3>
-            <p className="text-gray-600 dark:text-gray-400">{member.position}</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              {member.position}
+            </p>
           </div>
         </button>
       ))}
@@ -157,6 +159,7 @@ const Team = () => {
     )}
   </div>
 </section>
+
 
   );
 };
