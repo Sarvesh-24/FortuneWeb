@@ -6,7 +6,7 @@ const Program = () => {
   
 <section
   id="about"
-  className="w-full min-h-screen px-6 py-8 m-0 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-100 font-roboto transition-colors duration-300"
+  className="w-full min-h-screen px-4 py-16 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-100 font-roboto transition-colors duration-300"
 >
     
     {/* Section Title */}
