@@ -52,67 +52,67 @@ const Gallery = () => {
   id="gallery"
   className="w-full px-4 py-8 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-100 font-roboto transition-colors duration-300"
 >
-    <div className="w-full max-w-screen-xl mx-auto">
-      {/* Gallery Title */}
-      <div className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#384f4b] dark:text-gray-100 font-inter mb-4">
-          Gallery
-        </h2>
-        <div className="w-24 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-8"></div>
-      </div>
-  
-      {/* Filter Section */}
-      <div className="text-center mb-8">
-        <ul className="flex justify-center space-x-8 text-sm uppercase font-normal">
-          {["*", "mumbai", "bangalore", "chennai"].map((city) => (
-            <li key={city}>
-              <button
-                className={`${
-                  filter === city
-                    ? "text-black dark:text-white border-b-2 border-black dark:border-white"
-                    : "text-gray-500 dark:text-gray-400"
-                } hover:text-blue-600 dark:hover:text-blue-400`}
-                onClick={() => setFilter(city)}
-              >
-                {city === "*" ? "All" : city.charAt(0).toUpperCase() + city.slice(1)}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
-  
-      {/* Portfolio Items */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {items
-          .filter((item) => filter === "*" || item.filters.includes(filter))
-          .map((item, index) => (
-            <div key={index} className="relative group p-4 cursor-pointer">
-              <div className="overflow-hidden" onClick={() => setSelectedMember(item)}>
-                <img
-                  src={item.imgSrc}
-                  alt={item.title}
-                  className="w-full h-60 object-cover transition-transform duration-300 transform group-hover:scale-105 rounded-lg" // Added rounded-lg for border radius
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-white dark:bg-gray-800 opacity-0 group-hover:opacity-90 transition-all duration-300 flex justify-center items-center">
-                  <div className="text-center">
-                    <h6 className="text-[#384f4b] dark:text-gray-100 font-inter mt-1">
-                      {item.title}
-                    </h6>
-                  </div>
+  <div className="w-full max-w-screen-xl mx-auto">
+    {/* Gallery Title */}
+    <div className="text-center mb-8">
+      <h2 className="text-3xl md:text-4xl font-bold text-[#384f4b] dark:text-gray-100 font-inter mb-4">
+        Gallery
+      </h2>
+      <div className="w-24 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
+    </div>
+
+    {/* Filter Section */}
+    <div className="text-center mb-6">
+      <ul className="flex justify-center space-x-6 text-sm uppercase font-normal">
+        {["*", "mumbai", "bangalore", "chennai"].map((city) => (
+          <li key={city}>
+            <button
+              className={`${
+                filter === city
+                  ? "text-black dark:text-white border-b-2 border-black dark:border-white"
+                  : "text-gray-500 dark:text-gray-400"
+              } hover:text-blue-600 dark:hover:text-blue-400`}
+              onClick={() => setFilter(city)}
+            >
+              {city === "*" ? "All" : city.charAt(0).toUpperCase() + city.slice(1)}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* Portfolio Items */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+      {items
+        .filter((item) => filter === "*" || item.filters.includes(filter))
+        .map((item, index) => (
+          <div key={index} className="relative group p-2 cursor-pointer">
+            <div className="overflow-hidden rounded-lg" onClick={() => setSelectedMember(item)}>
+              <img
+                src={item.imgSrc}
+                alt={item.title}
+                className="w-full h-60 object-cover transition-transform duration-300 transform group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-white dark:bg-gray-800 opacity-0 group-hover:opacity-90 transition-all duration-300 flex justify-center items-center">
+                <div className="text-center">
+                  <h6 className="text-[#384f4b] dark:text-gray-100 font-inter mt-1">
+                    {item.title}
+                  </h6>
                 </div>
               </div>
             </div>
-          ))}
-      </div>
-  
-      {/* Modal */}
-      {selectedMember && (
-        <Modal member={selectedMember} onClose={() => setSelectedMember(null)} />
-      )}
+          </div>
+        ))}
     </div>
-  </section>
-  
+
+    {/* Modal */}
+    {selectedMember && (
+      <Modal member={selectedMember} onClose={() => setSelectedMember(null)} />
+    )}
+  </div>
+</section>
+
   
   );
 };
