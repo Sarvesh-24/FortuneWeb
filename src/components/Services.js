@@ -7,17 +7,16 @@ const Services = () => {
   return (
     <section
   id="services"
-  className="w-full min-h-screen px-4 py-16 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-300 font-roboto transition-colors duration-300"
-  >
-
-  <div className="w-full max-w-screen-xl mx-auto px-6 py-12">
+  className="w-full px-4 py-8 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-300 font-roboto transition-colors duration-300"
+>
+  <div className="w-full max-w-screen-xl mx-auto px-6 py-8">
     {/* Section Title */}
-    <h2 className="text-3xl md:text-4xl font-bold text-[#384f4b] text-center  font-inter dark:text-white mb-4">
+    <h2 className="text-3xl md:text-4xl font-bold text-[#384f4b] text-center font-inter dark:text-white mb-4">
       Our Services
     </h2>
-    <div className="w-24 h-1 bg-blue-600 mx-auto mb-8 dark:bg-blue-400"></div>
+    <div className="w-24 h-1 bg-blue-600 mx-auto mb-6 dark:bg-blue-400"></div>
 
-    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
       {/* Card 1: Live Trading Mentorship Programs */}
       <div className="rounded-lg border p-6 shadow-lg hover:shadow-xl transition dark:bg-gray-800 dark:text-white dark:border-gray-700">
         <div className="text-4xl text-teal-500 mb-4 dark:text-teal-400">
@@ -27,7 +26,8 @@ const Services = () => {
           Live Trading Mentorship Programs
         </h3>
         <p className="text-gray-600 mb-4 dark:text-gray-400">
-          Learn directly from experts in real-time trading sessions and take your trading skills to the next level.
+          Learn directly from experts in real-time trading sessions and take
+          your trading skills to the next level.
         </p>
         <a
           href="/services"
@@ -46,7 +46,8 @@ const Services = () => {
           Time Trading Technique
         </h3>
         <p className="text-gray-600 mb-4 dark:text-gray-400">
-          Join our free workshops to gain valuable insights and strategies for successful trading.
+          Join our free workshops to gain valuable insights and strategies for
+          successful trading.
         </p>
         <a
           href="#contact"
@@ -65,7 +66,8 @@ const Services = () => {
           Financial Planning
         </h3>
         <p className="text-gray-600 mb-4 dark:text-gray-400">
-          Strategically set goals, manage budgets, invest wisely, and plan for retirement to secure your financial future.
+          Strategically set goals, manage budgets, invest wisely, and plan for
+          retirement to secure your financial future.
         </p>
         <a
           href="/mutualfunds"
@@ -86,7 +88,8 @@ const Services = () => {
           Fortune Advisorz Live Events
         </h3>
         <p className="text-gray-600 mb-4 dark:text-gray-400">
-          Attend our live events and seminars for advanced trading techniques and market insights.
+          Attend our live events and seminars for advanced trading techniques
+          and market insights.
         </p>
         <a
           href="#event"
@@ -98,12 +101,12 @@ const Services = () => {
     </div>
 
     {/* Know More Button */}
-    <div className="text-center mt-8">
+    <div className="text-center mt-6">
       <motion.a
         href="/services"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="mt-8 inline-block px-8 py-3 bg-blue-600 text-white md:rounded-md font-semibold shadow-lg hover:bg-blue-700 hover:text-white transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-blue-500 dark:hover:bg-blue-400"
+        className="mt-6 inline-block px-8 py-3 bg-blue-600 text-white md:rounded-md font-semibold shadow-lg hover:bg-blue-700 hover:text-white transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-blue-500 dark:hover:bg-blue-400"
         aria-label="Learn more about our services"
       >
         Know More
@@ -111,6 +114,7 @@ const Services = () => {
     </div>
   </div>
 </section>
+
 
   );
 };
