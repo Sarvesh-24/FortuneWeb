@@ -49,21 +49,21 @@ const Gallery = () => {
 
   return (
     <section
-    id="gallery"
-    className="w-full px-4 py-8 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-100 font-roboto transition-colors duration-300"
-  >
+  id="gallery"
+  className="w-full px-4 py-8 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-100 font-roboto transition-colors duration-300"
+>
     <div className="w-full max-w-screen-xl mx-auto">
       {/* Gallery Title */}
-      <div className="text-center mb-8">
+      <div className="text-center mb-10">
         <h2 className="text-3xl md:text-4xl font-bold text-[#384f4b] dark:text-gray-100 font-inter mb-4">
           Gallery
         </h2>
-        <div className="w-24 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-6"></div>
+        <div className="w-24 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mb-8"></div>
       </div>
   
       {/* Filter Section */}
-      <div className="text-center mb-6">
-        <ul className="flex justify-center space-x-6 text-sm uppercase font-normal">
+      <div className="text-center mb-8">
+        <ul className="flex justify-center space-x-8 text-sm uppercase font-normal">
           {["*", "mumbai", "bangalore", "chennai"].map((city) => (
             <li key={city}>
               <button
@@ -91,7 +91,7 @@ const Gallery = () => {
                 <img
                   src={item.imgSrc}
                   alt={item.title}
-                  className="w-full h-60 object-cover transition-transform duration-300 transform group-hover:scale-105 rounded-lg"
+                  className="w-full h-60 object-cover transition-transform duration-300 transform group-hover:scale-105 rounded-lg" // Added rounded-lg for border radius
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-white dark:bg-gray-800 opacity-0 group-hover:opacity-90 transition-all duration-300 flex justify-center items-center">
