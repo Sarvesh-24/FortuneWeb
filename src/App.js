@@ -65,7 +65,7 @@ import Team from "./components/Team";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import Contact from "./api/Contact.js";
-
+import YouTubeVideo from "./components/YoutubeVideo.js";
 
 
 // Individual Pages
@@ -109,7 +109,7 @@ const App = () => {
           path="/"
           element={
             <>
-            
+              <YouTubeVideo />
               <Hero />
               <About />
               <Program />
