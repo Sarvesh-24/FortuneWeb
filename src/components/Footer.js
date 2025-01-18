@@ -150,7 +150,7 @@ const Footer = () => {
 <p className="mt-6 max-w-md leading-relaxed text-gray-400">
   We empower you with time-based trading mentorship that works in all time frames and market fluctuations, making trading easier and less complex.
 </p>
-
+</div>
         <div class="flex mt-8 space-x-6 text-gray-600">
           <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
             <span class="sr-only"> Facebook </span>
@@ -234,7 +234,7 @@ const Footer = () => {
     <p class="mt-8 text-xs text-gray-800">
       © 2022 Comany Name
     </p>
-  </div>
+  
 </footer>
 
   );
