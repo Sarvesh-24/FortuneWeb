@@ -395,7 +395,7 @@ const Contact = () => {
   return (
     <div
   id="contact"
-  className="w-full min-h-screen px-4 py-16 font-sans bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
+  className="w-full  px-4 py-16 font-sans bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300"
 >
   <ToastContainer />
 
