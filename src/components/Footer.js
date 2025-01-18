@@ -1,5 +1,8 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram, FaLinkedin, FaSquareXTwitter, FaYoutube, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedin, FaYoutube, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaSquareXTwitter } from 'react-icons/fa6';
+
+
 
 const Footer = () => {
   return (
