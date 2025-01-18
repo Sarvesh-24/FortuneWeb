@@ -1,97 +1,140 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram, FaLinkedin, FaYoutube, FaEnvelope, FaPhone, FaMapMarkerAlt, FaTwitterSquare } from 'react-icons/fa';
-import { FaSquareXTwitter } from 'react-icons/fa6';
-
-
-
+import { FaFacebookF, FaInstagram, FaLinkedin, FaSquareXTwitter, FaYoutube, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="bg-blue-600 dark:bg-gray-900 text-white mt-0 mb-0">
-    <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-        {/* Logo and Intro Section */}
-        <div>
-          <div className="flex items-center">
-            <img 
-              src='/assets/logo/Logo.webp'
-              alt="Fortune Advisorz Logo"
-              width={80}
-              height={80}
-              className="rounded-md"
-            />
-            <p className="text-3xl ml-6 font-bold">Fortune Advisorz</p>
+      <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-4">
+          {/* Logo and Intro Section */}
+          <div>
+            <div className="flex items-center">
+              <img
+                src="/assets/logo/Logo.webp"
+                alt="Fortune Advisorz Logo"
+                width={80}
+                height={80}
+                className="rounded-md"
+              />
+              <p className="text-3xl ml-6 font-bold">Fortune Advisorz</p>
+            </div>
+            <p className="mt-6 max-w-md leading-relaxed text-gray-400">
+              We empower you with time-based trading mentorship that works in all time frames and market fluctuations, making trading easier and less complex.
+            </p>
+            <ul className="mt-8 flex gap-4">
+              <li>
+                <a
+                  href="https://www.facebook.com/fortuneadvisorz/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-white hover:text-blue-600"
+                >
+                  <FaFacebookF className="text-2xl" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/fortune_advisorz/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-white hover:text-pink-500"
+                >
+                  <FaInstagram className="text-2xl" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://in.linkedin.com/company/fortuneadvisorz"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-white hover:text-blue-600"
+                >
+                  <FaLinkedin className="text-2xl" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://x.com/Parthas08744406"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-white hover:text-blue-600"
+                >
+                  <FaSquareXTwitter className="text-2xl" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/channel/UCOP5-2W_f62GdQhm4OCy4Ww"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-white hover:text-red-600"
+                >
+                  <FaYoutube className="text-2xl" />
+                </a>
+              </li>
+            </ul>
           </div>
-          <p className="mt-6 max-w-md leading-relaxed text-gray-400">
-            We empower you with time-based trading mentorship that works in all time frames and market fluctuations, making trading easier and less complex.
-          </p>
-          <ul className="mt-8 flex gap-4">
-            <li>
-              <a href="https://www.facebook.com/fortuneadvisorz/" target="_blank" rel="noreferrer" className="text-white hover:text-blue-600">
-                <FaFacebookF className="text-2xl" />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/fortune_advisorz/" target="_blank" rel="noreferrer" className="text-white hover:text-pink-500">
-                <FaInstagram className="text-2xl" />
-              </a>
-            </li>
-            <li>
-              <a href="https://in.linkedin.com/company/fortuneadvisorz" target="_blank" rel="noreferrer" className="text-white hover:text-blue-600">
-                <FaLinkedin className="text-2xl" />
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/Parthas08744406" target="_blank" rel="noreferrer" className="text-white hover:text-blue-600">
-                <FaSquareXTwitter className="text-2xl" />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/channel/UCOP5-2W_f62GdQhm4OCy4Ww" target="_blank" rel="noreferrer" className="text-white hover:text-red-600">
-                <FaYoutube className="text-2xl" />
-              </a>
-            </li>
-          </ul>
-        </div>
-  
-        {/* Links Section */}
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
-          {/* About Us */}
+
+          {/* About Us Section */}
           <div>
             <p className="text-lg font-medium text-white">About Us</p>
             <ul className="mt-4 space-y-4 text-sm text-gray-400">
-              <li><a href="#about" className="text-white hover:text-blue-600">About</a></li>
-              <li><a href="#services" className="text-white hover:text-blue-600">Services</a></li>
-              <li><a href="#gallery" className="text-white hover:text-blue-600">Gallery</a></li>
-              <li><a href="#team" className="text-white hover:text-blue-600">Team</a></li>
+              <li>
+                <a href="#about" className="text-white hover:text-blue-600">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-white hover:text-blue-600">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="#gallery" className="text-white hover:text-blue-600">
+                  Gallery
+                </a>
+              </li>
+              <li>
+                <a href="#team" className="text-white hover:text-blue-600">
+                  Team
+                </a>
+              </li>
             </ul>
           </div>
-  
-          {/* Policies */}
+
+          {/* Policies Section */}
           <div>
             <p className="text-lg font-medium text-white">Policies</p>
             <ul className="mt-4 space-y-4 text-sm text-gray-400">
-              <li><a href="/riskdisclaimer" className="text-white hover:text-blue-600">Risk Disclaimer</a></li>
-              <li><a href="/serviceprovide" className="text-white hover:text-blue-600">Services</a></li>
-              <li><a href="/termsandconditions" className="text-white hover:text-blue-600">Terms & Conditions</a></li>
-              <li><a href="/policies" className="text-white hover:text-blue-600">Privacy Policy</a></li>
-              <li><a href="/refundpolicy" className="text-white hover:text-blue-600">Refund Policy</a></li>
+              <li>
+                <a href="/riskdisclaimer" className="text-white hover:text-blue-600">
+                  Risk Disclaimer
+                </a>
+              </li>
+              <li>
+                <a href="/serviceprovide" className="text-white hover:text-blue-600">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="/termsandconditions" className="text-white hover:text-blue-600">
+                  Terms & Conditions
+                </a>
+              </li>
+              <li>
+                <a href="/policies" className="text-white hover:text-blue-600">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="/refundpolicy" className="text-white hover:text-blue-600">
+                  Refund Policy
+                </a>
+              </li>
             </ul>
           </div>
-  
-          {/* Helpful Links */}
-          <div>
-            <p className="text-lg font-medium text-white">Helpful Links</p>
-            <ul className="mt-4 space-y-4 text-sm text-gray-400">
-              <li><a href="#faq" className="text-white hover:text-blue-600">FAQ</a></li>
-              <li><a href="#feedback" className="text-white hover:text-blue-600">Feedback</a></li>
-              <li><a href="#book" className="text-white hover:text-blue-600">Book</a></li>
-              <li><a href="#event" className="text-white hover:text-blue-600">Event</a></li>
-              <li><a href="#contact" className="text-white hover:text-blue-600">Contact Us</a></li>
-            </ul>
-          </div>
-  
-          {/* Contact Us */}
+
+          {/* Contact Us Section */}
           <div>
             <p className="text-lg font-medium text-white">Contact Us</p>
             <ul className="mt-4 space-y-4 text-sm text-gray-400">
@@ -119,7 +162,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-  
+
       {/* Footer Bottom */}
       <div className="mt-12 border-t border-gray-700 pt-6">
         <div className="text-center sm:flex sm:justify-between">
@@ -127,14 +170,17 @@ const Footer = () => {
             &copy; 2022 Fortune Advisorz. All rights reserved.
           </p>
           <p className="mt-4 sm:mt-0 text-sm text-gray-400">
-            <a href="/termsAndConditions" className="hover:text-teal-500">Terms & Conditions</a> · 
-            <a href="/policies" className="hover:text-teal-500 ml-2">Privacy Policy</a>
+            <a href="/termsandconditions" className="hover:text-teal-500">
+              Terms & Conditions
+            </a>{" "}
+            ·{" "}
+            <a href="/policies" className="hover:text-teal-500 ml-2">
+              Privacy Policy
+            </a>
           </p>
         </div>
       </div>
-    </div>
-  </footer>
-  
+    </footer>
   );
 };
 
