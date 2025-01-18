@@ -188,10 +188,10 @@ const Hero = () => {
             />
             {/* Captions */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 bg-black bg-opacity-40 z-10">
-            <h5 className="text-3xl md:text-5xl font-bold text-cblue drop-shadow-md">
+            <h5 className="text-3xl md:text-5xl font-bold text-white drop-shadow-md">
                   {slide.title}
                 </h5>
-                <p className="mt-4 text-sm md:text-lg max-w-3xl text-cblue drop-shadow-md">
+                <p className="mt-4 text-sm md:text-lg max-w-3xl text-white drop-shadow-md">
                   {slide.description}
                 </p>
 
