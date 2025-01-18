@@ -139,10 +139,21 @@ const Footer = () => {
   <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
-      <img src="#" class="mr-5 h-6 sm:h-9" alt="logo" />
+      <img 
+            src='/assets/logo/Footer Logo.png'
+            alt="Fortune Advisorz Logo"
+            width={80}
+            height={80}
+            className="rounded-md"/>
         <p class="max-w-xs mt-4 text-sm text-gray-600">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusantium.
         </p>
+        <p className="text-3xl ml-6 font-bold">Fortune Advisorz</p>
+         
+         <p className="mt-6 max-w-md leading-relaxed text-gray-400">
+           We empower you with time-based trading mentorship that works in all time frames and market fluctuations, making trading easier and less complex.
+         </p>
+         
         <div class="flex mt-8 space-x-6 text-gray-600">
           <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
             <span class="sr-only"> Facebook </span>
