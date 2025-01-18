@@ -14,7 +14,7 @@ const Footer = () => {
       <div>
         <div className="flex items-center">
           <img 
-            src='/assets/logo/Logo.webp'
+            src='/assets/logo/Footer Logo.png'
             alt="Fortune Advisorz Logo"
             width={80}
             height={80}
