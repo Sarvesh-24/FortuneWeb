@@ -1,5 +1,5 @@
 import React from 'react';
-// import { FaFacebookF, FaInstagram, FaLinkedin, FaYoutube, FaEnvelope, FaPhone, FaMapMarkerAlt, FaTwitterSquare } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedin, FaYoutube, FaEnvelope, FaPhone, FaMapMarkerAlt, FaTwitterSquare } from 'react-icons/fa';
 // import { FaSquareXTwitter } from 'react-icons/fa6';
 
 
@@ -92,33 +92,33 @@ const Footer = () => {
 //         </div>
 
 //         {/* Contact Us */}
-//         <div>
-//           <p className="text-lg font-medium text-white">Contact Us</p>
-//           <ul className="mt-4 space-y-4 text-sm text-gray-400">
-//             <li className="flex items-center gap-4">
-//               <FaEnvelope className="text-teal-500 text-3xl" />
-//               <span>info@fortuneadvisorz.com</span>
-//             </li>
-//             <li className="flex items-center gap-4">
-//               <FaPhone className="text-teal-500 text-xl" />
-//               <span>+91 9699613407</span>
-//             </li>
-//             <li className="flex items-start gap-4">
-//               <FaMapMarkerAlt className="text-teal-500 text-3xl" />
-//               <span>Corporate Address: 3903, 39th floor, Kohinoor Square, Dadar West 400028</span>
-//             </li>
-//             <li className="flex items-start gap-4">
-//               <FaMapMarkerAlt className="text-teal-500 text-3xl" />
-//               <span>Registered Address: M/2, Panchasheel Bldg, 5th Floor, Room No. 514, Matunga Labour Camp, Valmiki Road, Mumbai – 400019</span>
-//             </li>
-//             <li className="flex items-start gap-4">
-//               <FaMapMarkerAlt className="text-teal-500 text-3xl" />
-//               <span>Branch Office: 123, First Floor, Fortune Towers, Andheri East, Mumbai – 400069</span>
-//             </li>
-//           </ul>
-//         </div>
-//       </div>
-//     </div>
+    //     <div>
+    //       <p className="text-lg font-medium text-white">Contact Us</p>
+    //       <ul className="mt-4 space-y-4 text-sm text-gray-400">
+    //         <li className="flex items-center gap-4">
+    //           <FaEnvelope className="text-teal-500 text-3xl" />
+    //           <span>info@fortuneadvisorz.com</span>
+    //         </li>
+    //         <li className="flex items-center gap-4">
+    //           <FaPhone className="text-teal-500 text-xl" />
+    //           <span>+91 9699613407</span>
+    //         </li>
+    //         <li className="flex items-start gap-4">
+    //           <FaMapMarkerAlt className="text-teal-500 text-3xl" />
+    //           <span>Corporate Address: 3903, 39th floor, Kohinoor Square, Dadar West 400028</span>
+    //         </li>
+    //         <li className="flex items-start gap-4">
+    //           <FaMapMarkerAlt className="text-teal-500 text-3xl" />
+    //           <span>Registered Address: M/2, Panchasheel Bldg, 5th Floor, Room No. 514, Matunga Labour Camp, Valmiki Road, Mumbai – 400019</span>
+    //         </li>
+    //         <li className="flex items-start gap-4">
+    //           <FaMapMarkerAlt className="text-teal-500 text-3xl" />
+    //           <span>Branch Office: 123, First Floor, Fortune Towers, Andheri East, Mumbai – 400069</span>
+    //         </li>
+    //       </ul>
+    //     </div>
+    //   </div>
+    // </div>
 
 //     {/* Footer Bottom */}
 //     <div className="mt-12 border-t border-gray-700 pt-6">
@@ -148,7 +148,7 @@ const Footer = () => {
         <p class="max-w-xs mt-4 leading-relaxed text-gray-400">
             We empower you with time-based trading mentorship that works in all time frames and market fluctuations, making trading easier and less complex. 
         </p>
-        
+
         <div class="flex mt-8 space-x-6 text-gray-600">
           <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
             <span class="sr-only"> Facebook </span>
@@ -208,7 +208,7 @@ const Footer = () => {
         </div>
         <div>
           <p class="font-medium">
-            Helpful Links
+               Contact Us
           </p>
           <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
             <a class="hover:opacity-75" href> Contact </a>
@@ -220,12 +220,28 @@ const Footer = () => {
           <p class="font-medium">
             Legal
           </p>
-          <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-            <a class="hover:opacity-75" href> Privacy Policy </a>
-            <a class="hover:opacity-75" href> Terms &amp; Conditions </a>
-            <a class="hover:opacity-75" href> Returns Policy </a>
-            <a class="hover:opacity-75" href> Accessibility </a>
-          </nav>
+          <ul class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+            <li class="hover:opacity-75" href>
+               <FaEnvelope className="text-teal-500 text-3xl" />
+              <span>info@fortuneadvisorz.com</span>
+            </li>
+            <li class="hover:opacity-75" href>
+               <FaPhone className="text-teal-500 text-xl" />
+              <span>+91 9699613407</span> 
+            </li>
+            <li class="hover:opacity-75" href>
+              <FaMapMarkerAlt className="text-teal-500 text-3xl" />
+              <span>Corporate Address: 3903, 39th floor, Kohinoor Square, Dadar West 400028</span> 
+            </li>
+            <li class="hover:opacity-75" href>
+              <FaMapMarkerAlt className="text-teal-500 text-3xl" />
+              <span>Registered Address: M/2, Panchasheel Bldg, 5th Floor, Room No. 514, Matunga Labour Camp, Valmiki Road, Mumbai –    400019</span>
+            </li>
+            <li class="hover:opacity-75" href>
+              <FaMapMarkerAlt className="text-teal-500 text-3xl" />
+              <span>Branch Office: 123, First Floor, Fortune Towers, Andheri East, Mumbai – 400069</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
