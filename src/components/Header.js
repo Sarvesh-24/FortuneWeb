@@ -151,7 +151,7 @@ const Header = () => {
           {navItems.map((item) => (
             <li key={item}>
               <a
-                href={`#${item.toLowerCase()}`}
+                href={`/#${item.toLowerCase()}`}
                 className="block px-4 py-2 text-[#444444] hover:text-white hover:bg-blue-600 dark:text-gray-200 dark:hover:bg-blue-600 transition duration-300 font-roboto"
                 onClick={() => setMobileNavOpen(false)} // Close on click
               >
