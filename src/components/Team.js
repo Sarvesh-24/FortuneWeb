@@ -41,18 +41,18 @@ const Team = () => {
         github: "https://github.com"
       }
     },
-    // {
-    //   id: 4,
-    //   name: "Rahul Shah",
-    //   position: "Research Analyst",
-    //   image: '/assets/profile/profile4.jpg',
-    //   bio: "Rahul Shah, had 15+ years of experience into Hedge Fund Administration, Served multinational companies viz. State Street Corporation, Apex Fund services, Viteos Capital Market services, SS&C Globeop. Techno - Funda trader since 2012. Cleared NISIM Investment Advisor X-A and NISIM Investment Advisor X-B certification. Applied for SEBI Investment Advisor Certification",
-    //   social: {
-    //     twitter: "https://twitter.com",
-    //     linkedin: "https://linkedin.com",
-    //     github: "https://github.com"
-    //   }
-    // },
+    {
+      id: 4,
+      name: "Sarvesh Walke",
+      position: "Software Developer",
+      image: '/assets/profile/profile4.jpeg',
+      bio: " ",
+      social: {
+        twitter: "https://twitter.com",
+        linkedin: "https://linkedin.com",
+        github: "https://github.com"
+      }
+    },
 
   ];
 
