@@ -217,46 +217,46 @@ const Footer = () => {
           </nav>
         </div>
         <div>
-          <p className="font-medium">Contact Us</p>
-          <ul className="flex flex-col mt-4 space-y-4 text-sm text-gray-500">
-            {/* Email */}
-            <li className="flex items-center hover:opacity-75">
-              <FaEnvelope className="text-teal-500 text-2xl mr-3" />
-              <span>info@fortuneadvisorz.com</span>
-            </li>
+        <p className="font-medium">Contact Us</p>
+  <ul className="flex flex-col mt-4 space-y-4 text-sm text-gray-500">
+    {/* Email */}
+    <li className="flex items-center hover:opacity-75">
+      <FaEnvelope className="text-teal-500 text-xl min-w-[24px] mr-3" />
+      <span>info@fortuneadvisorz.com</span>
+    </li>
 
-            {/* Phone */}
-            <li className="flex items-center hover:opacity-75">
-              <FaPhone className="text-teal-500 text-2xl mr-3" />
-              <span>+91 9699613407</span>
-            </li>
+    {/* Phone */}
+    <li className="flex items-center hover:opacity-75">
+      <FaPhone className="text-teal-500 text-xl min-w-[24px] mr-3" />
+      <span>+91 9699613407</span>
+    </li>
 
-            {/* Corporate Address */}
-            <li className="flex items-start hover:opacity-75">
-              <FaMapMarkerAlt className="text-teal-500 text-2xl mr-3" />
-              <span>
-                Corporate Address: 3903, 39th Floor, Kohinoor Square, Dadar West, 400028
-              </span>
-            </li>
+    {/* Corporate Address */}
+    <li className="flex items-start hover:opacity-75">
+      <FaMapMarkerAlt className="text-teal-500 text-xl min-w-[24px] mr-3 mt-1" />
+      <span>
+        Corporate Address: 3903, 39th Floor, Kohinoor Square, Dadar West, 400028
+      </span>
+    </li>
 
-            {/* Registered Address */}
-            <li className="flex items-start hover:opacity-75">
-              <FaMapMarkerAlt className="text-teal-500 text-2xl mr-3" />
-              <span>
-                Registered Address: M/2, Panchasheel Bldg, 5th Floor, Room No. 514,
-                Matunga Labour Camp, Valmiki Road, Mumbai – 400019
-              </span>
-            </li>
+    {/* Registered Address */}
+    <li className="flex items-start hover:opacity-75">
+      <FaMapMarkerAlt className="text-teal-500 text-xl min-w-[24px] mr-3 mt-1" />
+      <span>
+        Registered Address: M/2, Panchasheel Bldg, 5th Floor, Room No. 514,
+        Matunga Labour Camp, Valmiki Road, Mumbai – 400019
+      </span>
+    </li>
 
-            {/* Branch Office */}
-            <li className="flex items-start hover:opacity-75">
-              <FaMapMarkerAlt className="text-teal-500 text-2xl mr-3" />
-              <span>
-                Branch Office: 123, First Floor, Fortune Towers, Andheri East, Mumbai –
-                400069
-              </span>
-            </li>
-          </ul>
+    {/* Branch Office */}
+    <li className="flex items-start hover:opacity-75">
+      <FaMapMarkerAlt className="text-teal-500 text-xl min-w-[24px] mr-3 mt-1" />
+      <span>
+        Branch Office: 123, First Floor, Fortune Towers, Andheri East, Mumbai –
+        400069
+      </span>
+    </li>
+  </ul>
         </div>
 
       </div>
