@@ -145,9 +145,10 @@ const Footer = () => {
             width={80}
             height={80}
             className="rounded-md"/>
-        <p class="max-w-xs mt-4 text-sm text-gray-600">
-          FORTUNE ADVISORZ
+        <p class="max-w-xs mt-4 leading-relaxed text-gray-400">
+            We empower you with time-based trading mentorship that works in all time frames and market fluctuations, making trading easier and less complex. 
         </p>
+        
         <div class="flex mt-8 space-x-6 text-gray-600">
           <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
             <span class="sr-only"> Facebook </span>
