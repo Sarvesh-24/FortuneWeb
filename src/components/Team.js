@@ -45,7 +45,7 @@ const Team = () => {
       id: 4,
       name: "Sarvesh Walke",
       position: "Software Developer",
-      image: '/assets/profile/profile4.jpeg',
+      image: '/assets/profile/profile4.webp',
       bio: " ",
       social: {
         twitter: "https://twitter.com",
