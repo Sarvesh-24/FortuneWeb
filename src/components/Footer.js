@@ -196,15 +196,15 @@ const Footer = () => {
 
   {/* Services Section */}
   <div>
-    <p className="font-medium">Services</p>
-    <nav className="flex flex-col mt-4 space-y-3 text-sm text-gray-500">
-      <a className="hover:opacity-75" href="/">1on1 Coaching</a>
-      <a className="hover:opacity-75" href="/">Company Review</a>
-      <a className="hover:opacity-75" href="/">Accounts Review</a>
-      <a className="hover:opacity-75" href="/">HR Consulting</a>
-      <a className="hover:opacity-75" href="/">SEO Optimisation</a>
-    </nav>
-  </div>
+  <p className="text-lg font-medium text-white">Policies</p>
+  <ul className="mt-4 space-y-4 text-sm text-gray-400">
+    <li><a href="/riskdisclaimer" className="text-white hover:text-blue-600">Risk Disclaimer</a></li>
+    <li><a href="/serviceprovide" className="text-white hover:text-blue-600">Services</a></li>
+    <li><a href="/termsandconditions" className="text-white hover:text-blue-600">Terms & Conditions</a></li>
+    <li><a href="/policies" className="text-white hover:text-blue-600">Privacy Policy</a></li>
+    <li><a href="/refundpolicy" className="text-white hover:text-blue-600">Refund Policy</a></li>
+  </ul>
+</div>
 
   {/* Contact Us Section */}
   <div>
