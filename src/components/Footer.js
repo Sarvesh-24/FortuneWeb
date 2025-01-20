@@ -186,7 +186,7 @@ const Footer = () => {
   {/* About Us Section */}
   <div>
     <p className="font-medium">About Us</p>
-    <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+    <nav className="flex flex-col mt-4 space-y-3 text-sm text-gray-500">
       <a className="hover:opacity-75" href="/#about">About</a>
       <a className="hover:opacity-75" href="/#services">Services</a>
       <a className="hover:opacity-75" href="/#gallery">Gallery</a>
@@ -197,7 +197,7 @@ const Footer = () => {
   {/* Services Section */}
   <div>
     <p className="font-medium">Services</p>
-    <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+    <nav className="flex flex-col mt-4 space-y-3 text-sm text-gray-500">
       <a className="hover:opacity-75" href="/">1on1 Coaching</a>
       <a className="hover:opacity-75" href="/">Company Review</a>
       <a className="hover:opacity-75" href="/">Accounts Review</a>
@@ -209,7 +209,7 @@ const Footer = () => {
   {/* Contact Us Section */}
   <div>
     <p className="font-medium">Contact Us</p>
-    <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+    <nav className="flex flex-col mt-4 space-y-3 text-sm text-gray-500">
       <a className="hover:opacity-75" href="/">Contact</a>
       <a className="hover:opacity-75" href="/">FAQs</a>
       <a className="hover:opacity-75" href="/">Live Chat</a>
