@@ -220,13 +220,13 @@ const Footer = () => {
         <p className="font-medium">Contact Us</p>
   <ul className="flex flex-col mt-4 space-y-4 text-sm text-gray-500">
     {/* Email */}
-    <li className="flex items-center hover:opacity-75 text-gray-500">
+    <li className="flex items-center hover:opacity-75 ">
       <FaEnvelope className="text-teal-500 text-xl min-w-[24px] mr-3" />
-      <span>info@fortuneadvisorz.com</span>
+      <span className="text-gray-500">info@fortuneadvisorz.com</span>
     </li>
 
     {/* Phone */}
-    <li className="flex items-center hover:opacity-75 ">
+    <li className="flex items-center hover:opacity-75">
       <FaPhone className="text-teal-500 text-xl min-w-[24px] mr-3" />
       <span>+91 9699613407</span>
     </li>
