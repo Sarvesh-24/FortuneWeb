@@ -196,7 +196,7 @@ const Footer = () => {
 
   {/* Services Section */}
   <div>
-  <p className="text-lg font-medium text-white">Policies</p>
+  <p className="text-lg font-medium ">Policies</p>
   <ul className="mt-4 space-y-4 text-sm text-gray-400">
     <li><a href="/riskdisclaimer" className="text-blue-600 hover:opacity-75">Risk Disclaimer</a></li>
     <li><a href="/serviceprovide" className="text-blue-600 hover:opacity-75">Services</a></li>
