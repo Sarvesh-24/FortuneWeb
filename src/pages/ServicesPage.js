@@ -49,7 +49,7 @@ const ServicesPage = () => {
     <div className="bg-gray-100 dark:bg-gray-900 about section mx-auto w-full px-4 py-16 sm:px-6 lg:px-8">
       {/* Heading and Content Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 bg-cblue">
+        <div className="text-center mb-16 ">
           <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
             Capturing Big Moves & Still Making Losses?{' '}
             <span className="text-red-600">STOP CHASING RETURNS</span>
