@@ -80,16 +80,16 @@ const Footer = () => {
 //         </div>
 
 //         {/* Helpful Links */}
-//         <div>
-//           <p className="text-lg font-medium text-white">Helpful Links</p>
-//           <ul className="mt-4 space-y-4 text-sm text-gray-400">
-//             <li><a href="#faq" className="text-white hover:text-blue-600">FAQ</a></li>
-//             <li><a href="#feedback" className="text-white hover:text-blue-600">Feedback</a></li>
-//             <li><a href="#book" className="text-white hover:text-blue-600">Book</a></li>
-//             <li><a href="#event" className="text-white hover:text-blue-600">Event</a></li>
-//             <li><a href="#contact" className="text-white hover:text-blue-600">Contact Us</a></li>
-//           </ul>
-//         </div>
+        // <div>
+        //   <p className="text-lg font-medium text-white">Helpful Links</p>
+        //   <ul className="mt-4 space-y-4 text-sm text-gray-400">
+        //     <li><a href="#faq" className="text-white hover:text-blue-600">FAQ</a></li>
+        //     <li><a href="#feedback" className="text-white hover:text-blue-600">Feedback</a></li>
+        //     <li><a href="#book" className="text-white hover:text-blue-600">Book</a></li>
+        //     <li><a href="#event" className="text-white hover:text-blue-600">Event</a></li>
+        //     <li><a href="#contact" className="text-white hover:text-blue-600">Contact Us</a></li>
+        //   </ul>
+        // </div>
 
 //         {/* Contact Us */}
     //     <div>
@@ -208,13 +208,15 @@ const Footer = () => {
 
   {/* Contact Us Section */}
   <div>
-    <p className="text-lg font-medium">Contact Us</p>
-    <nav className="flex flex-col mt-4 space-y-3 text-sm text-gray-500">
-      <a className="hover:opacity-75" href="/">Contact</a>
-      <a className="hover:opacity-75" href="/">FAQs</a>
-      <a className="hover:opacity-75" href="/">Live Chat</a>
-    </nav>
-  </div>
+          <p className="text-lg font-medium">Helpful Links</p>
+          <ul className="mt-4 space-y-4 text-sm text-gray-400">
+            <li><a href="/#faq" className="text-blue-600 hover:opacity-75">FAQ</a></li>
+            <li><a href="/#feedback" className="text-blue-600 hover:opacity-75">Feedback</a></li>
+            <li><a href="/#book" className="text-blue-600 hover:opacity-75">Book</a></li>
+            <li><a href="/#event" className="text-blue-600 hover:opacity-75">Event</a></li>
+            <li><a href="/#contact" className="text-blue-600 hover:opacity-75">Contact Us</a></li>
+          </ul>
+    </div>
 
   {/* Contact Details Section */}
   <div>
