@@ -185,7 +185,7 @@ const Footer = () => {
       <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
   {/* About Us Section */}
   <div>
-    <p className="font-medium">About Us</p>
+    <p className="text-lg font-medium">About Us</p>
     <nav className="flex flex-col mt-4 space-y-3 text-sm text-gray-500">
       <a className="hover:opacity-75" href="/#about">About</a>
       <a className="hover:opacity-75" href="/#services">Services</a>
@@ -208,7 +208,7 @@ const Footer = () => {
 
   {/* Contact Us Section */}
   <div>
-    <p className="font-medium">Contact Us</p>
+    <p className="text-lg font-medium">Contact Us</p>
     <nav className="flex flex-col mt-4 space-y-3 text-sm text-gray-500">
       <a className="hover:opacity-75" href="/">Contact</a>
       <a className="hover:opacity-75" href="/">FAQs</a>
@@ -218,7 +218,7 @@ const Footer = () => {
 
   {/* Contact Details Section */}
   <div>
-    <p className="font-medium">Contact Us</p>
+    <p className="text-lg font-medium">Contact Us</p>
     <ul className="flex flex-col mt-4 space-y-4 text-sm text-gray-500">
       {/* Email */}
       <li className="flex items-center hover:opacity-75">
