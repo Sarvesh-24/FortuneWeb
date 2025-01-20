@@ -121,17 +121,17 @@ const Footer = () => {
     // </div>
 
 //     {/* Footer Bottom */}
-//     <div className="mt-12 border-t border-gray-700 pt-6">
-//       <div className="text-center sm:flex sm:justify-between">
-//         <p className="text-sm text-gray-400">
-//           &copy; 2022 Fortune Advisorz. All rights reserved.
-//         </p>
-//         <p className="mt-4 sm:mt-0 text-sm text-gray-400">
-//           <a href="/termsAndConditions" className="hover:text-teal-500">Terms & Conditions</a> · 
-//           <a href="/policies" className="hover:text-teal-500 ml-2">Privacy Policy</a>
-//         </p>
-//       </div>
-//     </div>
+    // <div className="mt-12 border-t border-gray-700 pt-6">
+    //   <div className="text-center sm:flex sm:justify-between">
+    //     <p className="text-sm text-gray-400">
+    //       &copy; 2022 Fortune Advisorz. All rights reserved.
+    //     </p>
+    //     <p className="mt-4 sm:mt-0 text-sm text-gray-400">
+    //       <a href="/termsAndConditions" className="hover:text-teal-500">Terms & Conditions</a> · 
+    //       <a href="/policies" className="hover:text-teal-500 ml-2">Privacy Policy</a>
+    //     </p>
+    //   </div>
+    // </div>
 //   </div>
 // </footer>
 
@@ -261,24 +261,25 @@ const Footer = () => {
   </div>
 </div>
 
-{/* Footer Section */}
-<div className="mt-12 border-t border-gray-700 pt-6">
-  <div className="text-center sm:flex sm:justify-between">
-    <p className="text-sm text-gray-400">
-      &copy; 2022 Fortune Advisorz. All rights reserved.
-    </p>
-    <p className="mt-4 sm:mt-0 text-sm text-gray-400">
-      <a href="/termsAndConditions" className="hover:text-teal-500">Terms & Conditions</a> ·
-      <a href="/policies" className="hover:text-teal-500 ml-2">Privacy Policy</a>
-    </p>
-  </div>
-</div>
 
      </div>
   </div>
+
+  <div className="mt-12 border-t border-gray-700 pt-6">
+      <div className="text-center sm:flex sm:justify-between">
+        <p className="text-sm text-gray-400">
+          &copy; 2022 Fortune Advisorz. All rights reserved.
+        </p>
+        <p className="mt-4 sm:mt-0 text-sm text-gray-400">
+          <a href="/termsAndConditions" className="hover:text-teal-500">Terms & Conditions</a> · 
+          <a href="/policies" className="hover:text-teal-500 ml-2">Privacy Policy</a>
+        </p>
+      </div>
+    </div>
 </footer>
 
   );
 };
 
 export default Footer;
+
