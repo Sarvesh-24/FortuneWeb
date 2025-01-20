@@ -70,7 +70,7 @@ const Company = () => {
   return (
     <section
   id="company"
-  className="w-full min-h-screen px-4 sm:px-6 lg:px-8 py-12 bg-cblue dark:bg-gray-900 text-gray-900 dark:text-gray-300"
+  className="w-full min-h-screen px-4 sm:px-6 lg:px-8 py-12 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"
 >
   {/* Header */}
   <div className="text-center mb-8 sm:mb-12 pt-10">
