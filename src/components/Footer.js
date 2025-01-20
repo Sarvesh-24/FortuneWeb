@@ -185,13 +185,13 @@ const Footer = () => {
       <div class="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <p class="font-medium">
-            Company
+            About Us
           </p>
           <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-            <a class="hover:opacity-75" href> About </a>
-            <a class="hover:opacity-75" href> Meet the Team </a>
-            <a class="hover:opacity-75" href> History </a>
-            <a class="hover:opacity-75" href> Careers </a>
+            <a class="hover:opacity-75" href="/#about"> About </a>
+            <a class="hover:opacity-75" href="/#services"> Services </a>
+            <a class="hover:opacity-75" href="/#gallery"> Gallery </a>
+            <a class="hover:opacity-75" href="/#team"> Team </a>
           </nav>
         </div>
         <div>
