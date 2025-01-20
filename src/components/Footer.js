@@ -198,11 +198,11 @@ const Footer = () => {
   <div>
   <p className="text-lg font-medium text-white">Policies</p>
   <ul className="mt-4 space-y-4 text-sm text-gray-400">
-    <li><a href="/riskdisclaimer" className="text-white hover:text-blue-600">Risk Disclaimer</a></li>
-    <li><a href="/serviceprovide" className="text-white hover:text-blue-600">Services</a></li>
-    <li><a href="/termsandconditions" className="text-white hover:text-blue-600">Terms & Conditions</a></li>
-    <li><a href="/policies" className="text-white hover:text-blue-600">Privacy Policy</a></li>
-    <li><a href="/refundpolicy" className="text-white hover:text-blue-600">Refund Policy</a></li>
+    <li><a href="/riskdisclaimer" className="text-blue-600 hover:opacity-75">Risk Disclaimer</a></li>
+    <li><a href="/serviceprovide" className="text-blue-600 hover:opacity-75">Services</a></li>
+    <li><a href="/termsandconditions" className="text-blue-600 hover:opacity-75">Terms & Conditions</a></li>
+    <li><a href="/policies" className="text-blue-600 hover:opacity-75">Privacy Policy</a></li>
+    <li><a href="/refundpolicy" className="text-blue-600 hover:opacity-75">Refund Policy</a></li>
   </ul>
 </div>
 
