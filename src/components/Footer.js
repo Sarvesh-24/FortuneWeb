@@ -182,7 +182,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div class="grid grid-cols-1 gap-4 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <p class="font-medium">
             About Us
