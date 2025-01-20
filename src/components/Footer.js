@@ -269,7 +269,7 @@ const Footer = () => {
      <div className="mt-12 border-t border-gray-700 pt-6">
       <div className="text-center sm:flex sm:justify-between">
         <p className="text-sm text-gray-400">
-          &copy; 2022 Fortune Advisorz. All rights reserved.
+          &copy; 2025 Fortune Advisorz. All rights reserved.
         </p>
         <p className="mt-4 sm:mt-0 text-sm text-gray-400">
           <a href="/termsAndConditions" className="hover:text-teal-500">Terms & Conditions</a> · 
