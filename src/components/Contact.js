@@ -29,7 +29,7 @@ const Contact = () => {
     setIsLoading(true);
   
     try {
-      const response = await fetch(`/api/contact`, {
+      const response = await fetch("/api/contact", { // The correct path to the serverless function
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -50,6 +50,7 @@ const Contact = () => {
       setIsLoading(false);
     }
   };
+  
   
 
   return (

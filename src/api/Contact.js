@@ -334,20 +334,9 @@
 
 // export default Contact;
 
-
 const nodemailer = require("nodemailer");
 
 export default async function handler(req, res) {
-  // Add CORS headers
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "POST");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-
-  // Handle preflight requests
-  if (req.method === "OPTIONS") {
-    return res.status(200).end();
-  }
-
   if (req.method !== "POST") {
     return res.status(405).json({ success: false, message: "Method not allowed" });
   }
@@ -355,34 +344,26 @@ export default async function handler(req, res) {
   const { name, email, subject, message, phone } = req.body;
 
   try {
-    // Validate input fields
-    if (!name || !email || !subject || !message || !phone) {
-      return res.status(400).json({ success: false, message: "All fields are required!" });
-    }
-
-    // Configure nodemailer transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER, // Your email
-        pass: process.env.EMAIL_PASS, // Your email password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
-    // Mail options
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "info@fortuneadvisorz.com", // Change this to your recipient email
+      to: "info@fortuneadvisorz.com", // Your recipient email
       subject: `New Contact Form Submission: ${subject}`,
       text: `You have a new message from ${name} (${email}, ${phone}):\n\n${message}`,
     };
 
-    // Send mail
     await transporter.sendMail(mailOptions);
-
     res.status(200).json({ success: true, message: "Email sent successfully!" });
   } catch (error) {
     console.error("Error sending email:", error);
     res.status(500).json({ success: false, message: "Server error. Please try again later." });
   }
 }
+
