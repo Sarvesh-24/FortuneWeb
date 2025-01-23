@@ -2,11 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "api/contact.js",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "src/**/*",
+        "src": "package.json",
         "use": "@vercel/static-build",
         "config": {
           "distDir": "build"
