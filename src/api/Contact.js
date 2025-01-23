@@ -337,13 +337,42 @@
 const nodemailer = require("nodemailer");
 
 export default async function handler(req, res) {
+  // Handle preflight requests for CORS
+  if (req.method === "OPTIONS") {
+    res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.status(200).end();
+    return;
+  }
+
+  // Allow only POST requests
   if (req.method !== "POST") {
-    return res.status(405).json({ success: false, message: "Method not allowed" });
+    return res
+      .status(405)
+      .json({ success: false, message: "Method not allowed" });
   }
 
   const { name, email, subject, message, phone } = req.body;
 
+  // Validate input fields
+  if (!name || !email || !subject || !message || !phone) {
+    return res
+      .status(400)
+      .json({ success: false, message: "All fields are required!" });
+  }
+
+  // Validate environment variables
+  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+    console.error("EMAIL_USER or EMAIL_PASS environment variables are missing.");
+    return res.status(500).json({
+      success: false,
+      message: "Server configuration error. Please contact support.",
+    });
+  }
+
   try {
+    // Configure nodemailer transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -352,18 +381,27 @@ export default async function handler(req, res) {
       },
     });
 
+    // Email options
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "info@fortuneadvisorz.com", // Your recipient email
+      to: "info@fortuneadvisorz.com", // Replace with your recipient email
       subject: `New Contact Form Submission: ${subject}`,
       text: `You have a new message from ${name} (${email}, ${phone}):\n\n${message}`,
     };
 
+    // Send the email
     await transporter.sendMail(mailOptions);
-    res.status(200).json({ success: true, message: "Email sent successfully!" });
+
+    res.status(200).json({
+      success: true,
+      message: "Email sent successfully!",
+    });
   } catch (error) {
     console.error("Error sending email:", error);
-    res.status(500).json({ success: false, message: "Server error. Please try again later." });
+    res.status(500).json({
+      success: false,
+      message: "Failed to send email. Please try again later.",
+      error: error.message, // Provide more error details for debugging
+    });
   }
 }
-

@@ -29,28 +29,35 @@ const Contact = () => {
     setIsLoading(true);
   
     try {
-      const response = await fetch("/api/contact", { // The correct path to the serverless function
+      // Send the form data to the serverless function
+      const response = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(formData),
       });
   
+      // Parse the JSON response
       const data = await response.json();
   
       if (response.ok) {
-        toast.success(data.message);
+        // Success: Display a success toast and reset the form
+        toast.success(data.message || "Message sent successfully!");
         setFormData({ name: "", email: "", subject: "", message: "", phone: "" });
       } else {
-        toast.error(data.message || "There was an error submitting the form.");
+        // Error: Display the error message returned by the API
+        toast.error(data.message || "Failed to submit the form. Please try again.");
       }
     } catch (error) {
+      // Catch any unexpected errors and log them
       console.error("Error submitting form:", error);
-      toast.error("There was a server error. Please try again later.");
+      toast.error("An unexpected error occurred. Please try again later.");
     } finally {
+      // Ensure loading state is reset regardless of the outcome
       setIsLoading(false);
     }
   };
-  
   
 
   return (
