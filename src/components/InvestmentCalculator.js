@@ -33,7 +33,7 @@ const InvestmentCalculator = () => {
   // Update result based on active tab
   useEffect(() => {
     setResult(activeTab === 'sip' ? calculateSIP() : calculateLumpSum());
-  }, [activeTab, monthlyInvestment, investment, annualReturn, years]);
+  }, [activeTab, monthlyInvestment, investment, annualReturn, years,]);
 
   // Detect system theme and set dark mode
   useEffect(() => {
