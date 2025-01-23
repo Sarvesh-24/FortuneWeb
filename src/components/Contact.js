@@ -23,14 +23,12 @@ const Contact = () => {
     }));
   };
 
-  
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
   
     try {
-      // Send the form data to the serverless function
-      const response = await fetch("/api/contact", {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -38,26 +36,22 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
   
-      // Parse the JSON response
       const data = await response.json();
   
       if (response.ok) {
-        // Success: Display a success toast and reset the form
         toast.success(data.message || "Message sent successfully!");
         setFormData({ name: "", email: "", subject: "", message: "", phone: "" });
       } else {
-        // Error: Display the error message returned by the API
         toast.error(data.message || "Failed to submit the form. Please try again.");
       }
     } catch (error) {
-      // Catch any unexpected errors and log them
       console.error("Error submitting form:", error);
       toast.error("An unexpected error occurred. Please try again later.");
     } finally {
-      // Ensure loading state is reset regardless of the outcome
       setIsLoading(false);
     }
   };
+  
   
 
   return (
