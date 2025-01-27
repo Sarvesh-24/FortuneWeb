@@ -20,30 +20,47 @@ const Contact = () => {
     }));
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault(); // Prevent default form submission
 
-    // Construct the Google Form submission URL with query parameters
-    const googleFormURL =
-      `https://docs.google.com/forms/d/e/1FAIpQLSd5-Ci8MFEyRAri9FOwNpUhDywT0lwWbBWuDk1f1rWxMxMMAQ/formResponse?` +
-      `entry.1094118904=${encodeURIComponent(formData.name)}&` +
-      `entry.451516050=${encodeURIComponent(formData.email)}&` +
-      `entry.1257855407=${encodeURIComponent(formData.phone)}&` +
-      `entry.27431264=${encodeURIComponent(formData.subject)}&` +
-      `entry.1162590133=${encodeURIComponent(formData.message)}`;
+    // Google Form submission URL (formResponse endpoint)
+    const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSd5-Ci8MFEyRAri9FOwNpUhDywT0lwWbBWuDk1f1rWxMxMMAQ/formResponse";
 
-    // Open the URL to submit data to Google Form
-    window.location.href = googleFormURL;
+    // Construct the form data to submit
+    const formDataToSubmit = new URLSearchParams();
+    formDataToSubmit.append("entry.1094118904", formData.name); // Name
+    formDataToSubmit.append("entry.451516050", formData.email); // Email
+    formDataToSubmit.append("entry.1257855407", formData.phone); // Phone
+    formDataToSubmit.append("entry.27431264", formData.subject); // Subject
+    formDataToSubmit.append("entry.1162590133", formData.message); // Message
 
-    // Show a success message
-    toast.success("Your message has been sent successfully!");
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-      phone: "",
-    });
+    try {
+      // Submit form data using a POST request
+      const response = await fetch(googleFormURL, {
+        method: "POST",
+        body: formDataToSubmit,
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      });
+
+      // Check if the response was successful
+      if (response.ok) {
+        toast.success("Your message has been sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+          phone: "",
+        });
+      } else {
+        toast.error("Failed to submit the form. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("An error occurred. Please try again later.");
+    }
   };
 
   return (
