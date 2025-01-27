@@ -22,6 +22,20 @@ const Contact = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault(); // Prevent default form submission
+
+    // Construct the Google Form submission URL with query parameters
+    const googleFormURL =
+      `https://docs.google.com/forms/d/e/1FAIpQLSd5-Ci8MFEyRAri9FOwNpUhDywT0lwWbBWuDk1f1rWxMxMMAQ/formResponse?` +
+      `entry.1094118904=${encodeURIComponent(formData.name)}&` +
+      `entry.451516050=${encodeURIComponent(formData.email)}&` +
+      `entry.1257855407=${encodeURIComponent(formData.phone)}&` +
+      `entry.27431264=${encodeURIComponent(formData.subject)}&` +
+      `entry.1162590133=${encodeURIComponent(formData.message)}`;
+
+    // Open the URL to submit data to Google Form
+    window.location.href = googleFormURL;
+
+    // Show a success message
     toast.success("Your message has been sent successfully!");
     setFormData({
       name: "",
@@ -106,15 +120,12 @@ const Contact = () => {
 
         {/* Contact Form Section */}
         <form
-          action="https://docs.google.com/forms/d/e/1FAIpQLSd5-Ci8MFEyRAri9FOwNpUhDywT0lwWbBWuDk1f1rWxMxMMAQ/formResponse"
-          method="POST"
-          target="_blank"
           onSubmit={handleFormSubmit}
           className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-sm space-y-4"
         >
           <input
             type="text"
-            name="entry.1094118904"
+            name="name"
             placeholder="Name"
             value={formData.name}
             onChange={handleChange}
@@ -123,7 +134,7 @@ const Contact = () => {
           />
           <input
             type="email"
-            name="entry.451516050"
+            name="email"
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
@@ -132,7 +143,7 @@ const Contact = () => {
           />
           <input
             type="text"
-            name="entry.1257855407"
+            name="phone"
             placeholder="Phone"
             value={formData.phone}
             onChange={handleChange}
@@ -140,14 +151,14 @@ const Contact = () => {
           />
           <input
             type="text"
-            name="entry.27431264"
+            name="subject"
             placeholder="Subject"
             value={formData.subject}
             onChange={handleChange}
             className="w-full p-2 border rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
           />
           <textarea
-            name="entry.1162590133"
+            name="message"
             placeholder="Message"
             value={formData.message}
             onChange={handleChange}
