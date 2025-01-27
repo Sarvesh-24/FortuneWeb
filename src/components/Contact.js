@@ -20,7 +20,8 @@ const Contact = () => {
     }));
   };
 
-  const handleFormSubmit = () => {
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
     toast.success("Your message has been sent successfully!");
     setFormData({
       name: "",
