@@ -22,10 +22,10 @@ const Contact = () => {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault(); // Prevent default form submission
-
+  
     // Google Form submission URL (formResponse endpoint)
     const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSd5-Ci8MFEyRAri9FOwNpUhDywT0lwWbBWuDk1f1rWxMxMMAQ/formResponse";
-
+  
     // Construct the form data to submit
     const formDataToSubmit = new URLSearchParams();
     formDataToSubmit.append("entry.1094118904", formData.name); // Name
@@ -33,7 +33,7 @@ const Contact = () => {
     formDataToSubmit.append("entry.1257855407", formData.phone); // Phone
     formDataToSubmit.append("entry.27431264", formData.subject); // Subject
     formDataToSubmit.append("entry.1162590133", formData.message); // Message
-
+  
     try {
       // Submit form data using a POST request
       const response = await fetch(googleFormURL, {
@@ -43,7 +43,7 @@ const Contact = () => {
           "Content-Type": "application/x-www-form-urlencoded",
         },
       });
-
+  
       // Check if the response was successful
       if (response.ok) {
         toast.success("Your message has been sent successfully!");
@@ -55,14 +55,14 @@ const Contact = () => {
           phone: "",
         });
       } else {
-        toast.error("Failed to submit the form. Please try again.");
+        throw new Error("Failed to submit form. Please try again.");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
       toast.error("An error occurred. Please try again later.");
     }
   };
-
+  
   return (
     <div
       id="contact"
