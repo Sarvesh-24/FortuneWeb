@@ -16,12 +16,12 @@ const Contact = () => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
-      [name]: value,
+      [name]: value, // Update the state based on the name of the input field
     }));
   };
 
   const handleFormSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent default form submission
     toast.success("Your message has been sent successfully!");
     setFormData({
       name: "",
