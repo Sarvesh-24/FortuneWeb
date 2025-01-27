@@ -12,8 +12,6 @@ const Contact = () => {
     phone: "",
   });
 
-  const [isLoading, setIsLoading] = useState(false);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -22,43 +20,15 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-
-    try {
-      // Google Form URL
-      const googleFormURL =
-        "https://docs.google.com/forms/d/e/1FAIpQLSd5-Ci8MFEyRAri9FOwNpUhDywT0lwWbBWuDk1f1rWxMxMMAQ/formResponse";
-
-      // Map React form data to Google Form fields
-      const formDataMapped = new FormData();
-      formDataMapped.append("entry.1094118904", formData.name); // Name field
-      formDataMapped.append("entry.451516050", formData.email); // Email field
-      formDataMapped.append("entry.1257855407", formData.phone); // Phone field
-      formDataMapped.append("entry.27431264", formData.subject); // Subject field
-      formDataMapped.append("entry.1162590133", formData.message); // Message field
-
-      // Submit form data to Google Form
-      await fetch(googleFormURL, {
-        method: "POST",
-        body: formDataMapped,
-      });
-
-      toast.success("Message sent successfully!");
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-        phone: "",
-      });
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      toast.error("An unexpected error occurred. Please try again later.");
-    } finally {
-      setIsLoading(false);
-    }
+  const handleFormSubmit = () => {
+    toast.success("Your message has been sent successfully!");
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+      phone: "",
+    });
   };
 
   return (
@@ -135,28 +105,33 @@ const Contact = () => {
 
         {/* Contact Form Section */}
         <form
-          onSubmit={handleSubmit}
+          action="https://docs.google.com/forms/d/e/1FAIpQLSd5-Ci8MFEyRAri9FOwNpUhDywT0lwWbBWuDk1f1rWxMxMMAQ/formResponse"
+          method="POST"
+          target="_blank"
+          onSubmit={handleFormSubmit}
           className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-sm space-y-4"
         >
           <input
             type="text"
-            name="name"
+            name="entry.1094118904"
             placeholder="Name"
             value={formData.name}
             onChange={handleChange}
             className="w-full p-2 border rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+            required
           />
           <input
             type="email"
-            name="email"
+            name="entry.451516050"
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
             className="w-full p-2 border rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+            required
           />
           <input
             type="text"
-            name="phone"
+            name="entry.1257855407"
             placeholder="Phone"
             value={formData.phone}
             onChange={handleChange}
@@ -164,14 +139,14 @@ const Contact = () => {
           />
           <input
             type="text"
-            name="subject"
+            name="entry.27431264"
             placeholder="Subject"
             value={formData.subject}
             onChange={handleChange}
             className="w-full p-2 border rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
           />
           <textarea
-            name="message"
+            name="entry.1162590133"
             placeholder="Message"
             value={formData.message}
             onChange={handleChange}
@@ -182,9 +157,8 @@ const Contact = () => {
           <button
             type="submit"
             className="w-full bg-blue-600 dark:bg-blue-400 text-white dark:text-gray-900 py-2 rounded hover:bg-blue-700 dark:hover:bg-blue-500 transition-colors duration-300"
-            disabled={isLoading}
           >
-            {isLoading ? "Submitting..." : "Submit"}
+            Submit
           </button>
         </form>
       </div>
