@@ -83,6 +83,7 @@ import MutualFundPage from "./pages/MutualFundPage.js";
 
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import VideoCarousel from "./pages/VideoCarousel";
+import AccessForm from "./components/AccessForm.js";
 
 
 
@@ -162,6 +163,8 @@ const App = () => {
         <Route path="/videos" element={<VideoYT />} />
         <Route path="/yt" element={<VideoCarousel />} />
         <Route path="/mutualfunds" element={<MutualFundPage/>}/>
+        <Route path="/accessform" element={<AccessForm/>}/>
+        
       </Routes>
       <Footer />
       
