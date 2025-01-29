@@ -1,12 +1,11 @@
 import { useState } from 'react';
-import { IoMail, IoLockClosed, IoPerson } from 'react-icons/io5';
+import { IoMail } from 'react-icons/io5';
 import { motion } from 'framer-motion';
 
 export default function AccessForm() {
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
-    password: '',
+    subscriptionType: 'NEW',
   });
 
   const handleChange = (e) => {
@@ -26,7 +25,7 @@ export default function AccessForm() {
         transition={{ duration: 0.6 }}
         className='w-full md:w-1/2 flex justify-center items-center p-6'
       >
-        <img src='/assets/logo/Profile.webp' alt='Welcome' className='max-w-xs md:max-w-md lg:max-w-lg' />
+        <img src='/assets/logo/Profile.webp' alt='Welcome' className='max-w-xs md:max-w-md lg:max-w-lg rounded-lg' />
       </motion.div>
       
       {/* Right Section */}
@@ -39,13 +38,6 @@ export default function AccessForm() {
         <h2 className='text-2xl font-semibold text-gray-800 mb-6 text-center'>Create Your Account</h2>
         <form className='space-y-4'>
           <div>
-            <label htmlFor='name' className='block text-gray-700 font-medium mb-1'>Name</label>
-            <div className='flex items-center bg-gray-200 p-3 rounded-lg'>
-              <IoPerson className='text-gray-600' />
-              <input type='text' id='name' name='name' placeholder='Your Full Name' className='w-full bg-transparent p-2 outline-none' onChange={handleChange} />
-            </div>
-          </div>
-          <div>
             <label htmlFor='email' className='block text-gray-700 font-medium mb-1'>Email</label>
             <div className='flex items-center bg-gray-200 p-3 rounded-lg'>
               <IoMail className='text-gray-600' />
@@ -53,10 +45,16 @@ export default function AccessForm() {
             </div>
           </div>
           <div>
-            <label htmlFor='password' className='block text-gray-700 font-medium mb-1'>Password</label>
-            <div className='flex items-center bg-gray-200 p-3 rounded-lg'>
-              <IoLockClosed className='text-gray-600' />
-              <input type='password' id='password' name='password' placeholder='••••••••' className='w-full bg-transparent p-2 outline-none' onChange={handleChange} />
+            <label className='block text-gray-700 font-medium mb-1'>Subscription Type</label>
+            <div className='flex gap-4'>
+              <label className='flex items-center gap-2'>
+                <input type='radio' name='subscriptionType' value='NEW' checked={formData.subscriptionType === 'NEW'} onChange={handleChange} />
+                NEW
+              </label>
+              <label className='flex items-center gap-2'>
+                <input type='radio' name='subscriptionType' value='RENEW' checked={formData.subscriptionType === 'RENEW'} onChange={handleChange} />
+                RENEW
+              </label>
             </div>
           </div>
           <motion.button 
