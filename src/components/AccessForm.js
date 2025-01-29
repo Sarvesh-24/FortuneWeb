@@ -17,7 +17,7 @@ export default function AccessForm() {
   };
 
   return (
-    <div className='flex flex-col md:flex-row h-screen bg-gray-100 p-6'>
+    <div className='flex flex-col md:flex-row min-h-screen bg-gray-100 p-6 pt-24'>
       {/* Left Section */}
       <motion.div 
         initial={{ opacity: 0, x: -50 }}
