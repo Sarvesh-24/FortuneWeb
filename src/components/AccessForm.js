@@ -46,7 +46,7 @@ export default function AccessForm() {
           </div>
           <div>
             <label className='block text-gray-700 font-medium mb-1'>Subscription Type</label>
-            <div className='flex gap-4'>
+            <div className='flex flex-col gap-2'>
               <label className='flex items-center gap-2'>
                 <input type='radio' name='subscriptionType' value='NEW' checked={formData.subscriptionType === 'NEW'} onChange={handleChange} />
                 NEW
@@ -62,7 +62,7 @@ export default function AccessForm() {
             whileTap={{ scale: 0.95 }}
             type='submit' 
             className='w-full bg-blue-600 text-white font-medium p-3 rounded-lg shadow-md'>
-            Create Account
+            Submit
           </motion.button>
           <p className='mt-4 text-center'>Already have an account? <a href='/' className='text-blue-600 font-medium'>Log in here</a></p>
         </form>
