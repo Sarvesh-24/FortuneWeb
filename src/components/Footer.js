@@ -239,15 +239,17 @@ const Footer = () => {
             <li className="flex items-start">
               <FaMapMarkerAlt className="text-teal-500 text-xl min-w-[24px] mr-3 mt-1" />
               <span className="text-blue-600 dark:text-blue-400">
-                Corporate Address: 3903, 39th Floor, Kohinoor Square, Dadar West, 400028
-              </span>
-            </li>
-            <li className="flex items-start">
-              <FaMapMarkerAlt className="text-teal-500 text-xl min-w-[24px] mr-3 mt-1" />
-              <span className="text-blue-600 dark:text-blue-400">
                 Registered Address: M/2, Panchasheel Bldg, 5th Floor, Room No. 514, Matunga Labour Camp, Valmiki Road, Mumbai – 400019
               </span>
             </li>
+            
+            <li className="flex items-start">
+              <FaMapMarkerAlt className="text-teal-500 text-xl min-w-[24px] mr-3 mt-1" />
+              <span className="text-blue-600 dark:text-blue-400">
+                Corporate Address: 3903, 39th Floor, Kohinoor Square, Dadar West, 400028
+              </span>
+            </li>
+          
             <li className="flex items-start">
               <FaMapMarkerAlt className="text-teal-500 text-xl min-w-[24px] mr-3 mt-1" />
               <span className="text-blue-600 dark:text-blue-400">
