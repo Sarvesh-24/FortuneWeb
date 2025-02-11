@@ -1,6 +1,6 @@
 import React from 'react';
 // import { FaFacebookF, FaInstagram, FaLinkedin, FaYoutube,  } from 'react-icons/fa';
-import {FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube, FaTelegramPlane,FaEnvelope, FaPhone, FaMapMarkerAlt, FaTwitterSquare } from "react-icons/fa";
+import {FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube, FaTelegramPlane,FaEnvelope, FaPhone, FaMapMarkerAlt, FaSquareXTwitter } from "react-icons/fa";
 
 // import { FaSquareXTwitter } from 'react-icons/fa6';
 
@@ -157,14 +157,14 @@ const Footer = () => {
         <FaFacebookF className="w-6 h-6" />
       </a>
 
-      <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
+      <a className="hover:text-pink-500" href="#" target="_blank" rel="noreferrer">
         <span className="sr-only">Instagram</span>
         <FaInstagram className="w-6 h-6" />
       </a>
 
       <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
         <span className="sr-only">Twitter</span>
-        <FaTwitter className="w-6 h-6" />
+        <FaSquareXTwitter className="w-6 h-6" />
       </a>
 
       <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
