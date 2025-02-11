@@ -1,6 +1,6 @@
 import React from 'react';
 // import { FaFacebookF, FaInstagram, FaLinkedin, FaYoutube,  } from 'react-icons/fa';
-import {FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube, FaTelegramPlane,FaEnvelope, FaPhone, FaMapMarkerAlt, FaTwitterSquare, } from "react-icons/fa";
+import {FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube, FaTelegramPlane,FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 
@@ -139,151 +139,128 @@ const Footer = () => {
 //   </div>
 // </footer>
 
-<footer class="bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100">
-  <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+<footer className="bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+  <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
-      <img 
-            src='/assets/logo/Footer Logo.png'
-            alt="Fortune Advisorz Logo"
-            width={80}
-            height={80}
-            className="rounded-md"/>
-        <p class="max-w-xs mt-4 leading-relaxed text-gray-400">
-            We empower you with time-based trading mentorship that works in all time frames and market fluctuations, making trading easier and less complex. 
+        <img 
+          src='/assets/logo/Footer Logo.png'
+          alt="Fortune Advisorz Logo"
+          width={80}
+          height={80}
+          className="rounded-md"
+        />
+        <p className="max-w-xs mt-4 leading-relaxed text-gray-400 dark:text-gray-300">
+          We empower you with time-based trading mentorship that works in all time frames and market fluctuations, making trading easier and less complex. 
         </p>
 
-        <div className="flex mt-8 space-x-6 text-gray-600 dark:text-gray-300">
-      <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
-        <span className="sr-only">Facebook</span>
-        <FaFacebookF className="w-6 h-6" />
-      </a>
-
-      <a className="hover:text-pink-500" href="#" target="_blank" rel="noreferrer">
-        <span className="sr-only">Instagram</span>
-        <FaInstagram className="w-6 h-6" />
-      </a>
-
-      <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
-        <span className="sr-only">Twitter</span>
-        <FaXTwitter className="w-6 h-6" />
-      </a>
-
-      <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
-        <span className="sr-only">LinkedIn</span>
-        <FaLinkedinIn className="w-6 h-6" />
-      </a>
-
-      <a className="hover:text-red-600" href="#" target="_blank" rel="noreferrer">
-        <span className="sr-only">YouTube</span>
-        <FaYoutube className="w-6 h-6" />
-      </a>
-
-      <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
-        <span className="sr-only">Telegram</span>
-        <FaTelegramPlane className="w-6 h-6" />
-      </a>
-    </div>
+        <div className="flex mt-8 space-x-6 text-gray-600 dark:text-gray-400">
+          <a className="hover:text-blue-500 dark:hover:text-gray-200" href="#" target="_blank" rel="noreferrer">
+            <FaFacebookF className="w-6 h-6" />
+          </a>
+          <a className="hover:text-pink-500 dark:hover:text-gray-200" href="#" target="_blank" rel="noreferrer">
+            <FaInstagram className="w-6 h-6" />
+          </a>
+          <a className="hover:text-blue-400 dark:hover:text-gray-200" href="#" target="_blank" rel="noreferrer">
+            <FaXTwitter className="w-6 h-6" />
+          </a>
+          <a className="hover:text-blue-600 dark:hover:text-gray-200" href="#" target="_blank" rel="noreferrer">
+            <FaLinkedinIn className="w-6 h-6" />
+          </a>
+          <a className="hover:text-red-600 dark:hover:text-gray-200" href="#" target="_blank" rel="noreferrer">
+            <FaYoutube className="w-6 h-6" />
+          </a>
+          <a className="hover:text-blue-400 dark:hover:text-gray-200" href="#" target="_blank" rel="noreferrer">
+            <FaTelegramPlane className="w-6 h-6" />
+          </a>
+        </div>
       </div>
+
       <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
-  {/* About Us Section */}
-  <div>
-    <p className="text-lg font-medium">About Us</p>
-    <nav className="flex flex-col mt-4 space-y-3 text-sm text-gray-500">
-      <a className="hover:opacity-75" href="/#about">About</a>
-      <a className="hover:opacity-75" href="/#services">Services</a>
-      <a className="hover:opacity-75" href="/#gallery">Gallery</a>
-      <a className="hover:opacity-75" href="/#team">Meeet our Team</a>
-    </nav>
-  </div>
+        {/* About Us Section */}
+        <div>
+          <p className="text-lg font-medium text-gray-800 dark:text-gray-300">About Us</p>
+          <nav className="flex flex-col mt-4 space-y-3 text-sm text-gray-500 dark:text-gray-400">
+            <a className="hover:text-blue-600 dark:hover:text-gray-200" href="/#about">About</a>
+            <a className="hover:text-blue-600 dark:hover:text-gray-200" href="/#services">Services</a>
+            <a className="hover:text-blue-600 dark:hover:text-gray-200" href="/#gallery">Gallery</a>
+            <a className="hover:text-blue-600 dark:hover:text-gray-200" href="/#team">Meet our Team</a>
+          </nav>
+        </div>
 
-  {/* Services Section */}
-  <div>
-  <p className="text-lg font-medium ">Policies</p>
-  <ul className="mt-4 space-y-4 text-sm text-gray-400">
-    <li><a href="/riskdisclaimer" className="text-blue-600 hover:opacity-75">Risk Disclaimer</a></li>
-    <li><a href="/serviceprovide" className="text-blue-600 hover:opacity-75">Services</a></li>
-    <li><a href="/termsandconditions" className="text-blue-600 hover:opacity-75">Terms & Conditions</a></li>
-    <li><a href="/policies" className="text-blue-600 hover:opacity-75">Privacy Policy</a></li>
-    <li><a href="/refundpolicy" className="text-blue-600 hover:opacity-75">Refund Policy</a></li>
-  </ul>
-</div>
-
-  {/* Contact Us Section */}
-  <div>
-          <p className="text-lg font-medium">Helpful Links</p>
-          <ul className="mt-4 space-y-4 text-sm text-gray-400">
-            <li><a href="/#faq" className="text-blue-600 hover:opacity-75">FAQ</a></li>
-            <li><a href="/#feedback" className="text-blue-600 hover:opacity-75">Feedback</a></li>
-            <li><a href="/#book" className="text-blue-600 hover:opacity-75">Book</a></li>
-            <li><a href="/#event" className="text-blue-600 hover:opacity-75">Event</a></li>
-            <li><a href="/#contact" className="text-blue-600 hover:opacity-75">Contact Us</a></li>
+        {/* Policies Section */}
+        <div>
+          <p className="text-lg font-medium text-gray-800 dark:text-gray-300">Policies</p>
+          <ul className="mt-4 space-y-4 text-sm text-gray-500 dark:text-gray-400">
+            <li><a href="/riskdisclaimer" className="text-blue-600 dark:text-blue-400 hover:opacity-75">Risk Disclaimer</a></li>
+            <li><a href="/serviceprovide" className="text-blue-600 dark:text-blue-400 hover:opacity-75">Services</a></li>
+            <li><a href="/termsandconditions" className="text-blue-600 dark:text-blue-400 hover:opacity-75">Terms & Conditions</a></li>
+            <li><a href="/policies" className="text-blue-600 dark:text-blue-400 hover:opacity-75">Privacy Policy</a></li>
+            <li><a href="/refundpolicy" className="text-blue-600 dark:text-blue-400 hover:opacity-75">Refund Policy</a></li>
           </ul>
+        </div>
+
+        {/* Helpful Links Section */}
+        <div>
+          <p className="text-lg font-medium text-gray-800 dark:text-gray-300">Helpful Links</p>
+          <ul className="mt-4 space-y-4 text-sm text-gray-500 dark:text-gray-400">
+            <li><a href="/#faq" className="text-blue-600 dark:text-blue-400 hover:opacity-75">FAQ</a></li>
+            <li><a href="/#feedback" className="text-blue-600 dark:text-blue-400 hover:opacity-75">Feedback</a></li>
+            <li><a href="/#book" className="text-blue-600 dark:text-blue-400 hover:opacity-75">Book</a></li>
+            <li><a href="/#event" className="text-blue-600 dark:text-blue-400 hover:opacity-75">Event</a></li>
+            <li><a href="/#contact" className="text-blue-600 dark:text-blue-400 hover:opacity-75">Contact Us</a></li>
+          </ul>
+        </div>
+
+        {/* Contact Us Section */}
+        <div>
+          <p className="text-lg font-medium text-gray-800 dark:text-gray-300">Contact Us</p>
+          <ul className="flex flex-col mt-4 space-y-4 text-sm text-gray-500 dark:text-gray-400">
+            <li className="flex items-center">
+              <FaEnvelope className="text-teal-500 text-xl min-w-[24px] mr-3" />
+              <span className="text-blue-600 dark:text-blue-400">info@fortuneadvisorz.com</span>
+            </li>
+            <li className="flex items-center">
+              <FaPhone className="text-teal-500 text-xl min-w-[24px] mr-3" />
+              <span className="text-blue-600 dark:text-blue-400">+91 9699613407</span>
+            </li>
+            <li className="flex items-start">
+              <FaMapMarkerAlt className="text-teal-500 text-xl min-w-[24px] mr-3 mt-1" />
+              <span className="text-blue-600 dark:text-blue-400">
+                Corporate Address: 3903, 39th Floor, Kohinoor Square, Dadar West, 400028
+              </span>
+            </li>
+            <li className="flex items-start">
+              <FaMapMarkerAlt className="text-teal-500 text-xl min-w-[24px] mr-3 mt-1" />
+              <span className="text-blue-600 dark:text-blue-400">
+                Registered Address: M/2, Panchasheel Bldg, 5th Floor, Room No. 514, Matunga Labour Camp, Valmiki Road, Mumbai – 400019
+              </span>
+            </li>
+            <li className="flex items-start">
+              <FaMapMarkerAlt className="text-teal-500 text-xl min-w-[24px] mr-3 mt-1" />
+              <span className="text-blue-600 dark:text-blue-400">
+                Branch Office: 123, First Floor, Fortune Towers, Andheri East, Mumbai – 400069
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-  {/* Contact Details Section */}
-  <div>
-    <p className="text-lg font-medium">Contact Us</p>
-    <ul className="flex flex-col mt-4 space-y-4 text-sm text-gray-500">
-      {/* Email */}
-      <li className="flex items-center hover:opacity-75">
-        <FaEnvelope className="text-teal-500 text-xl min-w-[24px] mr-3" />
-        <span className="text-blue-600 hover:opacity-75">info@fortuneadvisorz.com</span>
-      </li>
-
-      {/* Phone */}
-      <li className="flex items-center hover:opacity-75">
-        <FaPhone className="text-teal-500 text-xl min-w-[24px] mr-3" />
-        <span className="text-blue-600 hover:opacity-75">+91 9699613407</span>
-      </li>
-
-      {/* Corporate Address */}
-      <li className="flex items-start hover:opacity-75">
-        <FaMapMarkerAlt className="text-teal-500 text-xl min-w-[24px] mr-3 mt-1" />
-        <span className="text-blue-600 hover:opacity-75">
-          Corporate Address: 3903, 39th Floor, Kohinoor Square, Dadar West, 400028
-        </span>
-      </li>
-
-      {/* Registered Address */}
-      <li className="flex items-start hover:opacity-75">
-        <FaMapMarkerAlt className="text-teal-500 text-xl min-w-[24px] mr-3 mt-1" />
-        <span className="text-blue-600 hover:opacity-75">
-          Registered Address: M/2, Panchasheel Bldg, 5th Floor, Room No. 514,
-          Matunga Labour Camp, Valmiki Road, Mumbai – 400019
-        </span>
-      </li>
-
-      {/* Branch Office */}
-      <li className="flex items-start hover:opacity-75">
-        <FaMapMarkerAlt className="text-teal-500 text-xl min-w-[24px] mr-3 mt-1" />
-        <span className="text-blue-600 hover:opacity-75">
-          Branch Office: 123, First Floor, Fortune Towers, Andheri East, Mumbai –
-          400069
-        </span>
-      </li>
-    </ul>
-  </div>
-</div>
-
-
-     </div>
-
-     <div className="mt-12 border-t border-gray-700 pt-6">
+    <div className="mt-12 border-t border-gray-700 pt-6">
       <div className="text-center sm:flex sm:justify-between">
-        <p className="text-sm text-gray-400">
+        <p className="text-sm text-gray-400 dark:text-gray-500">
           &copy; 2025 Fortune Advisorz. All rights reserved.
         </p>
-        <p className="mt-4 sm:mt-0 text-sm text-gray-400">
+        <p className="mt-4 sm:mt-0 text-sm text-gray-400 dark:text-gray-500">
           <a href="/termsAndConditions" className="hover:text-teal-500">Terms & Conditions</a> · 
           <a href="/policies" className="hover:text-teal-500 ml-2">Privacy Policy</a>
         </p>
       </div>
     </div>
   </div>
-
-  
 </footer>
+
 
   );
 };
