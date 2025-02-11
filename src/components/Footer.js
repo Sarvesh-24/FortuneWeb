@@ -172,7 +172,7 @@ const Footer = () => {
         <FaLinkedinIn className="w-6 h-6" />
       </a>
 
-      <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
+      <a className="hover:text-red-600" href="#" target="_blank" rel="noreferrer">
         <span className="sr-only">YouTube</span>
         <FaYoutube className="w-6 h-6" />
       </a>
