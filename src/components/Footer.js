@@ -251,7 +251,8 @@ const Footer = () => {
             <li className="flex items-start">
               <FaMapMarkerAlt className="text-teal-500 text-xl min-w-[24px] mr-3 mt-1" />
               <span className="text-blue-600 dark:text-blue-400">
-                Branch Office: 123, First Floor, Fortune Towers, Andheri East, Mumbai – 400069
+                Branch Office: 1207/343, 9th main,
+                Sector 7, HSR Layout, Bangalore - 560102
               </span>
             </li>
           </ul>
