@@ -1,6 +1,8 @@
 import React from 'react';
 // import { FaFacebookF, FaInstagram, FaLinkedin, FaYoutube,  } from 'react-icons/fa';
-import {FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube, FaTelegramPlane,FaEnvelope, FaPhone, FaMapMarkerAlt, FaTwitterSquare, FaXTwitter } from "react-icons/fa";
+import {FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube, FaTelegramPlane,FaEnvelope, FaPhone, FaMapMarkerAlt, FaTwitterSquare, } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 
 // import { FaSquareXTwitter } from 'react-icons/fa6';
 
