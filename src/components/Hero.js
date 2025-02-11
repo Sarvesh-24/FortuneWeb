@@ -108,7 +108,7 @@ const Hero = () => {
         "Start your search today for the best financial planners, investment advisors, or stock market experts near you.",
     },
     {
-      image: "/assets/background img/bgimg4.gif"
+      image: "/assets/background img/bgimg03.gif"
       
     },
   ];
