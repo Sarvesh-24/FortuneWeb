@@ -40,9 +40,11 @@ const ServicesPage = () => {
       animate={{ opacity: 1, y: 0 }}
       className="bg-gradient-to-r from-cblue to-blue-600 text-white py-20 px-6 sm:px-8 lg:px-10"
     >
-      <div className="max-w-6xl mx-auto text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">About Us</h1>
-        <p className="text-xl md:text-2xl">Trade Like An Expert Right From The Start</p>
+      <div className="max-w-6xl mx-auto text-center flex flex-col items-center justify-center">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-6">About Us</h1>
+        <p className="text-lg md:text-xl lg:text-2xl max-w-2xl">
+          Trade Like An Expert Right From The Start
+        </p>
       </div>
     </motion.div>
   
