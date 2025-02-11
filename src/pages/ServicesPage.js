@@ -67,12 +67,13 @@ const ServicesPage = () => {
 
   
       {/* Services Section */}
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">Our Services</h2>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          We provide a range of services to help you succeed in the trading world.
-        </p>
-      </div>
+      <div className="relative mt-16 sm:mt-20 text-center mb-12">
+  <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">Our Services</h2>
+  <p className="text-lg text-gray-600 dark:text-gray-300">
+    We provide a range of services to help you succeed in the trading world.
+  </p>
+</div>
+
   
       {/* Services Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8">
