@@ -143,13 +143,23 @@ const Footer = () => {
   <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
-        <img 
-          src='/assets/logo/Footer Logo.png'
-          alt="Fortune Advisorz Logo"
-          width={80}
-          height={80}
-          className="rounded-md"
-        />
+          {/* Light Mode Logo */}
+          <img 
+            src="/assets/logo/Footer Logo.png"
+            alt="Fortune Advisorz Logo"
+            width={80}
+            height={80}
+            className="rounded-md block dark:hidden"
+          />
+
+          {/* Dark Mode Logo */}
+          <img 
+            src="/assets/logo/Fortune-Advisorz-logo.png"
+            alt="Fortune Advisorz Logo Dark"
+            width={80}
+            height={80}
+            className="rounded-md hidden dark:block"
+          />
         <p className="max-w-xs mt-4 leading-relaxed text-gray-400 dark:text-gray-300">
           We empower you with time-based trading mentorship that works in all time frames and market fluctuations, making trading easier and less complex. 
         </p>
