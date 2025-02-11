@@ -17,7 +17,7 @@ export default function AccessForm() {
   };
 
   return (
-    <div className='flex flex-col md:flex-row min-h-screen bg-gray-100 p-6 pt-24'>
+    <div className='flex flex-col md:flex-row min-h-screen bg-gray-100 p-6 pt-32'>
       {/* Left Section */}
       <motion.div 
         initial={{ opacity: 0, x: -50 }}
@@ -33,7 +33,7 @@ export default function AccessForm() {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
-        className='w-full md:w-1/2 flex flex-col justify-center p-12 bg-white rounded-lg shadow-lg'
+        className='w-full md:w-1/2 flex flex-col justify-center p-16 bg-white rounded-lg shadow-lg'
       >
         <h2 className='text-2xl font-semibold text-gray-800 mb-8 text-center'>Create Your Account</h2>
         <form className='space-y-6'>
