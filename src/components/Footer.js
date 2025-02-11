@@ -165,27 +165,29 @@ const Footer = () => {
         </p>
 
         <div className="flex mt-8 space-x-6 text-gray-600 dark:text-gray-400">
-          <a className="hover:text-blue-500 dark:hover:text-gray-200" href="#" target="_blank" rel="noreferrer">
+          <a className="hover:text-blue-500 dark:hover:text-gray-200" href="https://www.facebook.com/fortuneadvisorz/" target="_blank" rel="noreferrer">
             <FaFacebookF className="w-6 h-6" />
           </a>
-          <a className="hover:text-pink-500 dark:hover:text-gray-200" href="#" target="_blank" rel="noreferrer">
+          <a className="hover:text-pink-500 dark:hover:text-gray-200" href="https://www.instagram.com/fortune_advisorz/" target="_blank" rel="noreferrer">
             <FaInstagram className="w-6 h-6" />
           </a>
-          <a className="hover:text-blue-400 dark:hover:text-gray-200" href="#" target="_blank" rel="noreferrer">
+          <a className="hover:text-blue-400 dark:hover:text-gray-200" href="https://x.com/Parthas08744406" target="_blank" rel="noreferrer">
             <FaXTwitter className="w-6 h-6" />
           </a>
-          <a className="hover:text-blue-600 dark:hover:text-gray-200" href="#" target="_blank" rel="noreferrer">
+          <a className="hover:text-blue-600 dark:hover:text-gray-200" href="https://in.linkedin.com/company/fortuneadvisorz" target="_blank" rel="noreferrer">
             <FaLinkedinIn className="w-6 h-6" />
           </a>
-          <a className="hover:text-red-600 dark:hover:text-gray-200" href="#" target="_blank" rel="noreferrer">
+          <a className="hover:text-red-600 dark:hover:text-gray-200" href="https://www.youtube.com/channel/UCOP5-2W_f62GdQhm4OCy4Ww" target="_blank" rel="noreferrer">
             <FaYoutube className="w-6 h-6" />
           </a>
-          <a className="hover:text-blue-400 dark:hover:text-gray-200" href="#" target="_blank" rel="noreferrer">
+          <a className="hover:text-blue-400 dark:hover:text-gray-200" href="https://t.me/FortuneSignals369" target="_blank" rel="noreferrer">
             <FaTelegramPlane className="w-6 h-6" />
           </a>
         </div>
       </div>
 
+
+     
       <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
         {/* About Us Section */}
         <div>
