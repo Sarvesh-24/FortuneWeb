@@ -50,20 +50,27 @@ const ServicesPage = () => {
   
     <div className="bg-gray-100 dark:bg-gray-900 about section mx-auto w-full px-4 py-16 sm:px-6 lg:px-8">
       {/* Heading and Content Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 ">
-          <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
-            Capturing Big Moves & Still Making Losses?{' '}
-            <span className="text-red-600">STOP CHASING RETURNS</span>
-          </h1>
-          <p className="text-lg text-gray-600 font-semibold dark:text-gray-300 mb-6">
-            Capture Big Moves In All Time Frames With Exact Entry, Target & Stop Loss. Time Big Market Moves In Advance With the #1 Time Trade Technique.
-          </p>
-          <p className="text-lg text-gray-600 font-semibold dark:text-gray-300">
-            Trying Hard To Capture Big Moves & Still Getting Trapped Between Entry, Target & Stop Loss? Get Ready To Time Market In Advance.
-          </p>
-        </div>
-      </div>
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 py-12">
+  <div className="text-center mb-14">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-gray-900 dark:text-white">
+      Capturing Big Moves & Still Making Losses?  
+      <span className="block text-red-600 dark:text-red-400 mt-2">
+        STOP CHASING RETURNS!
+      </span>
+    </h1>
+    <p className="text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-gray-300 font-medium mt-6 max-w-3xl mx-auto">
+      Unlock the power of precision trading! Get **exact entry, target & stop loss**  
+      to time **big market moves in advance** with the <span className="text-blue-600 dark:text-blue-400 font-semibold">#1 Time Trade Technique.</span>
+    </p>
+    <div className="mt-8">
+      <p className="text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-gray-300 font-medium max-w-4xl mx-auto">
+        Still getting trapped between **entry, target & stop loss?**  
+        It's time to **master the market with precision.**
+      </p>
+    </div>
+  </div>
+</div>
+
   
       {/* Services Section */}
       <div className="text-center mb-12">
