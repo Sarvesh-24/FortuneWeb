@@ -73,14 +73,15 @@ const Company = () => {
   className="w-full min-h-screen px-4 sm:px-6 lg:px-8 py-12 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-300"
 >
   {/* Header */}
-  <div className="text-center mb-8 sm:mb-12 pt-10">
-    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4 sm:mb-6 leading-tight">
-      Fortune Advisorz
-    </h1>
-    <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4 sm:px-0">
-      RESPECT THE MARKET <strong>“IT WILL RESPECT YOU”</strong>
-    </p>
-  </div>
+  <div className="text-center mb-10 sm:mb-14 pt-14 md:pt-20">
+  <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 bg-clip-text text-transparent mb-5 sm:mb-7 leading-tight">
+    Fortune Advisorz
+  </h1>
+  <p className="text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto px-6 sm:px-0 font-medium">
+    RESPECT THE MARKET <strong className="text-blue-600 dark:text-blue-400">“IT WILL RESPECT YOU”</strong>
+  </p>
+</div>
+
 
   {/* Content */}
   <div className="w-full max-w-screen-xl mx-auto flex flex-col lg:flex-row items-start gap-8 px-4 sm:px-8">
