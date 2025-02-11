@@ -113,8 +113,8 @@ const App = () => {
             
               <Hero />
               <About />
-              <Program />
               <Indicator />
+              <Program />
               <Services />
               <Book />
               {/* <Feedback /> */}
