@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 const videos = [
   { id: "video1", url: "https://www.youtube.com/embed/Fmndt8_0qnI" },
   { id: "video2", url: "https://www.youtube.com/embed/KgCXW2YMTi4" },
-  { id: "video3", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID_3" },
-  { id: "video4", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID_4" },
-  { id: "video5", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID_5" },
-  { id: "video6", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID_6" },
+  { id: "video3", url: "https://www.youtube.com/embed/Fmndt8_0qnI" },
+  { id: "video4", url: "https://www.youtube.com/embed/Fmndt8_0qnI" },
+  { id: "video5", url: "https://www.youtube.com/embed/Fmndt8_0qnI" },
+  { id: "video6", url: "https://www.youtube.com/embed/Fmndt8_0qnI" },
 ];
 
 export default function VideoCarousel() {
