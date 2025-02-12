@@ -4,29 +4,16 @@ import { motion } from "framer-motion";
 const videos = [
   { id: "video1", url: "https://www.youtube.com/embed/Fmndt8_0qnI" },
   { id: "video2", url: "https://www.youtube.com/embed/KgCXW2YMTi4" },
-  { id: "video3", url: "https://www.youtube.com/embed/gkPMzWKAPmU" },
-  { id: "video4", url: "https://www.youtube.com/embed/NoiJBOYfqcY" },
-  { id: "video5", url: "https://www.youtube.com/embed/b8z0h_QK4mo" },
-  { id: "video6", url: "https://www.youtube.com/embed/0KZ-nEKBiZk" },
-  { id: "video7", url: "https://www.youtube.com/embed/HVrIOAmRogQ" },
-  { id: "video8", url: "https://www.youtube.com/embed/1kkAx78z_8w" },
-  { id: "video9", url: "https://www.youtube.com/embed/hBi8K2u4qAk" },
-  { id: "video10", url: "https://www.youtube.com/embed/1BjOmD0MQwU" },
-  { id: "video11", url: "https://www.youtube.com/embed/G4OzmBoAlnw" },
-  { id: "video12", url: "https://www.youtube.com/embed/W2Gvwrn2SB8" },
-  { id: "video13", url: "https://www.youtube.com/embed/dpLumtgxyx8" },
-  { id: "video14", url: "https://www.youtube.com/embed/J5vwTvhd4io" },
-  { id: "video15", url: "https://www.youtube.com/embed/oGQsmvci9Jw" },
-  { id: "video16", url: "https://www.youtube.com/embed/IvcbORWpJEY" },
-  { id: "video17", url: "https://www.youtube.com/embed/xHLp_3sVGnU" },
-  { id: "video18", url: "https://www.youtube.com/embed/hAhPFt4htv4" },
-  { id: "video19", url: "https://www.youtube.com/embed/agwiyYS2wBs" },
-  { id: "video20", url: "https://www.youtube.com/embed/dUX4FQF-jzY" },
+  { id: "video3", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID_3" },
+  { id: "video4", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID_4" },
+  { id: "video5", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID_5" },
+  { id: "video6", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID_6" },
 ];
 
 export default function VideoCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const videosPerPage = 3;
+
   const totalSlides = Math.ceil(videos.length / videosPerPage);
 
   const prevSlide = () => {
@@ -40,28 +27,23 @@ export default function VideoCarousel() {
   return (
     <div className="relative w-full max-w-7xl mx-auto overflow-hidden p-6">
       <motion.div
-        className="flex"
-        initial={{ x: "0%" }}
+        className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        initial={{ x: "-100%" }}
         animate={{ x: `-${currentIndex * 100}%` }}
         transition={{ type: "spring", stiffness: 100 }}
-        style={{
-          display: "flex",
-          width: `${totalSlides * 100}%`,
-        }}
       >
-        {Array.from({ length: totalSlides }, (_, index) => (
-          <div key={index} className="flex flex-shrink-0 w-full justify-center gap-6">
-            {videos.slice(index * videosPerPage, index * videosPerPage + videosPerPage).map((video) => (
+        {videos
+          .slice(currentIndex * videosPerPage, currentIndex * videosPerPage + videosPerPage)
+          .map((video) => (
+            <div key={video.id} className="w-full">
               <iframe
-                key={video.id}
-                className="w-1/3 h-64 md:h-80 lg:h-96 rounded-xl shadow-xl transition-transform transform hover:scale-105 dark:shadow-gray-700"
+                className="w-full h-64 md:h-80 lg:h-96 rounded-xl shadow-xl transition-transform transform hover:scale-105 dark:shadow-gray-700"
                 src={video.url}
                 title="YouTube Video"
                 allowFullScreen
               />
-            ))}
-          </div>
-        ))}
+            </div>
+          ))}
       </motion.div>
 
       {/* Navigation Buttons */}
