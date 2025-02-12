@@ -27,12 +27,7 @@ const videos = [
 export default function VideoCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const videosPerPage = 3;
-
-  // Group videos into pages of 3
   const totalSlides = Math.ceil(videos.length / videosPerPage);
-  const groupedVideos = Array.from({ length: totalSlides }, (_, index) =>
-    videos.slice(index * videosPerPage, index * videosPerPage + videosPerPage)
-  );
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
@@ -49,11 +44,14 @@ export default function VideoCarousel() {
         initial={{ x: "0%" }}
         animate={{ x: `-${currentIndex * 100}%` }}
         transition={{ type: "spring", stiffness: 100 }}
-        style={{ width: `${totalSlides * 100}%` }} // Ensure full width for smooth slides
+        style={{
+          display: "flex",
+          width: `${totalSlides * 100}%`,
+        }}
       >
-        {groupedVideos.map((group, index) => (
-          <div key={index} className="w-full flex justify-center gap-6 flex-shrink-0">
-            {group.map((video) => (
+        {Array.from({ length: totalSlides }, (_, index) => (
+          <div key={index} className="flex flex-shrink-0 w-full justify-center gap-6">
+            {videos.slice(index * videosPerPage, index * videosPerPage + videosPerPage).map((video) => (
               <iframe
                 key={video.id}
                 className="w-1/3 h-64 md:h-80 lg:h-96 rounded-xl shadow-xl transition-transform transform hover:scale-105 dark:shadow-gray-700"
