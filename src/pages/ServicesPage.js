@@ -4,6 +4,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import React from 'react';
 
+
+import VideoCarousel from '../components/VideoCarousel';
+
 const services = [
   {
     title: 'Trade In All Time Frames',
@@ -225,22 +228,9 @@ const ServicesPage = () => {
     </div>
 
 {/* Dynamic Video Carousel Section */}
-<div className="relative w-full mt-16">
-  {/* Title for the Video Carousel */}
-  <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-6 text-center">
-    HOW TO TRADE FORTUNE SIGNALS
-  </h2>
 
-  {/* Video Carousel */}
-  <div className="relative w-full pt-[40%]"> {/* Aspect ratio container */}
-    <iframe
-      src="https://rss.app/embed/v1/carousel/E3gmsZutVUDKTFPW"
-      frameBorder="0"
-      className="absolute top-0 left-0 w-full h-full border-0"
-      title="Video Carousel"
-    />
-  </div>
-</div>
+
+<VideoCarousel/>
 
 
 
