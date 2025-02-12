@@ -11,12 +11,17 @@ const FAQ = () => {
   const categories = ["all", "analysis", "astrology", "beginners", "technical", "crypto"];
 
   const faqData = [
-    { id: 1, question: "What is Gann Analysis?", answer: "Gann Analysis is a trading strategy developed by W.D. Gann...", category: "analysis" },
-    { id: 2, question: "How can financial astrology help in trading?", answer: "Financial astrology examines planetary cycles...", category: "astrology" },
-    { id: 3, question: "Are your courses suitable for beginners?", answer: "Yes, our courses are designed to be accessible...", category: "beginners" },
-    { id: 4, question: "What is the Fortunesignals system?", answer: "Fortunesignals is a proprietary trading tool...", category: "technical" },
-    { id: 5, question: "Can I apply these techniques to cryptocurrencies or commodities?", answer: "Yes, the techniques we teach can be applied...", category: "crypto" },
-    { id: 6, question: "Do I need prior knowledge in astrology to learn financial astrology?", answer: "No prior knowledge of astrology is required...", category: "astrology" },
+    { id: 1, question: "What is Gann Analysis?", answer: "Gann Analysis is a trading strategy developed by W.D. Gann that uses geometric angles, time cycles, and mathematical principles to predict price movements in the stock market. It focuses on finding support and resistance levels, trend change dates, and precise price targets.", category: "analysis" },
+
+    { id: 2, question: "How can financial astrology help in trading?", answer: "Financial astrology examines planetary cycles and their influence on market trends. It helps traders identify key dates for trend reversals, sector-specific impacts, and long-term market cycles, offering a unique perspective for decision-making.", category: "astrology" },
+    
+    { id: 3, question: "Are your courses suitable for beginners?", answer: "Absolutely! Our courses are designed to cater to all levels, from beginners who want to learn stock market basics to advanced traders looking to refine their strategies with Gann techniques, time cycles, and financial astrology.", category: "beginners" },
+
+    { id: 4, question: "What is the Fortunesignals system?", answer: "Fortunesignals is a proprietary trading tool that helps identify market trends, reversals, and momentum across multiple timeframes. It's user-friendly and perfect for both intraday and positional traders.", category: "technical" },
+
+    { id: 5, question: "Can I apply these techniques to cryptocurrencies or commodities?", answer: "Yes, the techniques we teach, such as Gann Analysis, time cycles, and financial astrology, can be applied to various markets, including cryptocurrencies, commodities like gold and silver, forex, and traditional stock markets.", category: "crypto" },
+
+    { id: 6, question: "Do I need prior knowledge in astrology to learn financial astrology?", answer: "No prior knowledge of astrology is required. Our financial astrology courses are simplified to help you understand and apply planetary influences on the financial markets without complex astrological concepts.", category: "astrology" },
   ];
 
   useEffect(() => {
