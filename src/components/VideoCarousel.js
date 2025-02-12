@@ -22,22 +22,17 @@ const videos = [
   { id: "video18", url: "https://www.youtube.com/embed/hAhPFt4htv4" },
   { id: "video19", url: "https://www.youtube.com/embed/agwiyYS2wBs" },
   { id: "video20", url: "https://www.youtube.com/embed/dUX4FQF-jzY" },
-  { id: "video21", url: "https://www.youtube.com/embed/-W86FA20P1k" },
-  { id: "video22", url: "https://www.youtube.com/embed/URxSjWHEcb0" },
-  { id: "video23", url: "https://www.youtube.com/embed/KzU-mlXBSXE" },
-  { id: "video24", url: "https://www.youtube.com/embed/Su0BFKZjCtA" },
-  { id: "video25", url: "https://www.youtube.com/embed/uJ_uWkfupSQ" },
-  { id: "video26", url: "https://www.youtube.com/embed/NeLxaN0sBGE" },
-  { id: "video27", url: "https://www.youtube.com/embed/1OxSSmF7Qos" },
-  { id: "video28", url: "https://www.youtube.com/embed/WOF08bzlfJ8" },
-  { id: "video29", url: "https://www.youtube.com/embed/x2j-vgTf1Rc" },
 ];
 
 export default function VideoCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const videosPerPage = 3;
 
+  // Group videos into pages of 3
   const totalSlides = Math.ceil(videos.length / videosPerPage);
+  const groupedVideos = Array.from({ length: totalSlides }, (_, index) =>
+    videos.slice(index * videosPerPage, index * videosPerPage + videosPerPage)
+  );
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
@@ -50,23 +45,23 @@ export default function VideoCarousel() {
   return (
     <div className="relative w-full max-w-7xl mx-auto overflow-hidden p-6">
       <motion.div
-        className="flex gap-6"
+        className="flex"
         initial={{ x: "0%" }}
         animate={{ x: `-${currentIndex * 100}%` }}
         transition={{ type: "spring", stiffness: 100 }}
-        style={{ width: `${totalSlides * 100}%` }} // Ensure total width
+        style={{ width: `${totalSlides * 100}%` }} // Ensure full width for smooth slides
       >
-        {videos.map((video, index) => (
-          <div
-            key={video.id}
-            className="w-1/3 flex-shrink-0" // Each slide takes 1/3 of the container width
-          >
-            <iframe
-              className="w-full h-64 md:h-80 lg:h-96 rounded-xl shadow-xl transition-transform transform hover:scale-105 dark:shadow-gray-700"
-              src={video.url}
-              title="YouTube Video"
-              allowFullScreen
-            />
+        {groupedVideos.map((group, index) => (
+          <div key={index} className="w-full flex justify-center gap-6 flex-shrink-0">
+            {group.map((video) => (
+              <iframe
+                key={video.id}
+                className="w-1/3 h-64 md:h-80 lg:h-96 rounded-xl shadow-xl transition-transform transform hover:scale-105 dark:shadow-gray-700"
+                src={video.url}
+                title="YouTube Video"
+                allowFullScreen
+              />
+            ))}
           </div>
         ))}
       </motion.div>
