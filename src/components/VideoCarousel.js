@@ -1,45 +1,39 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 const videos = [
   { id: "video1", url: "https://www.youtube.com/embed/Fmndt8_0qnI" },
   { id: "video2", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID_2" },
   { id: "video3", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID_3" },
+  { id: "video4", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID_4" },
+  { id: "video5", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID_5" },
+  { id: "video6", url: "https://www.youtube.com/embed/YOUR_VIDEO_ID_6" },
 ];
 
 export default function VideoCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlay, setIsAutoPlay] = useState(true);
-
-  useEffect(() => {
-    if (isAutoPlay) {
-      const interval = setInterval(() => {
-        nextSlide();
-      }, 5000); // Auto-slide every 5 seconds
-      return () => clearInterval(interval);
-    }
-  }, [currentIndex, isAutoPlay]);
+  const videosPerPage = 3;
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? videos.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? Math.floor(videos.length / videosPerPage) - 1 : prev - 1));
   };
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev === videos.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === Math.floor(videos.length / videosPerPage) - 1 ? 0 : prev + 1));
   };
 
   return (
-    <div className="relative w-full max-w-3xl mx-auto overflow-hidden p-4">
+    <div className="relative w-full max-w-5xl mx-auto overflow-hidden p-4">
       <motion.div
-        className="flex"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
         initial={{ x: "-100%" }}
         animate={{ x: `-${currentIndex * 100}%` }}
         transition={{ type: "spring", stiffness: 100 }}
       >
-        {videos.map((video) => (
+        {videos.slice(currentIndex * videosPerPage, currentIndex * videosPerPage + videosPerPage).map((video) => (
           <div key={video.id} className="w-full flex-shrink-0">
             <iframe
-              className="w-full h-56 md:h-72 lg:h-96 rounded-lg shadow-lg transition-transform transform hover:scale-105 dark:shadow-gray-700"
+              className="w-full h-56 md:h-64 lg:h-72 rounded-lg shadow-lg transition-transform transform hover:scale-105 dark:shadow-gray-700"
               src={video.url}
               title="YouTube Video"
               allowFullScreen
@@ -61,16 +55,6 @@ export default function VideoCarousel() {
       >
         ▶
       </button>
-
-      {/* AutoPlay Toggle */}
-      <div className="flex justify-center mt-4">
-        <button
-          onClick={() => setIsAutoPlay(!isAutoPlay)}
-          className="px-4 py-2 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-700 transition dark:bg-blue-400 dark:hover:bg-blue-500"
-        >
-          {isAutoPlay ? "Pause Autoplay" : "Start Autoplay"}
-        </button>
-      </div>
     </div>
   );
 }
