@@ -9,8 +9,8 @@ import { FloatingWhatsApp } from 'react-floating-whatsapp'
 const achievements = [
   { title: "Global Reach", icon: <RiStockFill />, count: "33+", suffix: "Years Of Expertise…" },
   { title: "Happy Clients", icon: <FaUserTie />, count: "25+", suffix: "Years Of Experience In Serving HNI Clients" },
-  { title: "Awards", icon: <FaTrophy />, count: "10k+", suffix: "Traders Life Transformed" },
-  { title: "Team Size", icon: <FaUsers />, count: "18+", suffix: "Experience in Providing Advisory Services To Mutual Fund Advisors" },
+  { title: " ", icon: <FaTrophy />, count: "25k+", suffix: "Traders Life Transformed" },
+  { title: " ", icon: <FaUsers />, count: "18+", suffix: "Experience in Providing Advisory Services To Mutual Fund Advisors" },
 ];
 
 
