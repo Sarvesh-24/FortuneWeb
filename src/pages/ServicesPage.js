@@ -226,12 +226,15 @@ const ServicesPage = () => {
     </div>
 
 {/* Dynamic Video Carousel Section */}
-
-<h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-6 text-center">
+<div className="relative w-full mt-16">
+  {/* Title for the Video Carousel */}
+  <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-6 text-center">
     HOW TO TRADE FORTUNE SIGNALS
   </h2>
 
-<VideoCarousel />
+  < VideoCarousel />
+</div>
+
 
 
 {/* Ready to Work With Us Section */}
