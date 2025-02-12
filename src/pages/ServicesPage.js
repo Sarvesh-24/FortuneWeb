@@ -3,8 +3,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import React from 'react';
-
-
 import VideoCarousel from '../components/VideoCarousel';
 
 const services = [
@@ -229,9 +227,11 @@ const ServicesPage = () => {
 
 {/* Dynamic Video Carousel Section */}
 
+<h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-6 text-center">
+    HOW TO TRADE FORTUNE SIGNALS
+  </h2>
 
-<VideoCarousel/>
-
+<VideoCarousel />
 
 
 {/* Ready to Work With Us Section */}
