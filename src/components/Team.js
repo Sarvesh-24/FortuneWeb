@@ -46,7 +46,7 @@ const Team = () => {
       name: "Sarvesh Walke",
       position: "Software Developer",
       image: '/assets/profile/profile4.webp',
-      bio: " ",
+      bio: "Sarvesh Walke is a highly skilled Software Developer with a B.Tech from K J Somaiya Institute of Technology, known for exceptional problem-solving abilities and a strong passion for building efficient, scalable solutions. With expertise in full-stack development and automation, Sarvesh excels at optimizing system performance and leveraging cutting-edge technologies to create robust applications. A quick learner with a keen eye for detail, always eager to tackle complex challenges and drive innovation.",
       social: {
         twitter: "https://twitter.com",
         linkedin: "https://linkedin.com",
