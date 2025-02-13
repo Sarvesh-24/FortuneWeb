@@ -38,7 +38,7 @@ const Program = () => {
         data-aos-delay="200"
       >
         <h3 className="text-2xl font-semibold mb-4 dark:text-gray-200">
-          Discover The Formula For Stock Market Success With Our Secret Techniques
+          Determine Your Formula For Stock Market Success With Our Secret Techniques
         </h3>
         <ul className="list-none px-0 space-y-4">
           <li className="flex items-center justify-start text-lg dark:text-gray-300">
