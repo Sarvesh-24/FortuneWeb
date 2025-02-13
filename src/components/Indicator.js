@@ -46,7 +46,8 @@ const Indicator = () => {
         data-aos-delay="200"
       >
         <h3 className="text-2xl font-semibold mb-4 dark:text-gray-200">
-          Maximize Your Trading Potential With Fortune Signals
+          Maximize Your Trading Potential With Time Trading Technique
+
         </h3>
         <ul className="space-y-6">
           {/* Progress Bars */}
