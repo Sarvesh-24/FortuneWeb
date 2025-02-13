@@ -4,6 +4,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import React from 'react';
 import VideoCarousel from '../components/VideoCarousel';
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
 
 const services = [
   {
@@ -34,6 +35,20 @@ const services = [
 ];
 
 const ServicesPage = () => {
+
+  const handleChatSubmit = (event, message) => {
+    console.log("Message submitted:", message);
+  };
+
+  const handleChatClose = () => {
+    console.log("Chat box closed.");
+  };
+
+  const handleNotification = () => {
+    console.log("Notification triggered.");
+  };
+
+  
   return (
     <div className="pt-10">
     <motion.div
@@ -252,6 +267,30 @@ const ServicesPage = () => {
 
 
       </div>
+
+      <FloatingWhatsApp
+                          phoneNumber="+91 9702625115"
+                          accountName="FORTUNE ADVISORZ"
+                          onSubmit={handleChatSubmit}
+                          onClose={handleChatClose}
+                          onNotification={handleNotification}
+                          avatar="/assets/logo/Profile.webp"
+                          statusMessage="Typically replies within 1 hour"
+                          chatMessage={`How can we help?`}
+                          placeholder="Type your message here..."
+                          messageDelay={2}
+                          darkMode={false}
+                          allowClickAway={true}
+                          allowEsc={true}
+                          className="fixed bottom-8 right-8 z-50" // Ensure proper positioning
+                          chatboxHeight={300} // Adjust height if needed
+                          notification={true}
+                          notificationDelay={60}
+                          notificationSound={true}
+                          notificationLoop={3}
+                          notificationStyle={{ backgroundColor: '#007bff', color: 'white' }}
+                          chatboxStyle={{ borderRadius: '10px' }}
+                        />
     </div>
   );
 };
