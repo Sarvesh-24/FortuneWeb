@@ -16,52 +16,53 @@ const Contact = () => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
-      [name]: value, // Update the state based on the name of the input field
+      [name]: value,
     }));
   };
 
- const handleFormSubmit = async (e) => {
-  e.preventDefault(); // Prevent default form submission
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
 
-  // Google Form submission URL (formResponse endpoint)
-  const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSd5-Ci8MFEyRAri9FOwNpUhDywT0lwWbBWuDk1f1rWxMxMMAQ/formResponse";
+    // Google Form URL (Use your own Google Form response URL)
+    const googleFormURL =
+      "https://docs.google.com/forms/d/e/1FAIpQLSd5-Ci8MFEyRAri9FOwNpUhDywT0lwWbBWuDk1f1rWxMxMMAQ/formResponse";
 
-  // Construct the form data to submit
-  const formDataToSubmit = new URLSearchParams();
-  formDataToSubmit.append("entry.1094118904", formData.name); // Name
-  formDataToSubmit.append("entry.451516050", formData.email); // Email
-  formDataToSubmit.append("entry.1257855407", formData.phone); // Phone
-  formDataToSubmit.append("entry.27431264", formData.subject); // Subject
-  formDataToSubmit.append("entry.1162590133", formData.message); // Message
+    // Create a hidden HTML form and submit it
+    const form = document.createElement("form");
+    form.action = googleFormURL;
+    form.method = "POST";
+    form.target = "_blank"; // Opens in new tab (Optional)
 
-  try {
-    // Submit form data using a POST request
-    const response = await fetch(googleFormURL, {
-      method: "POST",
-      body: formDataToSubmit,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
+    // Append form fields (Use correct Google Form entry IDs)
+    const fields = {
+      "entry.1094118904": formData.name,
+      "entry.451516050": formData.email,
+      "entry.1257855407": formData.phone,
+      "entry.27431264": formData.subject,
+      "entry.1162590133": formData.message,
+    };
+
+    Object.entries(fields).forEach(([name, value]) => {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = name;
+      input.value = value;
+      form.appendChild(input);
     });
 
-    // Check if the response was successful
-    if (response.ok) {
-      toast.success("Your message has been sent successfully!");
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-        phone: "",
-      });
-    } else {
-      throw new Error("Failed to submit form. Please try again.");
-    }
-  } catch (error) {
-    console.error("Error submitting form:", error);
-    toast.error("An error occurred. Please try again later.");
-  }
-};
+    document.body.appendChild(form);
+    form.submit();
+    document.body.removeChild(form);
+
+    toast.success("Your message has been sent successfully!");
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+      phone: "",
+    });
+  };
 
   return (
     <div
