@@ -120,7 +120,7 @@ const Services = () => {
                   No Events Available
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mt-2">
-                  Currently, there are no live events. Stay tuned! We'll update this section when new events are available.
+                  Stay tuned for upcoming events!
                 </p>
                 <button className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition" onClick={() => setShowModal(false)}>
                   Close

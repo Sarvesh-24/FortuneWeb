@@ -62,9 +62,9 @@ export default function AccessForm() {
             whileTap={{ scale: 0.95 }}
             type='submit' 
             className='w-full bg-blue-600 text-white font-medium p-4 rounded-lg shadow-md'>
-            Create Account
+            Submit
           </motion.button>
-          <p className='mt-6 text-center'>Already have an account? <a href='/' className='text-blue-600 font-medium'>Log in here</a></p>
+          
         </form>
       </motion.div>
     </div>
