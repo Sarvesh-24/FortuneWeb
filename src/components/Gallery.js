@@ -38,7 +38,7 @@ const Gallery = () => {
     { imgSrc: "/assets/mumbai/Mumbai2.webp", category: "Mumbai", title: "Mumbai Event", filters: "mumbai" },
     { imgSrc: "/assets/chennai/chennai2.webp", category: "Chennai", title: "Chennai Event", filters: "chennai" },
     { imgSrc: "/assets/bangalore/banglore3.webp", category: "Bangalore", title: "Bangalore Event", filters: "bangalore" },
-    { imgSrc: "/assets/chennai/chennai3.webp", category: "Chennai", title: "Chennai Event", filters: "chennai" },
+    { imgSrc: "/assets/mumbai/Mumbai7.webp", category: "Mumbai", title: "Mumbai Event", filters: "mumbai" },
     { imgSrc: "/assets/mumbai/Mumbai3.webp", category: "Mumbai", title: "Mumbai Event", filters: "mumbai" },
     { imgSrc: "/assets/bangalore/banglore4.webp", category: "Bangalore", title: "Bangalore Event", filters: "bangalore" },
     { imgSrc: "/assets/chennai/chennai4.webp", category: "Chennai", title: "Chennai Event", filters: "chennai" },
