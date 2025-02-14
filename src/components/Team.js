@@ -54,6 +54,19 @@ const Team = () => {
       }
     },
 
+    {
+      id: 5,
+      name: "Shubhada Khadye",
+      position: "Accounts Executive",
+      image: '/assets/profile/profile5 (2).jpeg',
+      bio: "Shubhada is a creative and business-savvy accounting professional with 5 years of experience, bringing a unique blend of financial expertise and innovative thinking. Proven ability to identify client needs, develop customized solutions, and effectively manage complexity arising in finance resulting in significant revenue growth and customer satisfaction. Possesses a strong understanding of accounting principles and practices, combined with a passion for leveraging financial insights to achieve business objectives.",
+      social: {
+        twitter: "https://twitter.com",
+        linkedin: "https://linkedin.com",
+        github: "https://github.com"
+      }
+    },
+
   ];
 
   const Modal = ({ member, onClose }) => {
