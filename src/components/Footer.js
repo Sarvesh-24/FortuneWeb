@@ -264,9 +264,14 @@ const Footer = () => {
 
     <div className="mt-12 border-t border-gray-700 pt-6">
   <div className="text-center sm:flex sm:justify-between">
-    <p className="text-sm text-gray-400 dark:text-gray-500">
-      &copy; 2025 Fortune Advisorz. All rights reserved. | Managed and Designed by <span className="text-teal-500 font-semibold">FORTUNE NOVEM</span>
-    </p>
+    <div>
+      <p className="text-sm text-gray-400 dark:text-gray-500">
+        &copy; 2025 Fortune Advisorz. All rights reserved.
+      </p>
+      <p className="text-sm text-gray-400 dark:text-gray-500">
+        Managed and Designed by <span className="text-teal-500 font-semibold">FORTUNE NOVEM</span>
+      </p>
+    </div>
     <p className="mt-4 sm:mt-0 text-sm text-gray-400 dark:text-gray-500">
       <a href="/termsAndConditions" className="hover:text-teal-500">Terms & Conditions</a> · 
       <a href="/policies" className="hover:text-teal-500 ml-2">Privacy Policy</a>
