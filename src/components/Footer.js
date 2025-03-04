@@ -269,7 +269,7 @@ const Footer = () => {
         &copy; 2025 Fortune Advisorz. All rights reserved.
       </p>
       <p className="mt-2 text-sm text-gray-400 dark:text-gray-500">
-        Managed and Designed by <span className="text-blue-500 font-semibold">FORTUNE NOVEM</span>
+        Designed & Managed by <span className="text-blue-500 font-semibold">FORTUNE NOVEM</span>
       </p>
     </div>
     <p className="mt-4 sm:mt-0 text-sm text-gray-400 dark:text-gray-500">
