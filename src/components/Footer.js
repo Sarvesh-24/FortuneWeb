@@ -268,8 +268,8 @@ const Footer = () => {
       <p className="text-sm text-gray-400 dark:text-gray-500">
         &copy; 2025 Fortune Advisorz. All rights reserved.
       </p>
-      <p className="text-sm text-gray-400 dark:text-gray-500">
-        Managed and Designed by <span className="text-teal-500 font-semibold">FORTUNE NOVEM</span>
+      <p className="mt-2 text-sm text-gray-400 dark:text-gray-500">
+        Managed and Designed by <span className="text-blue-600 font-semibold">FORTUNE NOVEM</span>
       </p>
     </div>
     <p className="mt-4 sm:mt-0 text-sm text-gray-400 dark:text-gray-500">
@@ -278,7 +278,6 @@ const Footer = () => {
     </p>
   </div>
 </div>
-
 
 
   </div>
