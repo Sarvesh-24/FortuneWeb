@@ -127,6 +127,10 @@ const Team = () => {
       id="team"
       className="w-full px-4 py-8 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-300 font-roboto transition-colors duration-300"
     >
+          <h2 className="text-3xl md:text-4xl font-bold text-[#384f4b] dark:text-white text-center mb-4 font-inter">
+              Our Team
+          </h2>
+    <div className="w-24 h-1 bg-blue-600 mx-auto mb-6 dark:bg-blue-400"></div>
       <div className="min-h-screen  dark:from-gray-900 dark:to-gray-800 flex flex-wrap justify-center items-center p-10">
         {teamMembers.map((member) => (
           <motion.div
