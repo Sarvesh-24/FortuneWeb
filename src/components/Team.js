@@ -135,7 +135,7 @@ const Team = () => {
     </h2>
     <div className="w-24 h-1 bg-blue-600 mx-auto mb-6 dark:bg-blue-400"></div>
 
-    <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 flex flex-wrap justify-center items-center p-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {teamMembers.map((member) => (
         <motion.div
           key={member.id}
@@ -149,7 +149,7 @@ const Team = () => {
           {/* Name & Designation Patch */}
           <div className="absolute bottom-0 w-full bg-gradient-to-t from-black via-black/80 to-transparent text-white text-center p-4">
             <h3 className="font-semibold text-lg">{member.name}</h3>
-            <p className="text-sm text-gray-300">{member.designation}</p>
+            <p className="text-sm text-gray-300">{member.position}</p>
           </div>
         </motion.div>
       ))}
@@ -182,7 +182,7 @@ const Team = () => {
               <h2 className="text-2xl font-semibold text-center text-gray-800 dark:text-gray-200">{selectedMember.name}</h2>
               <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-inner">
                 <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300">Summary</h3>
-                <p className="text-gray-600 dark:text-gray-400">{selectedMember.summary}</p>
+                <p className="text-gray-600 dark:text-gray-400">{selectedMember.bio}</p>
               </div>
             </motion.div>
           </div>
@@ -198,3 +198,4 @@ const Team = () => {
 };
 
 export default Team;
+
