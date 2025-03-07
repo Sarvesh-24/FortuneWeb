@@ -124,15 +124,16 @@ const Team = () => {
 
   return (
     <section
-  id="team"
-  className="w-full px-4 py-8 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-300 font-roboto transition-colors duration-300"
->
-<div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 flex flex-wrap justify-center items-center p-10">
+    id="team"
+    className="w-full px-4 py-8 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-300 font-roboto transition-colors duration-300"
+  >
+    <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 flex flex-wrap justify-center items-center p-10">
       {teamMembers.map((member) => (
         <motion.div
           key={member.id}
           className="relative w-64 h-80 rounded-2xl overflow-hidden shadow-lg m-4 cursor-pointer transition-transform duration-300 hover:scale-105"
           onClick={() => setSelectedMember(member)}
+          whileTap={{ scale: 0.95 }}
           id={`team-member-${member.id}`} // Unique ID for each card
         >
           {/* Full Photo */}
@@ -150,7 +151,7 @@ const Team = () => {
       <AnimatePresence>
         {selectedMember && (
           <div
-            className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-lg flex justify-center items-center p-4"
+            className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-lg flex justify-center items-center p-4 z-50"
             onClick={() => setSelectedMember(null)}
           >
             <motion.div
@@ -183,7 +184,7 @@ const Team = () => {
         )}
       </AnimatePresence>
     </div>
-</section>
+  </section>
 
 
 
