@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IoClose } from "react-icons/io5";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Team = () => {
   const [selectedMember, setSelectedMember] = useState(null);
