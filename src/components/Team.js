@@ -68,7 +68,31 @@ const Team = () => {
         github: "https://github.com"
       }
     },
+    {
+      id: 6,
+      name: "Manjula",
+      position: "Education Counsellor",
+      image: '/assets/profile/Profile6.jpg',
+      bio: "",
+      social: {
+        twitter: "https://twitter.com",
+        linkedin: "https://linkedin.com",
+        github: "https://github.com"
+      }
+    },
 
+    {
+      id: 7,
+      name: "Neelavath",
+      position: "Education Counsellor",
+      image: '/assets/profile/Profile7.jpeg',
+      bio: " ",
+      social: {
+        twitter: "https://twitter.com",
+        linkedin: "https://linkedin.com",
+        github: "https://github.com"
+      }
+    },
   ];
 
   const Modal = ({ member, onClose }) => {
