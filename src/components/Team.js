@@ -93,6 +93,19 @@ const Team = () => {
         github: "https://github.com"
       }
     },
+
+    {
+      id: 8,
+      name: "",
+      position: "",
+      image: '',
+      bio: " ",
+      social: {
+        twitter: "https://twitter.com",
+        linkedin: "https://linkedin.com",
+        github: "https://github.com"
+      }
+    },
   ];
 
   const Modal = ({ member, onClose }) => {
