@@ -185,7 +185,7 @@ const Team = () => {
 
           {/* Name & Designation Patch */}
           <div className="absolute bottom-0 w-full bg-gradient-to-t from-black via-black/80 to-transparent text-white text-center p-4">
-            <h3 className="font-semibold text-lg">{member.name}</h3>
+            <h3 className="font-semibold text-lg text-gray-300">{member.name}</h3>
             <p className="text-sm text-gray-300">{member.position}</p>
           </div>
         </motion.div>
