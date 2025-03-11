@@ -11,7 +11,7 @@ const Team = () => {
       id: 1,
       name: "R.S. PARTHASARATHY",
       position: "Partner | Founder | Time Trader",
-      image: '/assets/profile/profile1.jpg',
+      image: '/assets/profile/profile01.webp',
       bio: " R.S. Parthasarathy, a Master in Business Administration with experience at prestigious institutions like Morgan Stanley and ICICI Securities, is a distinguished figure in the financial world. His unique market forecasts, which integrate Time, Price, and Vedic Mathematics, set him apart in the realm of financial analysis. In today’s tech-driven financial landscape, He specializes in developing advanced mathematical models and algorithms tailored for diverse asset classes. Renowned as an expert in Time Analysis, he is a highly sought-after trainer, having conducted numerous webinars for traders and investors. Additionally, he provides invaluable guidance to Mutual Fund Advisors, leveraging market timing techniques to optimize wealth management strategies.",
       social: {
         twitter: "https://twitter.com",
@@ -19,6 +19,7 @@ const Team = () => {
         github: "https://github.com"
       }
     },
+
     {
       id: 2,
       name: "BHAGESH GIRI",
@@ -31,6 +32,7 @@ const Team = () => {
         github: "https://github.com"
       }
     },
+
     {
       id: 3,
       name: "Puja Khot",
@@ -43,6 +45,7 @@ const Team = () => {
         github: "https://github.com"
       }
     },
+
     {
       id: 4,
       name: "Sarvesh Walke",
@@ -68,6 +71,7 @@ const Team = () => {
         github: "https://github.com"
       }
     },
+    
     {
       id: 6,
       name: "Manjula",
