@@ -76,7 +76,7 @@ const Team = () => {
       id: 6,
       name: "Manjula",
       position: "Education Counsellor",
-      image: '/assets/profile/Profile6.jpg',
+      image: '/assets/profile/Profile06.jpeg',
       bio: "",
       social: {
         twitter: "https://twitter.com",
