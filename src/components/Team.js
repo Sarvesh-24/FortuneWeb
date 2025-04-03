@@ -37,7 +37,7 @@ const Team = () => {
       id: 3,
       name: "Puja Khot",
       position: "Assistant Vice President",
-      image: '/assets/profile/profile5.jpeg',
+      image: '/assets/profile/profile05.webp',
       bio: "Puja Khot is an accomplished finance professional with over 11 years of experience in financial management and analysis. She holds a Post Graduate Diploma in Financial Management along with a Certification in Financial Management. Puja excels in creating precise reports and conducting in-depth analyses of organizational performance to support data-driven decision-making. With expertise in driving team-oriented process improvements, she has a proven track record of enhancing operational effectiveness, profitability, and consumer retention while ensuring reliability and compliance. She is skilled in analyzing financial data, preparing detailed reports, and aligning financial strategies with business goals to achieve budgetary and strategic objectives efficiently.",
       social: {
         twitter: "https://twitter.com",
