@@ -77,7 +77,7 @@ const Team = () => {
       name: "Manjula",
       position: "Education Counsellor",
       image: '/assets/profile/Profile06.jpeg',
-      bio: "",
+      bio: "Manjula is an accomplished sales and marketing professional with over a decade of experience in the field. She has developed a strong expertise in business and organizational development. Throughout her career, Manjula has consistently delivered outstanding results in sales and marketing by fostering and maintaining robust relationships with clients. Her ability to connect with clients, understand their needs, and tailor effective sales and marketing strategies has been instrumental in driving success and growth in her roles.",
       social: {
         twitter: "https://twitter.com",
         linkedin: "https://linkedin.com",
@@ -90,7 +90,7 @@ const Team = () => {
       name: "Neelavath",
       position: "Education Counsellor",
       image: '/assets/profile/Profile7.jpeg',
-      bio: " ",
+      bio: "Neelavathi is an accomplished sales professional with over 12 years of experience in the financial sector, specializing in stock broking. Her career began at Muthoot Finance, where she spent five years refining her skills in client relations and business development. Subsequently, she served as Assistant Manager of Sales at Zerodha Broking Ltd for seven years, further expanding her expertise in sales strategies and consistently delivering exceptional results. Throughout her tenure, Neelavathi has demonstrated a strong ability to build lasting client relationships and drive business growth through innovative sales approaches.",
       social: {
         twitter: "https://twitter.com",
         linkedin: "https://linkedin.com",
