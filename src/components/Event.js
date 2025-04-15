@@ -84,11 +84,11 @@ const Event = () => {
                   <div>
                     <h3 className="font-semibold text-[#384f4b] dark:text-white">Location</h3>
                     <p className="text-gray-600 dark:text-gray-300">
-                      Novotel Mumbai International Airport <br />
-                      CTS NO 1359, Next to Airport Metro Station Entrance No 3 <br />
-                      Marol, Andheri Kurla Road <br />
-                      Andheri East <br />
-                      Mumbai 400059
+                      THE SAVERA HOTEL <br />
+                      146, Dr Radha Krishnan Salai, Mylapore,<br />
+                      Chennai, <br />
+                      Tamil Nadu <br />
+                      600004
                     </p>
                   </div>
                 </div>
