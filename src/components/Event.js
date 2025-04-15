@@ -73,7 +73,7 @@ const Event = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#384f4b] dark:text-white">Date & Duration</h3>
-                    <p className="text-gray-600 dark:text-gray-300">December 22-23, 2024 | 2 Full Days</p>
+                    <p className="text-gray-600 dark:text-gray-300">MAY 24-25, 2025 | 2 Full Days</p>
                   </div>
                 </div>
 
@@ -93,7 +93,7 @@ const Event = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4">
+                {/* <div className="flex items-center space-x-4">
                   <div className="bg-blue-100 p-3 rounded-full dark:bg-blue-400">
                     <FaUsers className="text-blue-600 text-xl dark:text-white" />
                   </div>
@@ -101,11 +101,11 @@ const Event = () => {
                     <h3 className="font-semibold text-[#384f4b] dark:text-white">Participants</h3>
                     <p className="text-gray-600 dark:text-gray-300">2000+ Traders & Investors</p>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               <motion.a
-                href="https://example.com"
+                href="https://forms.gle/eN5sAKkf4kA3tR6eA"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="mt-8 inline-block px-8 py-3 bg-blue-600 text-white rounded-md font-semibold shadow-lg hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
