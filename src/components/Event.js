@@ -86,9 +86,7 @@ const Event = () => {
                     <p className="text-gray-600 dark:text-gray-300">
                       THE SAVERA HOTEL <br />
                       146, Dr Radha Krishnan Salai, Mylapore,<br />
-                      Chennai, <br />
-                      Tamil Nadu <br />
-                      600004
+                      Chennai, Tamil Nadu, 600004 <br />
                     </p>
                   </div>
                 </div>
