@@ -65,7 +65,7 @@ import Team from "./components/Team";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact.js";
-
+import Event from "./components/Event.js";
 
 
 // Individual Pages
@@ -117,6 +117,7 @@ const App = () => {
               <Program />
               <Services />
               <Book />
+              <Event />
               {/* <Feedback /> */}
               <Gallery />
               <Team />
