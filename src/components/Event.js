@@ -58,7 +58,7 @@ const Event = () => {
                 className="rounded-lg shadow-2xl w-full h-[400px] object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-blue-600 opacity-10 rounded-lg"></div>
+              <div className="absolute inset-0 bg-white opacity-10 rounded-lg"></div>
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-6">
