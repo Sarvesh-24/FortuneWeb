@@ -93,7 +93,7 @@ const Services = () => {
             <p className="text-gray-600 mb-4 dark:text-gray-400">
               Attend our live events and seminars for advanced trading techniques and market insights.
             </p>
-            <a href={hasEvents ? "/events" : "#"} className="text-red-500 hover:underline font-medium dark:text-red-400 dark:hover:text-red-300" onClick={handleEventClick}>
+            <a href={hasEvents ? "/event" : "#"} className="text-red-500 hover:underline font-medium dark:text-red-400 dark:hover:text-red-300" onClick={handleEventClick}>
               View Events →
             </a>
           </div>
