@@ -165,6 +165,7 @@ const App = () => {
         <Route path="/yt" element={<VideoCarousel />} />
         <Route path="/mutualfunds" element={<MutualFundPage/>}/>
         <Route path="/accessform" element={<AccessForm/>}/>
+        <Route path="/event" element={<Event/>}/>
         
       </Routes>
       <Footer />
