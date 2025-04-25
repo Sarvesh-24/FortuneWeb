@@ -45,7 +45,7 @@ const Event = () => {
         <motion.div ref={ref} initial="hidden" animate={controls} variants={containerVariants} className="max-w-7xl mx-auto">
           <motion.div variants={itemVariants} className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-[#384f4b] dark:text-white mb-4">
-              The Mindful Trader
+              Mind Over Markets
             </h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto mb-8 dark:bg-blue-400 sm:bg-blue-400"></div>
           </motion.div>
