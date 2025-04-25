@@ -117,12 +117,13 @@ const Event = () => {
           <motion.div variants={itemVariants} className="mt-16 grid md:grid-cols-3 gap-8">
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 dark:bg-gray-800 dark:text-white">
               <h3 className="text-xl font-bold mb-3">Day 1</h3>
-              <h2 className="text-gray-600 font-bold mb-2 dark:text-gray-300">
+              {/* <h2 className="text-gray-600 font-bold mb-2 dark:text-gray-300">
                 Topic 1: Mastering Market Moves with Advanced Techniques
               </h2>
               <p className="text-gray-700 dark:text-gray-300">
                 In this session, you’ll learn:
-              </p>
+              </p> */}
+              
               <ul className="list-disc pl-6 text-lg text-gray-700 dark:text-gray-300 space-y-2 mt-3">
                 <li>
                   <strong>Purity of Breakout:</strong> This section discusses the purity of breakout for index, stocks, and options.
