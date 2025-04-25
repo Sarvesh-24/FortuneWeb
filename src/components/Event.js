@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FaCalendarAlt, FaMapMarkerAlt, FaUsers } from "react-icons/fa";
+import RazorpayButton from "./RazorpayButton";
 
 const Event = () => {
   const controls = useAnimation();
@@ -196,8 +197,7 @@ const Event = () => {
                 
               </ul>
             </div>
-
-            <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_QNFhTmuA90zsIi" async> </script> </form>
+            <RazorpayButton />
           </motion.div>
         </motion.div>
       </div>
