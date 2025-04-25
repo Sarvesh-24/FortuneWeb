@@ -197,7 +197,6 @@ const Event = () => {
                 
               </ul>
             </div>
-            <RazorpayButton />
           </motion.div>
         </motion.div>
       </div>
