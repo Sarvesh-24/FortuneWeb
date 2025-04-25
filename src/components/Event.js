@@ -184,7 +184,7 @@ const Event = () => {
                   <strong>Find precise targets in options using secret cycle analysis.</strong>
                 </li>
                 <li>
-                  <strong>Secret strategy to make 20% return in the beginning of the month in the first 3 trading session
+                  <strong>Secret strategy to make 20% return in the beginning of the month in the first 3 trading session.
                   </strong> 
                 </li>
 
@@ -196,6 +196,8 @@ const Event = () => {
                 
               </ul>
             </div>
+
+            <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_QNFhTmuA90zsIi" async> </script> </form>
           </motion.div>
         </motion.div>
       </div>
