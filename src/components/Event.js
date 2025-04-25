@@ -115,19 +115,30 @@ const Event = () => {
           </div>
 
           <motion.div variants={itemVariants} className="mt-16 grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 dark:bg-gray-800 dark:text-white">
+          <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 dark:bg-gray-800 dark:text-white">
               <h3 className="text-xl font-bold mb-3">Day 1</h3>
-              <h2 className="text-gray-600 font-bold mb-2 dark:text-gray-300">Topic 1: Option Trading Simplified Using Gann Technique</h2>
+              <h2 className="text-gray-600 font-bold mb-2 dark:text-gray-300">
+                Topic 1: Mastering Market Moves with Advanced Techniques
+              </h2>
               <p className="text-gray-700 dark:text-gray-300">
-                Discover how to incorporate the powerful Gann Technique into your options trading. Learn how to:
+                In this session, you’ll learn:
               </p>
-              <ul className="list-disc pl-5 text-lg text-gray-700 dark:text-gray-300 space-y-2 mt-3">
-                <li>Trade both index and stocks with precision using Gann.</li>
-                <li>Utilize Gann for monthly and weekly options trading to enhance your strategies.</li>
-                <li>Leverage Fortune Signals to capture momentum in option buying and selling.</li>
-                <li>Use a combination of Fortune Signals and Gann to write options successfully.</li>
+              <ul className="list-disc pl-6 text-lg text-gray-700 dark:text-gray-300 space-y-2 mt-3">
+                <li>
+                  <strong>Purity of Breakout:</strong> This section discusses the purity of breakout for index, stocks, and options.
+                </li>
+                <li>
+                  <strong>Range Calculation:</strong> Find the range and targets of stocks or indices before the start of the year, month, or week. This ultimate system empowers trend traders to capture big swing moves with precision.
+                </li>
+                <li>
+                  <strong>How to trade Trend change date:</strong> This section covers to trade trend change date in intraday and positional.
+                </li>
+                <li>
+                  <strong>Secret to trade Gap up and Gap down analysis:</strong> This section reveals the secret to trading gap up and gap down analysis.
+                </li>
               </ul>
             </div>
+
 
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 dark:bg-gray-800 dark:text-white">
               <h3 className="text-xl font-bold mb-3">Day 1</h3>
