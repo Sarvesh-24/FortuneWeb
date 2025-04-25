@@ -137,12 +137,7 @@ const Event = () => {
 
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 dark:bg-gray-800 dark:text-white">
               <h3 className="text-xl font-bold mb-3">Day 1</h3>
-              <h2 className="text-gray-600 font-bold mb-2 dark:text-gray-300">
-              Options Trading: Learn How Numbers can doing wonders in Options Trading For Buyers And Options Writers.(retail traders delight)
-              </h2>
-              {/* <p className="text-gray-700 dark:text-gray-300">
-                In this session, you’ll learn:
-              </p> */}
+              
               <ul className="list-disc pl-6 text-lg text-gray-700 dark:text-gray-300 space-y-2 mt-3">
                 <li>
                   <strong>One number Magic:</strong> This section discusses trading indices and stocks based on yearly, quarterly, monthly, and weekly.
@@ -159,7 +154,9 @@ const Event = () => {
 
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 dark:bg-gray-800 dark:text-white">
               <h3 className="text-xl font-bold mb-3">Day 2</h3>
-
+              <h2 className="text-gray-600 font-bold mb-2 dark:text-gray-300">
+              Options Trading: Learn How Numbers can doing wonders in Options Trading For Buyers And Options Writers.(retail traders delight)
+              </h2>
               <ul className="list-disc pl-6 text-lg text-gray-700 dark:text-gray-300 space-y-2 mt-3">
                 <li>
                   Discover the magic of numbers in option trading, a delight for retail traders.
