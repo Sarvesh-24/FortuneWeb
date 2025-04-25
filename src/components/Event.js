@@ -152,6 +152,18 @@ const Event = () => {
                 <li>Receive a forecast with High and Low Dates for Nifty and Bank Nifty for 2025.</li>
               </ul>
             </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 dark:bg-gray-800 dark:text-white">
+              <h3 className="text-xl font-bold mb-3">Day 2</h3>
+              <h2 className="text-gray-600 font-bold mb-2 dark:text-gray-300">Live Trading Session</h2>
+              <ul className="list-disc pl-5 text-lg text-gray-700 dark:text-gray-300 space-y-2">
+                <li>Watch real-time market analysis using TTS (Time-Price-Space) and Fortune Signals with the Gann Technique.</li>
+                <li>Participate in live trades guided by experts.</li>
+              </ul>
+              <h2 className="font-bold mt-4 dark:text-gray-300">Exclusive Bonus Package:</h2>
+              <ul className="list-disc pl-5 text-lg text-gray-700 dark:text-gray-300 mt-2">
+                <li>Receive a forecast with High and Low Dates for Nifty and Bank Nifty for 2025.</li>
+              </ul>
+            </div>
           </motion.div>
         </motion.div>
       </div>
