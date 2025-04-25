@@ -187,6 +187,12 @@ const Event = () => {
                   <strong>Secret strategy to make 20% return in the beginning of the month in the first 3 trading session
                   </strong> 
                 </li>
+
+                <li>
+                  <strong>
+                  Note: The strategies and techniques taught in this program are applicable across various markets—including Forex, Crypto, and other financial markets.
+                  </strong>
+                </li>
                 
               </ul>
             </div>
