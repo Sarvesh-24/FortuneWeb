@@ -117,13 +117,7 @@ const Event = () => {
           <motion.div variants={itemVariants} className="mt-16 grid md:grid-cols-3 gap-8">
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 dark:bg-gray-800 dark:text-white">
               <h3 className="text-xl font-bold mb-3">Day 1</h3>
-              {/* <h2 className="text-gray-600 font-bold mb-2 dark:text-gray-300">
-                Topic 1: Mastering Market Moves with Advanced Techniques
-              </h2>
-              <p className="text-gray-700 dark:text-gray-300">
-                In this session, you’ll learn:
-              </p> */}
-              
+
               <ul className="list-disc pl-6 text-lg text-gray-700 dark:text-gray-300 space-y-2 mt-3">
                 <li>
                   <strong>Purity of Breakout:</strong> This section discusses the purity of breakout for index, stocks, and options.
@@ -143,37 +137,60 @@ const Event = () => {
 
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 dark:bg-gray-800 dark:text-white">
               <h3 className="text-xl font-bold mb-3">Day 1</h3>
-              <h2 className="text-gray-600 font-bold mb-2 dark:text-gray-300">Topic 2: Purity of Breakout (POB)</h2>
-              <p className="text-gray-700 dark:text-gray-300">Master the Purity of Breakout strategy for identifying powerful market moves:</p>
-              <ul className="list-disc pl-5 text-lg text-gray-700 dark:text-gray-300 space-y-2 mt-3">
-                <li>Apply POB across different timeframes in indices, stocks, cryptos, and commodities.</li>
-                <li>Predict key price targets and learn how to spot market tops and bottoms.</li>
-                <li>Get exclusive insights into Bank Nifty timing and predict its movements accurately.</li>
+              <h2 className="text-gray-600 font-bold mb-2 dark:text-gray-300">
+              Options Trading: Learn How Numbers can doing wonders in Options Trading For Buyers And Options Writers.(retail traders delight)
+              </h2>
+              {/* <p className="text-gray-700 dark:text-gray-300">
+                In this session, you’ll learn:
+              </p> */}
+              <ul className="list-disc pl-6 text-lg text-gray-700 dark:text-gray-300 space-y-2 mt-3">
+                <li>
+                  <strong>One number Magic:</strong> This section discusses trading indices and stocks based on yearly, quarterly, monthly, and weekly.
+                </li>
+                <li>
+                  <strong>Timing Technique:</strong>  Master the secret of market timing using simple cyclic line analysis.
+                </li>
+                <li>
+                Use <strong>"Fortunesignals"</strong> Proprietary Indicator to capture mega moves in intraday and swing trading without any emotions. This section discusses using <strong>"Fortunesignals"</strong>  to trade the trend change date to capture mega moves in indices and stocks.
+
+                </li>
               </ul>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 dark:bg-gray-800 dark:text-white">
               <h3 className="text-xl font-bold mb-3">Day 2</h3>
-              <h2 className="text-gray-600 font-bold mb-2 dark:text-gray-300">Live Trading Session</h2>
-              <ul className="list-disc pl-5 text-lg text-gray-700 dark:text-gray-300 space-y-2">
-                <li>Watch real-time market analysis using TTS (Time-Price-Space) and Fortune Signals with the Gann Technique.</li>
-                <li>Participate in live trades guided by experts.</li>
-              </ul>
-              <h2 className="font-bold mt-4 dark:text-gray-300">Exclusive Bonus Package:</h2>
-              <ul className="list-disc pl-5 text-lg text-gray-700 dark:text-gray-300 mt-2">
-                <li>Receive a forecast with High and Low Dates for Nifty and Bank Nifty for 2025.</li>
+
+              <ul className="list-disc pl-6 text-lg text-gray-700 dark:text-gray-300 space-y-2 mt-3">
+                <li>
+                  Discover the magic of numbers in option trading, a delight for retail traders.
+                </li>
+                <li>
+                  <strong>Understand how numbers play a vital role in trading options monthly, weekly, and daily.</strong>
+                </li>
+                <li>
+                  <strong>Identify hero zero calls or puts using our secret system.</strong> 
+                </li>
+                <li>
+                  Master the art of buying or selling naked options with our secret system.
+                </li>
               </ul>
             </div>
+
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 dark:bg-gray-800 dark:text-white">
               <h3 className="text-xl font-bold mb-3">Day 2</h3>
-              <h2 className="text-gray-600 font-bold mb-2 dark:text-gray-300">Live Trading Session</h2>
-              <ul className="list-disc pl-5 text-lg text-gray-700 dark:text-gray-300 space-y-2">
-                <li>Watch real-time market analysis using TTS (Time-Price-Space) and Fortune Signals with the Gann Technique.</li>
-                <li>Participate in live trades guided by experts.</li>
-              </ul>
-              <h2 className="font-bold mt-4 dark:text-gray-300">Exclusive Bonus Package:</h2>
-              <ul className="list-disc pl-5 text-lg text-gray-700 dark:text-gray-300 mt-2">
-                <li>Receive a forecast with High and Low Dates for Nifty and Bank Nifty for 2025.</li>
+
+              <ul className="list-disc pl-6 text-lg text-gray-700 dark:text-gray-300 space-y-2 mt-3">
+                <li>
+                  <strong> Utilize advanced analysis for option selling and capture big moves in stock options.</strong>
+                </li>
+                <li>
+                  <strong>Find precise targets in options using secret cycle analysis.</strong>
+                </li>
+                <li>
+                  <strong>Secret strategy to make 20% return in the beginning of the month in the first 3 trading session
+                  </strong> 
+                </li>
+                
               </ul>
             </div>
           </motion.div>
