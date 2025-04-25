@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Services = () => {
   const [showModal, setShowModal] = useState(false);
-  const hasEvents = false; // Set to 'true' when there are events
+  const hasEvents = true; // Set to 'true' when there are events
 
   // Close modal when ESC key is pressed
   useEffect(() => {
