@@ -100,8 +100,8 @@ const Team = () => {
 
     {
       id: 8,
-      name: "",
-      position: "",
+      name: "David Raja Nadar.",
+      position: "'/assets/profile/Profile9.jpg",
       image: '',
       bio: " ",
       social: {
