@@ -101,8 +101,8 @@ const Team = () => {
     {
       id: 8,
       name: "David Raja Nadar.",
-      position: "'/assets/profile/Profile9.jpg",
-      image: '',
+      position: "Education Counsellor",
+      image: '/assets/profile/profile9.jpg',
       bio: " ",
       social: {
         twitter: "https://twitter.com",
