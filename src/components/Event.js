@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FaCalendarAlt, FaMapMarkerAlt, FaUsers } from "react-icons/fa";
-import RazorpayButton from "./RazorpayButton";
+
 
 const Event = () => {
   const controls = useAnimation();
