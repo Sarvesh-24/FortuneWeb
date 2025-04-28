@@ -96,7 +96,7 @@ const Header = () => {
         <a href="/" className="flex items-center space-x-2">
           <img
             // Light theme logo
-            src="/assets/logo/Fortune-Advisorz-logo-web (1).webp"
+            src="/assets/logo/Fortune-Advisorz-logo_TM.webp"
             alt="Fortune Advisorz Logo"
             width={80}
             height={80}
