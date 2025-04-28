@@ -145,7 +145,7 @@ const Footer = () => {
       <div>
           {/* Light Mode Logo */}
           <img 
-            src="/assets/logo/Footer Logo.png"
+            src="/assets/logo/Footer_Fortune-Advisorz-logo_TM.jpg"
             alt="Fortune Advisorz Logo"
             width={80}
             height={80}
