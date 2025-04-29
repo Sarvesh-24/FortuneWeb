@@ -75,6 +75,7 @@ const Event = () => {
                   <div>
                     <h3 className="font-semibold text-[#384f4b] dark:text-white">Date & Duration</h3>
                     <p className="text-gray-600 dark:text-gray-300">MAY 24-25, 2025 | 2 Full Days</p>
+                    <p className="text-gray-600 dark:text-gray-300">(Inclusive of breakfast, lunch, and high tea)</p>
                   </div>
                 </div>
 
