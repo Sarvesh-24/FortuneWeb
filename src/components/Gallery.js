@@ -45,6 +45,7 @@ const Gallery = () => {
     { imgSrc: "/assets/mumbai/Mumbai4.webp", category: "Mumbai", title: "Mumbai Event", filters: "mumbai" },
     { imgSrc: "/assets/mumbai/Mumbai5.webp", category: "Mumbai", title: "Mumbai Event", filters: "mumbai" },
     { imgSrc: "/assets/mumbai/Mumbai6.webp", category: "Mumbai", title: "Mumbai Event", filters: "mumbai" },
+    { imgSrc: "/assets/chennai/chennai6.webp", category: "Chennai", title: "Chennai Event", filters: "chennai" },
   ];
 
   return (
