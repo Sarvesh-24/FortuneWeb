@@ -90,7 +90,8 @@ const Header = () => {
   const navItems = ["Home", "About", "Services", "Gallery", "Team", "Contact"];
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-white dark:bg-gray-900 shadow-md dark:text-white">
+    // <header className="fixed top-0 w-full z-50 bg-white dark:bg-gray-900 shadow-md dark:text-white">
+    <header className="fixed top-[40px] w-full z-40 bg-white dark:bg-gray-900 shadow-md dark:text-white">
       <div className="mx-auto max-w-screen-xl px-4 py-3 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center space-x-2">
