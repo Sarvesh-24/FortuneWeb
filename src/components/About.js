@@ -31,7 +31,7 @@ const About = () => {
         data-aos-delay="100"
       >
         <img
-          src="/assets/about/About.webp" // Ensure the image path is correct
+          src="" // Ensure the image path is correct
           alt="About Fortune Advisorz"
           className="rounded-tl-[40px] rounded-br-[40px] shadow-lg"
           width={600}
