@@ -8,9 +8,9 @@ const FloatingTicker = () => {
     script.innerHTML = JSON.stringify({
       symbols: [
                 { proName: "BSE:SENSEX", title: "SENSEX" },
-                { proName: "BSE:NIFTY", title: "NIFTY" },
-                { proName: "BSE:BANKNIFTY", title: "BANKNIFTY" },
-                { proName: "BSE:CNXFINANCE", title: "CNXFINANCE" },
+                // { proName: "BSE:NIFTY", title: "NIFTY" },
+                // { proName: "BSE:BANKNIFTY", title: "BANKNIFTY" },
+                // { proName: "BSE:CNXFINANCE", title: "CNXFINANCE" },
                 { proName: "BSE:ABB", title: "ABB" },
                 { proName: "BSE:COFORGE", title: "COFORGE" },
                 { proName: "BSE:DIVISLAB", title: "DIVISLAB" },
