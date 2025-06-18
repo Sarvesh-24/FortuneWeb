@@ -3,30 +3,39 @@ import React, { useEffect } from "react";
 const FloatingTicker = () => {
   useEffect(() => {
     const script = document.createElement("script");
-    script.src =
+    script.src = "https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js";
     script.async = true;
     script.innerHTML = JSON.stringify({
       symbols: [
         {
-          proName: "BSE:SENSEX",
-          title: "Sensex",
+          proName: "FOREXCOM:SPXUSD",
+          title: "S&P 500 Index"
         },
         {
-          proName: "NSE:NIFTY",
-          title: "Nifty 50",
+          proName: "FOREXCOM:NSXUSD",
+          title: "US 100 Cash CFD"
         },
         {
-          proName: "NSE:BANKNIFTY",
-          title: "Bank Nifty",
+          proName: "FX_IDC:EURUSD",
+          title: "EUR to USD"
         },
+        {
+          proName: "BITSTAMP:BTCUSD",
+          title: "Bitcoin"
+        },
+        {
+          proName: "BITSTAMP:ETHUSD",
+          title: "Ethereum"
+        }
       ],
-      colorTheme: "light", // or "dark"
-      isTransparent: true,
+      showSymbolLogo: true,
+      isTransparent: false,
       displayMode: "adaptive",
-      locale: "en",
+      colorTheme: "dark",
+      locale: "en"
     });
 
-    const container = document.getElementById("tv-ticker-container");
+    const container = document.getElementById("tradingview-widget-container");
     if (container && container.children.length === 0) {
       container.appendChild(script);
     }
@@ -34,9 +43,11 @@ const FloatingTicker = () => {
 
   return (
     <div
-      id="tv-ticker-container"
-      className="fixed bottom-4 right-4 z-50 w-[350px] h-[60px] rounded-lg overflow-hidden shadow-lg border border-gray-300"
-    ></div>
+      id="tradingview-widget-container"
+      className="fixed bottom-4 right-4 w-[350px] h-[60px] z-50 rounded-md overflow-hidden shadow-lg"
+    >
+      {/* TradingView widget script will be injected here */}
+    </div>
   );
 };
 
