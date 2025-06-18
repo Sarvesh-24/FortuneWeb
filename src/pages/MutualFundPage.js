@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { HiOutlineCash, HiOutlineSwitchHorizontal, HiOutlineClock, HiOutlineArrowRight, HiOutlineCurrencyDollar, HiOutlineChartBar } from 'react-icons/hi';
 import SIPCalculator from '../components/InvestmentCalculator';
-
+import FloatingTicker from '../components/FloatingTicker';
 
 const MutualFundPage = () => {
   return (
@@ -12,7 +12,9 @@ const MutualFundPage = () => {
   transition={{ duration: 1 }}
   className="w-full min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100"
   id="mutualfunds"
->
+> 
+  
+  <FloatingTicker/>
   {/* Hero Section */}
   <section className="bg-blue-600 text-white text-center py-16 mt-20">
     <h1 className="text-4xl md:text-5xl text-black font-bold">
