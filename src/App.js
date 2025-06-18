@@ -84,7 +84,7 @@ import MutualFundPage from "./pages/MutualFundPage.js";
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import VideoCarousel from "./pages/VideoCarousel";
 import AccessForm from "./components/AccessForm.js";
-
+import FloatingSocialIcons from "./components/FloatingSocialIcons.js";
 
 
 const App = () => {
@@ -147,7 +147,7 @@ const App = () => {
                     chatboxStyle={{ borderRadius: '10px' }}
                   />
 
-
+                <FloatingSocialIcons/>
           
             </>
           }
