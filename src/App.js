@@ -85,6 +85,7 @@ import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import VideoCarousel from "./pages/VideoCarousel";
 import AccessForm from "./components/AccessForm.js";
 import FloatingSocialIcons from "./components/FloatingSocialIcons.js";
+import FloatingTicker from "./components/FloatingTicker.js";
 
 
 const App = () => {
@@ -165,6 +166,7 @@ const App = () => {
         <Route path="/yt" element={<VideoCarousel />} />
         <Route path="/mutualfunds" element={<MutualFundPage/>}/>
         <Route path="/accessform" element={<AccessForm/>}/>
+        <Route path="/ticker" element={FloatingTicker} />
         {/* <Route path="/event" element={<Event/>}/> */}
         
       </Routes>
