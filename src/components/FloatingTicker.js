@@ -31,7 +31,7 @@ const FloatingTicker = () => {
       showSymbolLogo: true,
       isTransparent: false,
       displayMode: "adaptive",
-      colorTheme: "light",
+      colorTheme: "dark",
       locale: "en"
     });
 
