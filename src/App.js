@@ -149,6 +149,7 @@ const App = () => {
                   />
 
                 <FloatingSocialIcons/>
+                <FloatingTicker />
           
             </>
           }
@@ -166,7 +167,7 @@ const App = () => {
         <Route path="/yt" element={<VideoCarousel />} />
         <Route path="/mutualfunds" element={<MutualFundPage/>}/>
         <Route path="/accessform" element={<AccessForm/>}/>
-        <Route path="/ticker" element={FloatingTicker} />
+        {/* <Route path="/ticker" element={FloatingTicker} /> */}
         {/* <Route path="/event" element={<Event/>}/> */}
         
       </Routes>
