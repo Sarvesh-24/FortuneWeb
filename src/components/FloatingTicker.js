@@ -7,26 +7,23 @@ const FloatingTicker = () => {
     script.async = true;
     script.innerHTML = JSON.stringify({
       symbols: [
-
-            { proName: "BSE:SENSEX", title: "SENSEX" },
-            { proName: "NSE:NIFTY", title: "NIFTY" },
-            { proName: "NSE:BANKNIFTY", title: "BANKNIFTY" },
-            { proName: "NSE:CNXFINANCE", title: "CNXFINANCE" },
-            { proName: "NSE:NIFTY_MID_SELECT", title: "NIFTY MID SELECT" },
-            { proName: "NSE:ABB", title: "ABB" },
-            { proName: "NSE:COFORGE", title: "COFORGE" },
-            { proName: "NSE:DIVISLAB", title: "DIVISLAB" },
-            { proName: "NSE:DIXON", title: "DIXON" },
-            { proName: "NSE:HEROMOTOCO", title: "HEROMOTOCO" },
-            { proName: "NSE:MARUTI", title: "MARUTI" },
-            { proName: "NSE:MCX", title: "MCX" },
-            { proName: "NSE:OFSS", title: "OFSS" },
-            { proName: "NSE:SIEMENS", title: "SIEMENS" },
-            { proName: "NSE:TRENT", title: "TRENT" },
-            { proName: "NSE:ULTRACEMCO", title: "ULTRATECH" },
-            { proName: "NSE:NAUKRI", title: "NAUKRI" }
-
-          ],
+                { proName: "BSE:SENSEX", title: "SENSEX" },
+                { proName: "NSE:NIFTY", title: "NIFTY" },
+                { proName: "NSE:BANKNIFTY", title: "BANKNIFTY" },
+                { proName: "NSE:CNXFINANCE", title: "CNXFINANCE" },
+                { proName: "NSE:ABB", title: "ABB" },
+                { proName: "NSE:COFORGE", title: "COFORGE" },
+                { proName: "NSE:DIVISLAB", title: "DIVISLAB" },
+                { proName: "NSE:DIXON", title: "DIXON" },
+                { proName: "NSE:HEROMOTOCO", title: "HEROMOTOCO" },
+                { proName: "NSE:MARUTI", title: "MARUTI" },
+                { proName: "NSE:MCX", title: "MCX" },
+                { proName: "NSE:OFSS", title: "OFSS" },
+                { proName: "NSE:SIEMENS", title: "SIEMENS" },
+                { proName: "NSE:TRENT", title: "TRENT" },
+                { proName: "NSE:ULTRACEMCO", title: "ULTRATECH" },
+                { proName: "NSE:NAUKRI", title: "NAUKRI" }
+              ],
 
       showSymbolLogo: true,
       isTransparent: false,
