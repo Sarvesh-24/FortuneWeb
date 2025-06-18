@@ -14,7 +14,7 @@ const FloatingTicker = () => {
                 { proName: "BSE:ABB", title: "ABB" },
                 { proName: "BSE:COFORGE", title: "COFORGE" },
                 { proName: "BSE:DIVISLAB", title: "DIVISLAB" },
-                { proName: "BSE:DIXON", title: "DIXON" },
+                { proName: "NSE:DIXON TECHNO (INDIA) LTD", title: "DIXON" },
                 { proName: "BSE:HEROMOTOCO", title: "HEROMOTOCO" },
                 { proName: "BSE:MARUTI", title: "MARUTI" },
                 { proName: "BSE:MCX", title: "MCX" },
