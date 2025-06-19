@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { HiOutlineCash, HiOutlineSwitchHorizontal, HiOutlineClock, HiOutlineArrowRight, HiOutlineCurrencyDollar, HiOutlineChartBar } from 'react-icons/hi';
 import SIPCalculator from '../components/InvestmentCalculator';
 import FloatingTicker from '../components/FloatingTicker';
-import YahooMarquee from '../components/YahooMarquee.JS';
+import StockTicker from '../components/StockTicker';
 
 const MutualFundPage = () => {
   return (
@@ -16,7 +16,7 @@ const MutualFundPage = () => {
 > 
   
   <FloatingTicker/>
-  <YahooMarquee />
+  <StockTicker />
   
   {/* Hero Section */}
   <section className="bg-blue-600 text-white text-center py-16 mt-20">

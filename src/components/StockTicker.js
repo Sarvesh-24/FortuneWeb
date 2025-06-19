@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const YahooMarquee = () => {
+const StockTicker = () => {
   const [stocks, setStocks] = useState([]);
 
   const fetchData = async () => {
@@ -45,4 +45,4 @@ const YahooMarquee = () => {
   );
 };
 
-export default YahooMarquee;
+export default StockTicker;
