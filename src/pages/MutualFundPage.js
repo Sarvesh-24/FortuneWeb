@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { HiOutlineCash, HiOutlineSwitchHorizontal, HiOutlineClock, HiOutlineArrowRight, HiOutlineCurrencyDollar, HiOutlineChartBar } from 'react-icons/hi';
 import SIPCalculator from '../components/InvestmentCalculator';
-import FloatingTicker from '../components/FloatingTicker';
+// import FloatingTicker from '../components/FloatingTicker';
 import StockTicker from '../components/StockTicker';
 
 const MutualFundPage = () => {
@@ -15,7 +15,7 @@ const MutualFundPage = () => {
   id="mutualfunds"
 > 
   
-  <FloatingTicker/>
+  {/* <FloatingTicker/> */}
   <StockTicker />
   
   {/* Hero Section */}
