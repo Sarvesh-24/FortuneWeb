@@ -1,47 +1,51 @@
 import React, { useEffect, useState } from 'react';
+import Marquee from 'react-fast-marquee';
 import axios from 'axios';
 
 const StockTicker = () => {
   const [stocks, setStocks] = useState([]);
 
-  const fetchData = async () => {
+  const fetchStockData = async () => {
     try {
       const symbols = ['RELIANCE.NS', 'TCS.NS', 'INFY.NS', '^NSEI'];
       const url = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${symbols.join(',')}`;
-      const response = await axios.get(url);
-      const results = response.data.quoteResponse.result;
+      const res = await axios.get(url);
+      const results = res.data.quoteResponse.result;
 
       const formatted = results.map((stock) => ({
-        name: stock.symbol,
+        name: stock.shortName || stock.symbol,
         price: stock.regularMarketPrice,
         change: stock.regularMarketChangePercent,
       }));
 
       setStocks(formatted);
     } catch (error) {
-      console.error('Failed to fetch Yahoo Finance data', error);
+      console.error('Failed to fetch stock data:', error);
     }
   };
 
   useEffect(() => {
-    fetchData();
-    const interval = setInterval(fetchData, 60000); // refresh every 1 min
+    fetchStockData();
+    const interval = setInterval(fetchStockData, 60000); // refresh every 1 minute
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <marquee scrollAmount="6" style={{ background: '#111', color: '#fff', padding: '10px', fontSize: '16px' }}>
-      {stocks.map((stock, index) => {
-        const isUp = stock.change >= 0;
-        const arrow = isUp ? '▲' : '▼';
-        const color = isUp ? 'lightgreen' : 'red';
-        return (
-          <span key={index} style={{ marginRight: '30px', color }}>
-            {stock.name}: ₹{stock.price?.toFixed(2)} {arrow} {stock.change?.toFixed(2)}%
-          </span>
-        );
-      })}
-    </marquee>
+    <div className="w-full bg-black py-2 text-white border-y border-gray-700">
+      <Marquee gradient={false} speed={50} pauseOnHover>
+        {stocks.map((stock, i) => {
+          const isUp = stock.change >= 0;
+          const arrow = isUp ? '▲' : '▼';
+          const color = isUp ? 'text-green-400' : 'text-red-500';
+
+          return (
+            <span key={i} className={`mx-6 ${color}`}>
+              {stock.name}: ₹{stock.price?.toFixed(2)} {arrow} {stock.change?.toFixed(2)}%
+            </span>
+          );
+        })}
+      </Marquee>
+    </div>
   );
 };
 
