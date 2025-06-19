@@ -8,7 +8,7 @@ const StockTicker = () => {
   const fetchStockData = async () => {
     try {
       const symbols = ['RELIANCE.NS', 'TCS.NS', 'INFY.NS', '^NSEI'];
-      const url = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${symbols.join(',')}`;
+       const url = `https://corsproxy.io/?https://query1.finance.yahoo.com/v7/finance/quote?symbols=${symbols.join(',')}`;
       const res = await axios.get(url);
       const results = res.data.quoteResponse.result;
 
