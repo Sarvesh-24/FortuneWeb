@@ -43,7 +43,7 @@ const FloatingTicker = () => {
       <div
       id="tradingview-widget-container"
       //  className="fixed top-0 left-0 w-full h-[40px] z-50 shadow-md bg-white dark:bg-black"
-       className="hidden sm:fixed sm:top-0 sm:left-0 sm:w-full sm:h-[20px] sm:z-50 sm:shadow-md sm:bg-white sm:dark:bg-black"
+       className="hidden lg:fixed lg:top-0 lg:left-0 lg:w-full lg:h-[40px] lg:z-50 lg:shadow-md lg:bg-white lg:dark:bg-black"
 
 
     >
