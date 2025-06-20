@@ -64,7 +64,7 @@ const Event = () => {
 
             <motion.div variants={itemVariants} className="space-y-6">
               <p className="text-lg text-gray-700 font-bold leading-relaxed dark:text-gray-300">
-              BANGLORE EVENT
+              MIND OVER MARKETS
               </p>
 
               <div className="space-y-4">
