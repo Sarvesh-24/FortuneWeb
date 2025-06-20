@@ -118,7 +118,7 @@ const App = () => {
               <Program />
               <Services />
               <Book />
-              {/* <Event /> */}
+              <Event />
               {/* <Feedback /> */}
               <Gallery />
               <Team />
