@@ -46,7 +46,7 @@ const Event = () => {
         <motion.div ref={ref} initial="hidden" animate={controls} variants={containerVariants} className="max-w-7xl mx-auto">
           <motion.div variants={itemVariants} className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-[#384f4b] dark:text-white mb-4">
-              Mind Over Markets
+              BANGLORE EVENT
             </h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto mb-8 dark:bg-blue-400 sm:bg-blue-400"></div>
           </motion.div>
@@ -64,7 +64,7 @@ const Event = () => {
 
             <motion.div variants={itemVariants} className="space-y-6">
               <p className="text-lg text-gray-700 font-bold leading-relaxed dark:text-gray-300">
-              Mind Over Markets: Decode Patterns. Master Timing. Dominate Trades
+              BANGLORE EVENT
               </p>
 
               <div className="space-y-4">
@@ -74,7 +74,7 @@ const Event = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#384f4b] dark:text-white">Date & Duration</h3>
-                    <p className="text-gray-600 dark:text-gray-300">MAY 24-25, 2025 | 2 Full Days</p>
+                    <p className="text-gray-600 dark:text-gray-300">OCT 11-12, 2025 | 2 Full Days</p>
                     <p className="text-gray-600 dark:text-gray-300">(Inclusive of breakfast, lunch, and high tea)</p>
                   </div>
                 </div>
@@ -86,9 +86,7 @@ const Event = () => {
                   <div>
                     <h3 className="font-semibold text-[#384f4b] dark:text-white">Location</h3>
                     <p className="text-gray-600 dark:text-gray-300">
-                      THE SAVERA HOTEL <br />
-                      146, Dr Radha Krishnan Salai, Mylapore,<br />
-                      Chennai, Tamil Nadu, 600004 <br />
+                      BANGLORE <br />
                     </p>
                   </div>
                 </div>
@@ -110,6 +108,7 @@ const Event = () => {
                 whileTap={{ scale: 0.95 }}
                 className="mt-8 inline-block px-8 py-3 bg-blue-600 text-white rounded-md font-semibold shadow-lg hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 aria-label="Learn more about the event dark:bg-blue-400"
+                aria-disabled="true"
               >
                 Learn more
               </motion.a>

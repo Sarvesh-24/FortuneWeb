@@ -65,7 +65,7 @@ import Team from "./components/Team";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact.js";
-// import Event from "./components/Event.js";
+import Event from "./components/Event.js";
 
 
 // Individual Pages
@@ -168,7 +168,7 @@ const App = () => {
         <Route path="/mutualfunds" element={<MutualFundPage/>}/>
         <Route path="/accessform" element={<AccessForm/>}/>
         {/* <Route path="/ticker" element={FloatingTicker} /> */}
-        {/* <Route path="/event" element={<Event/>}/> */}
+        <Route path="/event" element={<Event/>}/>
         
       </Routes>
       <Footer />
