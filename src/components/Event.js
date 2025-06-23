@@ -103,7 +103,7 @@ const Event = () => {
               </div>
 
               <motion.a
-                href="https://pages.razorpay.com/momchennai"
+                href="https://forms.gle/uLTRd6ux4w5Q2qHu6"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="mt-8 inline-block px-8 py-3 bg-blue-600 text-white rounded-md font-semibold shadow-lg hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
