@@ -74,7 +74,7 @@ const Book = () => {
           </li>
         </ul>
   
-        <div className="flex space-x-4">
+        {/* <div className="flex space-x-4">
           <motion.a
             href="https://pages.razorpay.com/sampadastra"
             whileHover={{ scale: 1.05 }}
@@ -84,7 +84,7 @@ const Book = () => {
           >
             Buy Now
           </motion.a>
-        </div>
+        </div> */}
       </div>
     </div>
   </section>
