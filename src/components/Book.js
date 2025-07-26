@@ -74,17 +74,17 @@ const Book = () => {
           </li>
         </ul>
   
-        {/* <div className="flex space-x-4">
+        <div className="flex space-x-4">
           <motion.a
-            href="https://pages.razorpay.com/sampadastra"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdy4XiiexsUG16tRGeSQbh3nQHAzLeGnQG1SLOTXa_Dg3zwaQ/viewform?usp=sharing&ouid=104965521659633288081"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="mt-6 inline-block px-8 py-3 bg-blue-600 dark:bg-blue-400 text-white dark:text-gray-900 md:rounded-md font-semibold shadow-lg hover:bg-blue-700 dark:hover:bg-blue-500 hover:text-white dark:hover:text-gray-100 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
             aria-label="Buy the book"
           >
-            Buy Now
+            Click Here
           </motion.a>
-        </div> */}
+        </div>
       </div>
     </div>
   </section>
