@@ -15,6 +15,12 @@ const Testimonials = () => {
     '/assets/testimonials/testimonials7.webp',
     '/assets/testimonials/testimonials8.webp',
     '/assets/testimonials/testimonials9.webp',
+    '/assets/testimonials/testimonials13.webp',
+    '/assets/testimonials/testimonials14.jpeg',
+    '/assets/testimonials/testimonials15.jpeg',
+    '/assets/testimonials/testimonials16.jpeg',
+    '/assets/testimonials/testimonials17.jpeg'
+
   ];
 
   // Close Modal function
