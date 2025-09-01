@@ -181,42 +181,83 @@
 
 
 
+// import React from "react";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// // Component imports
+// import Header from "./components/Header";
+// import Footer from "./components/Footer";
+// import FloatingTicker from "./components/FloatingTicker";
+// import FloatingWhatsApp from "./components/FloatingWhatsApp";
+// import FloatingSocialIcons from "./components/FloatingSocialIcons";
+
+// // Page sections for Home route
+// import Hero from "./components/Hero";
+// import About from "./components/About";
+// import Indicator from "./components/Indicator";
+// import Program from "./components/Program";
+// import Services from "./components/Services";
+// import Book from "./components/Book";
+// import Event from "./components/Event";
+// import Gallery from "./components/Gallery";
+// import Team from "./components/Team";
+// import FAQ from "./components/FAQ";
+// import Contact from "./components/Contact";
+
+// // Other Routes
+// import Testimonials from "./components/Testimonials";
+// import Company from "./components/Company";
+// import PrivacyPolicy from "./components/PrivacyPolicy";
+// import RefundsAndCancellations from "./components/RefundsAndCancellations";
+// import RiskDisclaimer from "./components/RiskDisclaimer";
+// import TermsAndConditions from "./components/TermsAndConditions";
+// import ServicesProvide from "./components/ServicesProvide";
+// import ServicesPage from "./components/ServicesPage";
+// import VideoYT from "./components/VideoYT";
+// import VideoCarousel from "./components/VideoCarousel";
+// import MutualFundPage from "./components/MutualFundPage";
+// import AccessForm from "./components/AccessForm";
+
+
+
+
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Component imports
 import Header from "./components/Header";
-import Footer from "./components/Footer";
-import FloatingTicker from "./components/FloatingTicker";
-import FloatingWhatsApp from "./components/FloatingWhatsApp";
-import FloatingSocialIcons from "./components/FloatingSocialIcons";
-
-// Page sections for Home route
-import Hero from "./components/Hero";
 import About from "./components/About";
-import Indicator from "./components/Indicator";
+import Hero from "./components/Hero";
 import Program from "./components/Program";
+import Indicator from "./components/Indicator";
 import Services from "./components/Services";
 import Book from "./components/Book";
-import Event from "./components/Event";
+// import Feedback from "./components/Feedback";
 import Gallery from "./components/Gallery";
 import Team from "./components/Team";
 import FAQ from "./components/FAQ";
-import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Contact from "./components/Contact.js";
+import Event from "./components/Event.js";
 
-// Other Routes
-import Testimonials from "./components/Testimonials";
-import Company from "./components/Company";
-import PrivacyPolicy from "./components/PrivacyPolicy";
-import RefundsAndCancellations from "./components/RefundsAndCancellations";
-import RiskDisclaimer from "./components/RiskDisclaimer";
-import TermsAndConditions from "./components/TermsAndConditions";
-import ServicesProvide from "./components/ServicesProvide";
-import ServicesPage from "./components/ServicesPage";
-import VideoYT from "./components/VideoYT";
-import VideoCarousel from "./components/VideoCarousel";
-import MutualFundPage from "./components/MutualFundPage";
-import AccessForm from "./components/AccessForm";
+
+// Individual Pages
+// import Home from "./pages/Home";
+import Testimonials from "./pages/Testimonials";
+import Company from "./pages/Company";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import RefundsAndCancellations from "./pages/RefundsAndCancellations";
+import RiskDisclaimer from "./pages/RiskDisclaimer";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import ServicesProvide from "./pages/ServicesProvide";
+import ServicesPage from "./pages/ServicesPage";
+import VideoYT from "./pages/VideoYT";
+import MutualFundPage from "./pages/MutualFundPage.js";
+
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
+import VideoCarousel from "./pages/VideoCarousel";
+import AccessForm from "./components/AccessForm.js";
+import FloatingSocialIcons from "./components/FloatingSocialIcons.js";
+import FloatingTicker from "./components/FloatingTicker.js";
 
 
 const App = () => {
