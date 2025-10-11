@@ -64,7 +64,7 @@ const Event = () => {
 
             <motion.div variants={itemVariants} className="space-y-6">
               <p className="text-lg text-gray-700 font-bold leading-relaxed dark:text-gray-300">
-              MIND OVER MARKETS
+              BREAKOUTS AND BEYOND
               </p>
 
               <div className="space-y-4">
@@ -74,7 +74,7 @@ const Event = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#384f4b] dark:text-white">Date & Duration</h3>
-                    <p className="text-gray-600 dark:text-gray-300">OCT 11-12, 2025 | 2 Full Days</p>
+                    <p className="text-gray-600 dark:text-gray-300">NOV 1-2, 2025 | 2 Full Days</p>
                     <p className="text-gray-600 dark:text-gray-300">(Inclusive of breakfast, lunch, and high tea)</p>
                   </div>
                 </div>
