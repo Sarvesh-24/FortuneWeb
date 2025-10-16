@@ -121,22 +121,22 @@ const Event = () => {
 
               <ul className="list-disc pl-6 text-lg text-gray-700 dark:text-gray-300 space-y-2 mt-3">
                 <li>
+                  <strong>God Strategy:</strong> Emphasis on the Single Candle Rule, which dominates the entire intraday momentum. By recognizing this one decisive candle and aligning trades accordingly, traders can ride the market’s primary move with confidence and clarity.
+                </li>
+                <li>
+                  <strong>Guru Candle:</strong> A powerful Astro Candle that marks moments of extraordinary influence in intraday trading. Known for triggering strong directional moves, the Guru Candle serves as a high-impact signal for traders seeking to capture explosive momentum before it unfolds.
+                </li>
+                <li>
+                  <strong>No-Loss Strategy:</strong> A disciplined trading method focused on capital preservation above all else. By combining strict risk management with high-probability setups, this approach aims to minimize drawdowns and protect profits, allowing traders to grow their accounts steadily without reckless exposure.
+                </li>
+                <li>
                   <strong>Purity of Breakout:</strong> This section discusses the purity of breakout for index, stocks, and options.
-                </li>
-                <li>
-                  <strong>Range Calculation:</strong> Find the range and targets of stocks or indices before the start of the year, month, or week. This ultimate system empowers trend traders to capture big swing moves with precision.
-                </li>
-                <li>
-                  <strong>How to trade Trend change date:</strong> This section covers to trade trend change date in intraday and positional.
-                </li>
-                <li>
-                  <strong>Secret to trade Gap up and Gap down analysis:</strong> This section reveals the secret to trading gap up and gap down analysis.
                 </li>
               </ul>
             </div>
 
 
-            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 dark:bg-gray-800 dark:text-white">
+            {/* <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 dark:bg-gray-800 dark:text-white">
               <h3 className="text-xl font-bold mb-3">Day 1</h3>
               
               <ul className="list-disc pl-6 text-lg text-gray-700 dark:text-gray-300 space-y-2 mt-3">
@@ -151,7 +151,7 @@ const Event = () => {
 
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 dark:bg-gray-800 dark:text-white">
               <h3 className="text-xl font-bold mb-3">Day 2</h3>
@@ -179,21 +179,25 @@ const Event = () => {
 
               <ul className="list-disc pl-6 text-lg text-gray-700 dark:text-gray-300 space-y-2 mt-3">
                 <li>
-                  <strong> Utilize advanced analysis for option selling and capture big moves in stock options.</strong>
+                  <strong> Discover the magic of numbers in option trading, a delight for retail traders.</strong>
                 </li>
                 <li>
-                  <strong>Find precise targets in options using secret cycle analysis.</strong>
+                  <strong>Understand how numbers play a vital role in trading options monthly, weekly, and daily.</strong>
                 </li>
                 <li>
-                  <strong>Secret strategy to make 20% return in the beginning of the month in the first 3 trading session.
+                  <strong>One number Magic: This section discusses trading indices and stocks based on yearly, quarterly, monthly, and weekly.
+                  </strong> 
+                </li>
+                 <li>
+                  <strong>Timing Technique: Master the secret of market timing using simple cyclic line analysis.
                   </strong> 
                 </li>
 
-                <li>
+                {/* <li>
                   <strong>
                   Note: The strategies and techniques taught in this program are applicable across various markets—including Forex, Crypto, and other financial markets.
                   </strong>
-                </li>
+                </li> */}
                 
               </ul>
             </div>
