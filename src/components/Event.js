@@ -54,7 +54,7 @@ const Event = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div variants={itemVariants} className="relative">
               <img
-                src="/assets/event/Website banner.webp"
+                src="/assets/event/bang-event.jpeg"
                 alt="Event Conference"
                 className="rounded-lg shadow-2xl w-full h-[400px] object-cover"
                 loading="lazy"
