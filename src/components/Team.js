@@ -46,12 +46,12 @@ const Team = () => {
       }
     },
 
-    {
+        {
       id: 4,
-      name: "Sarvesh",
-      position: "Software Developer",
-      image: '/assets/profile/profile4.webp',
-      bio: "Sarvesh Walke is a highly skilled Software Developer with a B.Tech in Electronics and Telecommunication Engineering, known for exceptional problem-solving abilities and a strong passion for building efficient, scalable solutions. With expertise in full-stack development and automation, Sarvesh excels at optimizing system performance and leveraging cutting-edge technologies to create robust applications. A quick learner with a keen eye for detail, always eager to tackle complex challenges and drive innovation.",
+      name: "Vinayak Joshi",
+      position: "Research Analyst",
+      image: '/assets/profile/vinayak.jpeg',
+      bio: "Vinayakk V Joshi who has 24+ years of professional experience in the Corporate world in large business houses and have worked in overseas including Dubai, UAE and Mauritius. Registered with Securities & Exchange Board of India as “Research Analyst” in the year 2020 and having certification from NISM as Research Analyst. A member of The Association of Technical Analysts. (ATA, India). Wide knowledge of Stock Market, Fundamental and Technical Analysis including Chart Analysis and Astro effects on stock market. Studied Numerology in the year 2019 and practicing it in Financial Market.Graduated in Commerce from University of Mumbai and Associate Member ofThe Institute of Company Secretaries of India (ICSI) since year 1998.Also Associate (ACSI) Member of Chartered Institute of Securities &Investment, London, UK. Passed my first certification in Capital Marketsand Derivatives in the year 2000 from NSE Academy.Currently based in Dubai, UAE and leading operations of Fortune Advisorz Group in GCC countries.",
       social: {
         twitter: "https://twitter.com",
         linkedin: "https://linkedin.com",
@@ -61,6 +61,19 @@ const Team = () => {
 
     {
       id: 5,
+      name: "Sarvesh",
+      position: "Software Developer",
+      image: '/assets/profile/profile4.webp',
+      bio: "Sarvesh is a highly skilled Software Developer with a B.Tech in Electronics and Telecommunication Engineering, known for exceptional problem-solving abilities and a strong passion for building efficient, scalable solutions. With expertise in full-stack development and automation, Sarvesh excels at optimizing system performance and leveraging cutting-edge technologies to create robust applications. A quick learner with a keen eye for detail, always eager to tackle complex challenges and drive innovation.",
+      social: {
+        twitter: "https://twitter.com",
+        linkedin: "https://linkedin.com",
+        github: "https://github.com"
+      }
+    },
+
+    {
+      id: 6,
       name: "Shubhada Khadye",
       position: "Accounts Executive",
       image: '/assets/profile/profile05.jpg',
@@ -73,7 +86,7 @@ const Team = () => {
     },
     
     {
-      id: 6,
+      id: 7,
       name: "Manjula",
       position: "Education Counsellor",
       image: '/assets/profile/Profile06.jpeg',
@@ -86,7 +99,7 @@ const Team = () => {
     },
 
     {
-      id: 7,
+      id: 8,
       name: "Neelavath",
       position: "Education Counsellor",
       image: '/assets/profile/Profile7.jpeg',
@@ -99,7 +112,7 @@ const Team = () => {
     },
 
     {
-      id: 8,
+      id: 9,
       name: "David Raja Nadar.",
       position: "Education Counsellor",
       image: '/assets/profile/profile9.jpg',
