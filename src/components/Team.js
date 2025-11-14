@@ -178,82 +178,86 @@ const Team = () => {
   };
 
   return (
-    <section
+<section
   id="team"
   className="w-full px-4 py-8 bg-white dark:bg-gray-900 text-[#444444] dark:text-gray-300 font-roboto transition-colors duration-300"
 >
   <div className="w-full max-w-screen-xl mx-auto px-4 py-8">
+    
     {/* Section Title */}
     <h2 className="text-3xl md:text-4xl font-bold text-[#384f4b] dark:text-white text-center mb-4 font-inter">
       Our Team
     </h2>
     <div className="w-24 h-1 bg-blue-600 mx-auto mb-6 dark:bg-blue-400"></div>
 
-    <div className="min-h-screen dark:from-gray-900 dark:to-gray-800 flex flex-wrap justify-center items-center p-10">
+    {/* TEAM GRID */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-10">
       {teamMembers.map((member) => (
         <motion.div
           key={member.id}
-          className="relative w-64 h-80 rounded-2xl overflow-hidden shadow-lg m-4 cursor-pointer transition-transform duration-300 hover:scale-105"
+          className="relative w-64 h-80 rounded-2xl overflow-hidden shadow-lg mx-auto cursor-pointer transition-transform duration-300 hover:scale-105"
           onClick={() => setSelectedMember(member)}
           id={`team-member-${member.id}`}
         >
-          {/* Full Photo - Image Will Fit Perfectly */}
+          {/* Perfect Image Fit */}
           <img
             src={member.image}
             alt={member.name}
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-top"
           />
 
-          {/* Name & Designation Patch */}
+          {/* Name & Position */}
           <div className="absolute bottom-0 w-full bg-gradient-to-t from-black via-black/80 to-transparent text-white text-center p-4">
             <h3 className="font-semibold text-lg text-gray-300">{member.name}</h3>
             <p className="text-sm text-gray-300">{member.position}</p>
           </div>
         </motion.div>
       ))}
-
-      {/* Modal */}
-      <AnimatePresence>
-        {selectedMember && (
-          <div
-            className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-lg flex justify-center items-center p-4"
-            onClick={() => setSelectedMember(null)}
-          >
-            <motion.div
-              className="bg-white dark:bg-gray-900 rounded-2xl p-6 w-full max-w-md shadow-2xl relative"
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 50, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              onClick={(e) => e.stopPropagation()}
-              id={`modal-member-${selectedMember.id}`}
-            >
-              {/* Close Button */}
-              <button
-                className="absolute top-3 right-3 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-xl"
-                onClick={() => setSelectedMember(null)}
-              >
-                &times;
-              </button>
-
-              {/* Modal Content */}
-              <h2 className="text-2xl font-semibold text-center text-gray-800 dark:text-gray-200">
-                {selectedMember.name}
-              </h2>
-
-              <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-inner">
-                <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
-                  Summary
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  {selectedMember.bio}
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
     </div>
+
+    {/* MODAL */}
+    <AnimatePresence>
+      {selectedMember && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-lg flex justify-center items-center p-4"
+          onClick={() => setSelectedMember(null)}
+        >
+          <motion.div
+            className="bg-white dark:bg-gray-900 rounded-2xl p-6 w-full max-w-md shadow-2xl relative"
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 50, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={(e) => e.stopPropagation()}
+            id={`modal-member-${selectedMember.id}`}
+          >
+            {/* Close Button */}
+            <button
+              className="absolute top-3 right-3 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-xl"
+              onClick={() => setSelectedMember(null)}
+            >
+              &times;
+            </button>
+
+            {/* Modal Name */}
+            <h2 className="text-2xl font-semibold text-center text-gray-800 dark:text-gray-200">
+              {selectedMember.name}
+            </h2>
+
+            {/* Modal Bio */}
+            <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-inner">
+              <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
+                Summary
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                {selectedMember.bio}
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      )}
+    </AnimatePresence>
+    
   </div>
 </section>
 
