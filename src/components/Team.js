@@ -195,10 +195,14 @@ const Team = () => {
           key={member.id}
           className="relative w-64 h-80 rounded-2xl overflow-hidden shadow-lg m-4 cursor-pointer transition-transform duration-300 hover:scale-105"
           onClick={() => setSelectedMember(member)}
-          id={`team-member-${member.id}`} // Unique ID for each card
+          id={`team-member-${member.id}`}
         >
-          {/* Full Photo */}
-          <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+          {/* Full Photo - Image Will Fit Perfectly */}
+          <img
+            src={member.image}
+            alt={member.name}
+            className="w-full h-full object-cover object-center"
+          />
 
           {/* Name & Designation Patch */}
           <div className="absolute bottom-0 w-full bg-gradient-to-t from-black via-black/80 to-transparent text-white text-center p-4">
@@ -222,7 +226,7 @@ const Team = () => {
               exit={{ y: 50, opacity: 0 }}
               transition={{ duration: 0.3 }}
               onClick={(e) => e.stopPropagation()}
-              id={`modal-member-${selectedMember.id}`} // Unique ID for the modal
+              id={`modal-member-${selectedMember.id}`}
             >
               {/* Close Button */}
               <button
@@ -233,10 +237,17 @@ const Team = () => {
               </button>
 
               {/* Modal Content */}
-              <h2 className="text-2xl font-semibold text-center text-gray-800 dark:text-gray-200">{selectedMember.name}</h2>
+              <h2 className="text-2xl font-semibold text-center text-gray-800 dark:text-gray-200">
+                {selectedMember.name}
+              </h2>
+
               <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-inner">
-                <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300">Summary</h3>
-                <p className="text-gray-600 dark:text-gray-400">{selectedMember.bio}</p>
+                <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
+                  Summary
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  {selectedMember.bio}
+                </p>
               </div>
             </motion.div>
           </div>
@@ -245,6 +256,7 @@ const Team = () => {
     </div>
   </div>
 </section>
+
 
 
 
