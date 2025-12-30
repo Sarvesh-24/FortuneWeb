@@ -1,26 +1,27 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+    darkMode: "media",  // 🔥 Auto-switch based on system theme
+    content: ["./src/**/*.{js,jsx,ts,tsx}"],
 
-  darkMode: 'media',
-  theme: {
-    extend: {
-      fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-        roboto: ['Roboto', 'sans-serif'],
-        
-        
-      },
+    theme: {
+        extend: {
+            fontFamily: {
+                poppins: ["Poppins", "sans-serif"],
+            },
+            colors: {
+                primary: "#00619F",
+                secondary: "#09659D",
+                light: "#F1F2F2",
+                danger: "#ED4F4A",
+                dark: "#191919",
 
-      colors: {
-        instagram: '#E1306C', 
-        cblue:'#0A66B3'
-      },
+                /* Optional extra shades */
+                "bg-dark-1": "#0A0F1A",
+                "bg-dark-2": "#0F1624",
+                "bg-light-1": "#F6F9FF",
+                "bg-light-2": "#EEF4FF",
+            },
+        },
     },
-  },
-  plugins: [],
+    plugins: [],
 };
