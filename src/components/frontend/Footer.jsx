@@ -6,7 +6,7 @@ import {
     Phone,
 } from "lucide-react";
 import {FaLinkedinIn, FaXTwitter, FaInstagram, FaYoutube, FaFacebookF, FaTelegram} from "react-icons/fa6";
-
+// import Divider from "../Helpers/Divider"; // Commented as per source
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -22,6 +22,7 @@ const Footer = () => {
     return (
         <footer className="relative w-full bg-bg-dark-1 text-light overflow-hidden font-poppins">
 
+            {/*<Divider />*/}
 
             <div className="w-full pt-16 md:pt-20 pb-12 px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
                 <div
@@ -33,7 +34,9 @@ const Footer = () => {
                     "
                 >
 
+                    {/* ------------------------------------------------ */}
                     {/* COL 1: BRANDING */}
+                    {/* ------------------------------------------------ */}
                     <div
                         className="
                             space-y-6 md:space-y-8
@@ -90,7 +93,9 @@ const Footer = () => {
                         </div>
                     </div>
 
+                    {/* ------------------------------------------------ */}
                     {/* COL 2: COMPANY */}
+                    {/* ------------------------------------------------ */}
                     <div className="lg:col-span-1 xl:col-span-2">
                         <FooterColumn
                             title="Company"
@@ -104,7 +109,9 @@ const Footer = () => {
                     </div>
 
 
+                    {/* ------------------------------------------------ */}
                     {/* COL 3: LEGAL */}
+                    {/* ------------------------------------------------ */}
                     <div className="lg:col-span-1 xl:col-span-2">
                         <FooterColumn
                             title="Legal"
@@ -117,7 +124,9 @@ const Footer = () => {
                         />
                     </div>
 
+                    {/* ------------------------------------------------ */}
                     {/* COL 4: HELP */}
+                    {/* ------------------------------------------------ */}
                     <div className="lg:col-span-1 xl:col-span-2">
                         <FooterColumn
                             title="Helpful Links"
@@ -130,7 +139,9 @@ const Footer = () => {
                         />
                     </div>
 
+                    {/* ------------------------------------------------ */}
                     {/* COL 5: CONTACT INFO */}
+                    {/* ------------------------------------------------ */}
                     <div className="lg:col-span-1 xl:col-span-2">
                         <FooterContact />
                     </div>
@@ -138,7 +149,9 @@ const Footer = () => {
                 </div>
             </div>
 
+            {/* ------------------------------------------------ */}
             {/* BOTTOM COPYRIGHT BAR */}
+            {/* ------------------------------------------------ */}
             <div className="w-full bg-bg-dark-2 border-t border-light/5">
                 <div className="max-w-[1440px] mx-auto px-6 sm:px-10 md:px-12 lg:px-16 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs sm:text-sm text-light/40">
 
@@ -194,7 +207,9 @@ function FooterContact() {
     );
 }
 
-/*FOOTER COLUMN */
+/* ------------------------------------------------------------ */
+/*                       FOOTER COLUMN                          */
+/* ------------------------------------------------------------ */
 
 function FooterColumn({ title, links }) {
     return (
@@ -229,7 +244,9 @@ function FooterColumn({ title, links }) {
     );
 }
 
-/* CONTACT ITEM */
+/* ------------------------------------------------------------ */
+/*                       CONTACT ITEM                           */
+/* ------------------------------------------------------------ */
 
 function ContactItem({ icon: Icon, text, href }) {
     return (

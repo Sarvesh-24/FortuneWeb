@@ -184,7 +184,9 @@ export default function Navbar() {
     );
 }
 
+/* ------------------------------------------- */
 /* Desktop Item */
+/* ------------------------------------------- */
 
 function NavItem({ href, label }) {
     return (
@@ -206,7 +208,9 @@ function NavItem({ href, label }) {
     );
 }
 
+/* ------------------------------------------- */
 /* Mobile Item */
+/* ------------------------------------------- */
 
 function MobileItem({ href, label, close, isOpen, delay }) {
     return (

@@ -53,7 +53,7 @@ const Hero = () => {
                 items-center relative z-10
                 "
             >
-                {/* LEFT CONTENT */}
+                {/* ================= LEFT CONTENT ================= */}
                 <div
                     className="
                     space-y-6 sm:space-y-7 xl:space-y-9
@@ -135,7 +135,7 @@ const Hero = () => {
                     </div>
                 </div>
 
-                {/*  RIGHT CONTENT*/}
+                {/* ================= RIGHT CONTENT (Indicator Card) ================= */}
                 <div className="relative w-full max-w-md md:max-w-full mx-auto md:mx-0 py-4 sm:py-10">
 
                     {/* Background Glow */}
@@ -227,7 +227,7 @@ const Hero = () => {
 
             </div>
 
-            {/* ZOOM MODAL */}
+            {/* ================= ZOOM MODAL ================= */}
             {isZoomed && (
                 <div
                     className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-md p-4 animate-in fade-in duration-200"

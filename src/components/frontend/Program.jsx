@@ -10,6 +10,7 @@ import {
     Globe
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+// import Divider from "../Helpers/Divider"; // Commented as per source
 import React from "react";
 import {fadeUp} from "../Helpers/Transitions";
 
@@ -36,6 +37,8 @@ export default function Program() {
                 overflow-hidden
             "
         >
+            {/*<Divider />*/}
+            {/* Background Decorative Elements (Subtle Glows) */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute top-[-10%] left-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-primary/5 rounded-full blur-3xl" />
                 <div className="absolute bottom-[-10%] right-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-secondary/5 rounded-full blur-3xl" />
@@ -53,7 +56,7 @@ export default function Program() {
                 "
             >
 
-                {/*  LEFT CONTENT */}
+                {/* ---------------- LEFT CONTENT (STICKY) ---------------- */}
                 <motion.div
                     className="lg:col-span-6 lg:sticky lg:top-24 space-y-6 md:space-y-8"
                     initial="hidden"
@@ -112,7 +115,7 @@ export default function Program() {
                     </motion.div>
                 </motion.div>
 
-                {/*  RIGHT CONTENT  */}
+                {/* ---------------- RIGHT CONTENT (SCROLLABLE) ---------------- */}
                 <div className="lg:col-span-6 space-y-6 md:space-y-8 mt-8 lg:mt-0">
 
                     {/* Module 1: Complete Fortune Trading Mastery */}
@@ -148,6 +151,7 @@ export default function Program() {
     );
 }
 
+/* ------------------ Sub-Components ------------------ */
 
 function FeatureCard({ text, icon, delay }) {
     return (
@@ -213,6 +217,7 @@ function CurriculumCard({ title, subtitle, icon, children, accentColor }) {
                 </div>
             </div>
 
+            {/* Hover gradient effect */}
             <div className="absolute inset-0 bg-gradient-to-tr from-gray-50 to-transparent dark:from-white/5 dark:to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
         </motion.div>
     );

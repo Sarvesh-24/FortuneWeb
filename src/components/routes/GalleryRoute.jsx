@@ -2,13 +2,17 @@ import React, {useState, useMemo, useCallback, memo, useEffect} from "react";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 import { X, ZoomIn, Camera } from "lucide-react";
 
+// --- CONFIGURATION ---
 const categories = ["All", "Bangalore", "Mumbai", "Chennai"];
 
+// --- DATA ---
 const galleryItems = [
+    // --- BANGALORE (4 Photos) ---
     { id: 1, image: "/assets/events/bangalore/bangalore1.jpg", category: "Bangalore", title: "The Grand Summit", size: "large" },
     { id: 2, image: "/assets/events/bangalore/bangalore2.jpg", category: "Bangalore", title: "Live Trading Floor", size: "normal" },
     { id: 3, image: "/assets/events/bangalore/bangalore3.jpg", category: "Bangalore", title: "Community Meetup", size: "wide" },
     { id: 4, image: "/assets/events/bangalore/bangalore4.jpg", category: "Bangalore", title: "Strategy Workshop", size: "normal" },
+    // --- MUMBAI (7 Photos) ---
     { id: 5, image: "/assets/events/mumbai/Mumbai1.webp", category: "Mumbai", title: "Mumbai Expo", size: "large" },
     { id: 6, image: "/assets/events/mumbai/Mumbai2.webp", category: "Mumbai", title: "Analysis Session", size: "normal" },
     { id: 7, image: "/assets/events/mumbai/Mumbai3.webp", category: "Mumbai", title: "Student Success", size: "tall" },
@@ -16,6 +20,7 @@ const galleryItems = [
     { id: 9, image: "/assets/events/mumbai/Mumbai5.webp", category: "Mumbai", title: "Market Deep Dive", size: "wide" },
     { id: 10, image: "/assets/events/mumbai/Mumbai6.webp", category: "Mumbai", title: "Mentorship", size: "normal" },
     { id: 11, image: "/assets/events/mumbai/Mumbai7.webp", category: "Mumbai", title: "City Skyline", size: "normal" },
+    // --- CHENNAI (5 Photos) ---
     { id: 12, image: "/assets/events/chennai/chennai1.webp", category: "Chennai", title: "Chennai Seminar", size: "tall" },
     { id: 13, image: "/assets/events/chennai/chennai2.webp", category: "Chennai", title: "Networking Dinner", size: "normal" },
     { id: 14, image: "/assets/events/chennai/chennai6.webp", category: "Chennai", title: "Closing Ceremony", size: "wide" },
@@ -27,15 +32,19 @@ const GalleryRoute = () => {
     const [selectedCategory, setSelectedCategory] = useState("All");
     const [selectedImage, setSelectedImage] = useState(null);
 
+    // --- LOCK SCROLL LOGIC ---
     useEffect(() => {
         if (selectedImage) {
+            // Prevent scrolling when modal is open
             document.body.style.overflow = "hidden";
             document.documentElement.style.overflow = "hidden";
         } else {
+            // Restore scrolling when modal is closed
             document.body.style.overflow = "";
             document.documentElement.style.overflow = "";
         }
 
+        // Cleanup function to ensure scrolling is restored if component unmounts
         return () => {
             document.body.style.overflow = "";
             document.documentElement.style.overflow = "";
@@ -53,19 +62,21 @@ const GalleryRoute = () => {
 
     const openLightbox = useCallback((item) => {
         setSelectedImage(item);
+        // Prevent body scroll when lightbox is open
         document.body.style.overflow = 'hidden';
     }, []);
 
     const closeLightbox = useCallback(() => {
         setSelectedImage(null);
+        // Restore body scroll
         document.body.style.overflow = 'unset';
     }, []);
 
     return (
-        <section className="min-h-screen bg-light dark:bg-bg-dark-1 py-28 px-4 sm:px-10 lg:px-20 relative overflow-hidden">
+        <section className="min-h-screen py-28 px-4 sm:px-10 lg:px-20 relative overflow-hidden">
             <div className="max-w-[85rem] mx-auto relative z-10">
 
-                {/* Header */}
+                {/* --- Header --- */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
@@ -91,7 +102,7 @@ const GalleryRoute = () => {
                     </p>
                 </div>
 
-                {/* Filter Tabs */}
+                {/* --- Filter Tabs --- */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -110,10 +121,12 @@ const GalleryRoute = () => {
                     </LayoutGroup>
                 </motion.div>
 
-                {/* Masonry Grid */}
+                {/* --- Masonry Grid --- */}
                 <motion.div
+                    // OPTIMIZATION: Use transform for layout animations
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[300px]"
                 >
+                    {/* OPTIMIZATION: LayoutGroup batches layout reads/writes for performance */}
                     <LayoutGroup>
                         <AnimatePresence mode='popLayout'>
                             {filteredItems.map((item) => (
@@ -129,7 +142,7 @@ const GalleryRoute = () => {
 
             </div>
 
-            {/* Lightbox Modal */}
+            {/* --- Lightbox Modal --- */}
             <AnimatePresence>
                 {selectedImage && (
                     <Lightbox
@@ -142,6 +155,7 @@ const GalleryRoute = () => {
     );
 };
 
+// --- Sub-Component: Filter Button ---
 const FilterButton = memo(({ category, isSelected, onClick }) => (
     <button
         onClick={() => onClick(category)}
@@ -164,6 +178,7 @@ const FilterButton = memo(({ category, isSelected, onClick }) => (
     </button>
 ));
 
+// --- Sub-Component: Individual Gallery Item (Optimized) ---
 const GalleryItem = memo(({ item, onClick }) => {
     // New local state to handle image loading gracefully
     const [isLoaded, setIsLoaded] = useState(false);
@@ -196,11 +211,16 @@ const GalleryItem = memo(({ item, onClick }) => {
                 `}
             />
 
+            {/* Overlay - Optimized to use GPU properties */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 z-10">
                 <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 will-change-transform">
                     <span className="text-xs font-bold text-light uppercase tracking-wider mb-1 block">
                         {item.category}
                     </span>
+                    {/*<h3 className="text-light text-lg font-bold flex items-center gap-2">*/}
+                    {/*    /!*{item.title}*!/*/}
+                    {/*    <ArrowRight size={16} className="-rotate-45" />*/}
+                    {/*</h3>*/}
                 </div>
             </div>
 
@@ -211,6 +231,7 @@ const GalleryItem = memo(({ item, onClick }) => {
     );
 });
 
+// --- Sub-Component: Lightbox ---
 const Lightbox = ({ selectedImage, onClose }) => {
     return (
         <motion.div
@@ -239,6 +260,7 @@ const Lightbox = ({ selectedImage, onClose }) => {
                     <span className="text-primary font-bold tracking-widest uppercase text-xs mb-2">
                         {selectedImage.category}
                     </span>
+                    {/*<h3 className="text-light text-2xl font-bold">{selectedImage.title}</h3>*/}
                 </div>
 
                 <button

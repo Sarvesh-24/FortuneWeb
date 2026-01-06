@@ -2,6 +2,7 @@ import React, {useEffect, useRef} from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { Clock, TrendingUp, Target, Compass, ArrowRight } from "lucide-react";
 import {useNavigate} from "react-router-dom";
+// import Divider from "../Helpers/Divider";
 
 const About = () => {
     return (
@@ -101,7 +102,9 @@ function ContentSection() {
     );
 }
 
-/* RIGHT — IMAGE PANEL + FEATURES */
+/* ================================================================
+   RIGHT — IMAGE PANEL + FEATURES
+================================================================= */
 function RightImagePanel() {
     return (
         <div className="flex flex-col gap-6 w-full">
@@ -150,7 +153,9 @@ function RightImagePanel() {
     );
 }
 
-/* FEATURE CARD COMPONENT */
+/* ================================================================
+   FEATURE CARD COMPONENT
+================================================================= */
 function FeatureCard({ title, text, icon }) {
     return (
         <motion.div
@@ -192,7 +197,9 @@ function FeatureCard({ title, text, icon }) {
     );
 }
 
-/* IMAGE SCROLL ANIMATION WRAPPER */
+/* ================================================================
+   IMAGE SCROLL ANIMATION WRAPPER
+================================================================= */
 function ScrollImage({ src, delay, className }) {
     return (
         <motion.img

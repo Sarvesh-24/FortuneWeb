@@ -12,6 +12,7 @@ import GetInTouch from "../Helpers/GetInTouch";
 import { processSteps, services, videos } from "../../constants/Services";
 import { cardSummaries, curriculumData } from "../../constants/Curriculam";
 
+// --- 1. Curriculum Card (Responsive Update) ---
 const CurriculumCard = ({ item, index }) => {
     const description = cardSummaries[item.id] || "Comprehensive financial training strategies.";
 
@@ -42,6 +43,7 @@ const CurriculumCard = ({ item, index }) => {
                 </h3>
             </div>
 
+            {/* Brief Summary Text */}
             <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
                 {description}
             </p>
@@ -50,12 +52,14 @@ const CurriculumCard = ({ item, index }) => {
 };
 
 
+// --- Main Component ---
 
 const ServicesPage = () => {
     const navigate = useNavigate();
     return (
         <div className="relative w-full overflow-hidden">
 
+            {/* 1. HERO SECTION */}
             <section className="pt-28 md:pt-36 pb-12 md:pb-20 px-4 text-center relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -72,8 +76,8 @@ const ServicesPage = () => {
                         transition={{ duration: 0.6 }}
                         className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dark dark:text-light leading-[1.2] md:leading-[1.3]"
                     >
-                        <span className="block">We Simplify</span>
-                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                        <span className="block leading-[1.2]">We Simplify</span>
+                        <span className="block leading-[1.2] text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                             Complex Finance
                         </span>
                     </motion.h2>
@@ -84,7 +88,9 @@ const ServicesPage = () => {
             </section>
 
 
+            {/* 2. SERVICES CARDS */}
             <section id="#" className="pb-16 md:pb-24 px-4">
+                {/* Responsive Container: 95% width on Tablet/iPad, fixed max-width on Desktop */}
                 <div className="w-[95%] md:w-[90%] xl:max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 justify-center">
                         {services.map((service, index) => (
@@ -117,18 +123,27 @@ const ServicesPage = () => {
                 </div>
             </section>
 
+            {/* 3. COURSE CURRICULUM (Summarized) */}
             <section className="pt-20 md:pt-32 px-4">
                 <div className="w-[95%] md:w-[90%] xl:max-w-7xl mx-auto">
                     <SectionTitle
                         title="What You Will Learn"
                         subtitle="A comprehensive curriculum designed to master market timing, technical analysis, and financial discipline."
                     />
+
+                    {/*
+                       GRID STRATEGY FOR iPAD PRO:
+                       - md:grid-cols-2 (Tablets/iPad Portrait)
+                       - lg:grid-cols-2 (iPad Pro Landscape - prevents squashing)
+                       - xl:grid-cols-4 (Large Desktops)
+                    */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
                         {curriculumData.slice(0, 4).map((item, index) => (
                             <CurriculumCard key={item.id} item={item} index={index} />
                         ))}
                     </div>
 
+                    {/* CTA to Full Courses Page */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -155,6 +170,7 @@ const ServicesPage = () => {
                 </div>
             </section>
 
+            {/* 4. YOUTUBE VIDEOS */}
             <section className="py-20 md:py-32 px-4">
                 <div className="w-[95%] md:w-[90%] xl:max-w-7xl mx-auto">
                     <SectionTitle
@@ -168,6 +184,7 @@ const ServicesPage = () => {
                 </div>
             </section>
 
+            {/* 5. GET IN TOUCH */}
             <GetInTouch />
 
         </div>
@@ -176,9 +193,11 @@ const ServicesPage = () => {
 
 export default ServicesPage;
 
+// --- Sub-Components ---
 
 const SectionTitle = ({ title, subtitle, centered = true }) => (
     <div className={`mb-12 ${centered ? 'text-center' : 'text-left'}`}>
+        {/* Responsive Text Sizes */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 uppercase leading-tight">
             {title}
         </h2>
@@ -188,6 +207,7 @@ const SectionTitle = ({ title, subtitle, centered = true }) => (
     </div>
 );
 
+// --- Video Player Modal ---
 const VideoModal = ({ videoId, isOpen, onClose }) => {
     if (!isOpen) return null;
 
@@ -220,12 +240,14 @@ const VideoModal = ({ videoId, isOpen, onClose }) => {
     );
 };
 
+// --- Video Carousel Component ---
 const VideoCarousel = ({ items }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState(0);
     const [selectedVideo, setSelectedVideo] = useState(null);
     const [itemsPerPage, setItemsPerPage] = useState(3);
 
+    // Responsive items per page logic
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth < 640) setItemsPerPage(1);       // Mobile
@@ -260,6 +282,7 @@ const VideoCarousel = ({ items }) => {
 
     return (
         <div className="relative w-full">
+            {/* Carousel Controls */}
             <div className="flex justify-end gap-2 mb-6">
                 <button
                     onClick={prevSlide}
@@ -275,6 +298,7 @@ const VideoCarousel = ({ items }) => {
                 </button>
             </div>
 
+            {/* Carousel Content */}
             <div className="overflow-hidden min-h-[320px]">
                 <AnimatePresence mode='wait' custom={direction}>
                     <motion.div
@@ -284,6 +308,7 @@ const VideoCarousel = ({ items }) => {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: direction > 0 ? -50 : 50 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
+                        // Responsive Grid matches the itemsPerPage logic
                         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
                     >
                         {visibleItems.map((video, idx) => (
@@ -292,6 +317,7 @@ const VideoCarousel = ({ items }) => {
                                 layoutId={`video-${video.id || idx}`}
                                 className="group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 flex flex-col h-full"
                             >
+                                {/* Thumbnail Container */}
                                 <div
                                     className="relative aspect-video overflow-hidden cursor-pointer"
                                     onClick={() => setSelectedVideo(getVideoId(video))}
@@ -309,6 +335,7 @@ const VideoCarousel = ({ items }) => {
                                     </div>
                                 </div>
 
+                                {/* Content */}
                                 <div className="p-5 flex flex-col flex-grow">
                                     <h3 className="font-bold text-lg text-gray-900 dark:text-white line-clamp-2 mb-2 group-hover:text-primary transition-colors uppercase">
                                         {video.title}
@@ -329,6 +356,7 @@ const VideoCarousel = ({ items }) => {
                 </AnimatePresence>
             </div>
 
+            {/* Global Modal */}
             <VideoModal
                 isOpen={!!selectedVideo}
                 videoId={selectedVideo}

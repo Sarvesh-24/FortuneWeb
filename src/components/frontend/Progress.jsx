@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import { motion, useSpring, useTransform, useInView } from "framer-motion";
 import { CandlestickChart, Sparkles, LineChart, CheckCircle2 } from "lucide-react";
+// import Divider from "../Helpers/Divider";
 
 const Progress = () => {
 
+    // Data with specific gradients for a premium look
     const bars = [
         {
             label: "Technical Trade Techniques",
@@ -35,6 +37,8 @@ const Progress = () => {
                 overflow-hidden
             "
         >
+            {/*<Divider />*/}
+            {/* Background decorative blob */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl opacity-50 pointer-events-none -z-10" />
 
             <div
@@ -49,7 +53,7 @@ const Progress = () => {
                 "
             >
 
-                {/*  LEFT: IMAGE + FLOATING CARD  */}
+                {/* ---------- LEFT: IMAGE + FLOATING CARD ---------- */}
                 <div className="relative w-full flex justify-center lg:justify-start">
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
@@ -91,9 +95,11 @@ const Progress = () => {
                         </motion.div>
                     </motion.div>
 
+                    {/* Decorative geometric shape behind */}
+                    {/*<div className="absolute top-10 -left-6 w-full h-full border-2 border-primary/20 rounded-3xl -z-10 hidden sm:block" />*/}
                 </div>
 
-                {/*  RIGHT: CONTENT  */}
+                {/* ---------- RIGHT: CONTENT ---------- */}
                 <motion.div
                     className="w-full mt-10 lg:mt-0"
                     initial={{ opacity: 0, x: 50 }}
@@ -141,6 +147,9 @@ const Progress = () => {
 
 export default Progress;
 
+/* ------------------------------------------------------------------ */
+/*                  PROFESSIONAL PROGRESS BAR COMPONENT               */
+/* ------------------------------------------------------------------ */
 
 function ProgressBar({ label, value, icon, gradient, index }) {
     const ref = React.useRef(null);

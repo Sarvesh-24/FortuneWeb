@@ -33,7 +33,7 @@ import ScrollToHash from "./components/Helpers/ScrollToHash";
 function App() {
 
     return (
-        <div className="        bg-gradient-to-b
+        <div className="bg-gradient-to-b
         from-bg-light-1 to-bg-light-2
         dark:from-bg-dark-1 dark:to-bg-dark-2">
           <Router>

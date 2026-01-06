@@ -11,6 +11,7 @@ import { FaChalkboardTeacher } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Divider from "../Helpers/Divider";
 
+// Animation Variants
 const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -24,6 +25,7 @@ const itemVariants = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
 };
 
+// Gentle floating animation for background blobs
 const blobAnimation = {
     animate: {
         scale: [1, 1.1, 1],
@@ -47,6 +49,8 @@ const Services = () => {
                 overflow-hidden
             "
         >
+            {/*<Divider />*/}
+            {/* --- Background Effects (Ambient Soft Glows) --- */}
             <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
                 <motion.div
                     variants={blobAnimation}
@@ -64,7 +68,7 @@ const Services = () => {
 
             <div className="relative z-10 max-w-6xl mx-auto">
 
-                {/* Header Section */}
+                {/* --- Header Section --- */}
                 <div className="lg:text-center max-w-3xl mx-auto mb-16">
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
@@ -99,7 +103,7 @@ const Services = () => {
                     </motion.p>
                 </div>
 
-                {/*Cards Grid*/}
+                {/* --- Cards Grid --- */}
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -140,7 +144,7 @@ const Services = () => {
                     />
                 </motion.div>
 
-                {/*Bottom CTA*/}
+                {/* --- Bottom CTA --- */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}

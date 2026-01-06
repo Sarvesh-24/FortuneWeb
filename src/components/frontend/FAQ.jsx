@@ -76,6 +76,9 @@ const FAQ = () => {
                 relative w-full py-20 px-4 sm:px-8 md:px-12 overflow-hidden
             "
         >
+            {/* Top Decorative Line (Gradient) */}
+            {/*<Divider />*/}
+            {/* Ambient Background */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
             <div className="max-w-4xl mx-auto relative z-10">
@@ -201,7 +204,9 @@ const FAQ = () => {
 
 export default FAQ;
 
-/* SINGLE FAQ ITEM */
+/* ------------------------------------------------------------ */
+/*                       SINGLE FAQ ITEM                        */
+/* ------------------------------------------------------------ */
 
 function FAQItem({ index, q, a, openIndex, setOpenIndex }) {
     const isOpen = openIndex === index;

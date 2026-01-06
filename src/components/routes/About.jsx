@@ -4,17 +4,27 @@ import {
     Users, Target, Lightbulb, Handshake, CheckCircle2, X, Award, Briefcase, Mountain
 } from "lucide-react";
 
-import {teamMembers} from "../../constants/Team";
+import {segregatTeamMembers, teamMembers} from "../../constants/Team";
 import GetInTouch from "../Helpers/GetInTouch";
 import {fadeUp, scaleIn, staggerContainer} from "../Helpers/Transitions";
 
 
 
 
+// --- Updated Team Data with Details ---
 
 const Aboutus = () => {
     const [selectedMember, setSelectedMember] = useState(null);
+    const [activeTab, setActiveTab] = useState("All");
+    const categories = [
+        "All",
+        "Research & Strategy",
+        "Finance Operations",
+        "Engineering & Technology",
+        "Sales & Growth"
+    ];
 
+    // --- LOCK SCROLL LOGIC ---
     useEffect(() => {
         if (selectedMember) {
             // Prevent scrolling when modal is open
@@ -26,6 +36,7 @@ const Aboutus = () => {
             document.documentElement.style.overflow = "";
         }
 
+        // Cleanup function to ensure scrolling is restored if component unmounts
         return () => {
             document.body.style.overflow = "";
             document.documentElement.style.overflow = "";
@@ -43,7 +54,7 @@ const Aboutus = () => {
     return (
         <div className="w-full overflow-hidden text-dark dark:text-light py-28">
 
-            {/* WHO WE ARE */}
+            {/* ==================== SECTION 1: WHO WE ARE ==================== */}
             <section className="relative py-20 px-4 sm:px-10 lg:px-20 max-w-7xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
@@ -107,6 +118,7 @@ const Aboutus = () => {
                     >
                         <div className="absolute inset-0 bg-primary/20 blur-[80px] rounded-full -z-10" />
                         <img
+                            // src="https://images.unsplash.com/photo-1707762890671-52ef6d6f51e7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             src="/assets/bg/bgImg1.jpg"
                             alt="Team Meeting"
                             className="rounded-2xl shadow-2xl border border-white/20 dark:border-white/10 w-full object-cover h-[700px]"
@@ -128,7 +140,7 @@ const Aboutus = () => {
                 </div>
             </section>
 
-            {/* VISION & MISSION */}
+            {/* ==================== SECTION 2: VISION & MISSION ==================== */}
             <section className="py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-20">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -194,7 +206,7 @@ const Aboutus = () => {
                 </div>
             </section>
 
-            {/* CORE VALUES */}
+            {/* ==================== SECTION 3: CORE VALUES ==================== */}
             <section className="py-20 px-4 sm:px-10 lg:px-20 max-w-7xl mx-auto">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="text-3xl md:text-4xl font-extrabold mb-4">Our Core Values</h2>
@@ -255,15 +267,17 @@ const Aboutus = () => {
                 </motion.div>
             </section>
 
-            {/* TEAM SECTION */}
+            {/* ==================== TEAM SECTION ==================== */}
             <section id="team" className="py-20">
                 <div className="max-w-[1400px] mx-auto px-4 sm:px-10 lg:px-16">
-                    <div className="text-center max-w-3xl mx-auto mb-16">
+
+                    {/* Header */}
+                    <div className="text-center max-w-3xl mx-auto mb-20">
                         <motion.div
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-primary uppercase bg-primary/10 rounded-full"
+                            className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-widest text-primary uppercase bg-primary/10 rounded-full"
                         >
                             Our Experts
                         </motion.div>
@@ -272,35 +286,134 @@ const Aboutus = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="text-3xl md:text-4xl font-extrabold mb-4"
+                            className="text-4xl md:text-5xl font-extrabold mb-4 text-neutral-900 dark:text-white"
                         >
                             Meet the Minds Behind the Charts
                         </motion.h2>
                     </div>
 
-                    <motion.div
-                        variants={staggerContainer}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 xl:gap-8"
-                    >
-                        {teamMembers.map((member, index) => (
-                            <TeamCard
-                                key={index}
-                                member={member}
-                                onClick={() => {
-                                    setSelectedMember(member)
-                                }}
-                            />
-                        ))}
-                    </motion.div>
+                    {/* Segregated Categories */}
+                    {Object.entries(segregatTeamMembers).map(([category, members], catIndex) => (
+                        <div key={category} className="mb-20 last:mb-0">
+                            {/* Category Header */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                className="flex items-center gap-4 mb-10"
+                            >
+                                <h3 className="text-xl md:text-2xl font-bold text-neutral-800 dark:text-neutral-200 whitespace-nowrap">
+                                    {category}
+                                </h3>
+                                <div className="h-[1px] w-full bg-neutral-200 dark:bg-white/10" />
+                            </motion.div>
+
+                            {/* Members Grid for this Category */}
+                            <motion.div
+                                variants={staggerContainer}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 xl:gap-8"
+                            >
+                                {members.map((member, index) => (
+                                    <TeamCard
+                                        key={index}
+                                        member={member}
+                                        onClick={() => setSelectedMember(member)}
+                                    />
+                                ))}
+                            </motion.div>
+                        </div>
+                    ))}
                 </div>
             </section>
+            {/*<section id="team" className="relative py-24 overflow-hidden">*/}
+            {/*    /!* Background Decorative Element *!/*/}
+            {/*    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none">*/}
+            {/*        <div className="absolute top-24 left-1/4 w-64 h-64 bg-primary/5 blur-[120px] rounded-full"></div>*/}
+            {/*    </div>*/}
 
-            {/* CTA */}
-                <GetInTouch />
-            {/* MEMBER DETAIL MODAL */}
+            {/*    <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-10">*/}
+
+            {/*        /!* Header Section *!/*/}
+            {/*        <div className="text-center max-w-3xl mx-auto mb-16">*/}
+            {/*            <motion.div*/}
+            {/*                initial={{ opacity: 0, y: 10 }}*/}
+            {/*                whileInView={{ opacity: 1, y: 0 }}*/}
+            {/*                viewport={{ once: true }}*/}
+            {/*                className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-primary/10 border border-primary/20"*/}
+            {/*            >*/}
+            {/*                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>*/}
+            {/*                <span className="text-xs font-bold tracking-widest text-primary uppercase">Our Experts</span>*/}
+            {/*            </motion.div>*/}
+
+            {/*            <motion.h2*/}
+            {/*                initial={{ opacity: 0, y: 10 }}*/}
+            {/*                whileInView={{ opacity: 1, y: 0 }}*/}
+            {/*                viewport={{ once: true }}*/}
+            {/*                transition={{ delay: 0.1 }}*/}
+            {/*                className="text-4xl md:text-5xl font-bold mb-6 text-neutral-900 dark:text-white"*/}
+            {/*            >*/}
+            {/*                Meet the Minds Behind <span className="text-primary">the Charts</span>*/}
+            {/*            </motion.h2>*/}
+            {/*        </div>*/}
+
+            {/*        /!* Filter Tabs - Modern Glass Style *!/*/}
+            {/*        <div className="flex justify-center mb-16">*/}
+            {/*            <div className="inline-flex p-1.5 bg-neutral-100 dark:bg-neutral-900/50 backdrop-blur-xl border border-neutral-200 dark:border-white/5 rounded-2xl">*/}
+            {/*                {categories.map((tab) => (*/}
+            {/*                    <button*/}
+            {/*                        key={tab}*/}
+            {/*                        onClick={() => setActiveTab(tab)}*/}
+            {/*                        className={`relative px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 ${*/}
+            {/*                            activeTab === tab*/}
+            {/*                                ? "text-white"*/}
+            {/*                                : "text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"*/}
+            {/*                        }`}*/}
+            {/*                    >*/}
+            {/*                        {activeTab === tab && (*/}
+            {/*                            <motion.div*/}
+            {/*                                layoutId="activeTab"*/}
+            {/*                                className="absolute inset-0 bg-primary rounded-xl shadow-lg shadow-primary/20"*/}
+            {/*                                transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}*/}
+            {/*                            />*/}
+            {/*                        )}*/}
+            {/*                        <span className="relative z-10">{tab}</span>*/}
+            {/*                    </button>*/}
+            {/*                ))}*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+
+            {/*        /!* Team Grid *!/*/}
+            {/*        <motion.div*/}
+            {/*            layout*/}
+            {/*            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 xl:gap-8"*/}
+            {/*        >*/}
+            {/*            <AnimatePresence mode="popLayout">*/}
+            {/*                {teamMembers*/}
+            {/*                    .filter(m => activeTab === "All" || m.category === activeTab)*/}
+            {/*                    .map((member) => (*/}
+            {/*                        <motion.div*/}
+            {/*                            key={member.name}*/}
+            {/*                            layout*/}
+            {/*                            initial={{ opacity: 0, scale: 0.9 }}*/}
+            {/*                            animate={{ opacity: 1, scale: 1 }}*/}
+            {/*                            exit={{ opacity: 0, scale: 0.9 }}*/}
+            {/*                            transition={{ duration: 0.3 }}*/}
+            {/*                        >*/}
+            {/*                            <TeamCard member={member} />*/}
+            {/*                        </motion.div>*/}
+            {/*                    ))*/}
+            {/*                }*/}
+            {/*            </AnimatePresence>*/}
+            {/*        </motion.div>*/}
+            {/*    </div>*/}
+            {/*</section>*/}
+
+            {/* ==================== SECTION 4: CTA ==================== */}
+            <GetInTouch />
+            {/* ==================== MEMBER DETAIL MODAL ==================== */}
             <AnimatePresence>
                 {selectedMember && (
                     <MemberModal
@@ -372,7 +485,7 @@ const TeamCard = ({ member, onClick }) => (
             </div>
         </div>
         <div className="p-5 flex flex-col flex-grow">
-            <h3 className="text-lg font-bold text-dark dark:text-light">{member.name}</h3>
+            <h3 className="text-[17px] font-bold text-dark dark:text-light">{member.name}</h3>
             <p className="text-sm font-medium text-primary dark:text-secondary mb-2">{member.role}</p>
             {/*<p className="text-xs text-dark/60 dark:text-light/60 leading-relaxed mt-auto line-clamp-3">*/}
             {/*    {member.bio}*/}

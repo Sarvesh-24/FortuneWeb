@@ -8,6 +8,7 @@ import {
 } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 
+// Helper: Extract Initials
 const getInitials = (name) => {
     if (!name) return '';
     const nameParts = name.trim().split(' ');
@@ -54,7 +55,7 @@ const Testimonials = () => {
                 {/* 2. STATS & GOOGLE WIDGET BAR */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 mb-16">
 
-                    {/*  GOOGLE REVIEWS WIDGET CARD  */}
+                    {/* --- GOOGLE REVIEWS WIDGET CARD --- */}
                     <div
                         onClick={() => window.open(googleReviewUrl, '_blank')}
                         className="
@@ -148,12 +149,14 @@ const Testimonials = () => {
                                 <FaQuoteRight className="text-2xl text-gray-200 dark:text-gray-700 flex-shrink-0" />
                             </div>
 
+                            {/* Body */}
                             <div className="flex-grow">
                                 <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed whitespace-pre-line">
                                     {item.text}
                                 </p>
                             </div>
 
+                            {/* Optional Growth Badge if available */}
                             {item.growth && (
                                 <div className="mt-6 pt-4 border-t border-gray-100 dark:border-gray-700 flex items-center justify-between">
                                     <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Results</span>

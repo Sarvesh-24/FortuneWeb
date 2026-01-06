@@ -7,10 +7,13 @@ import {
 } from 'lucide-react';
 import {curriculumData} from "../../constants/Curriculam";
 
+// --- DATA ---
 
 const CurriculumSection = () => {
+    // 0 is default open. Use -1 to close all on mobile if desired.
     const [activeTab, setActiveTab] = useState(0);
 
+    // Toggle function for Mobile Accordion
     const toggleAccordion = (index) => {
         if (activeTab === index) {
             setActiveTab(-1); // Close if clicking the same one
@@ -26,6 +29,7 @@ const CurriculumSection = () => {
                 {/* Section Header */}
                 <div className="text-center mb-16">
                         <div className="inline-block px-4 py-1.5 mb-4 text-xs font-bold tracking-wider uppercase bg-primary/10 text-primary dark:text-secondary dark:bg-secondary/10 rounded-full">
+                            {/*Comprehensive Syllabus*/}
                             Curriculum Phase 1
                         </div>
                     <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
@@ -36,7 +40,7 @@ const CurriculumSection = () => {
                     </p>
                 </div>
 
-                {/* MOBILE LAYOUT (ACCORDION) */}
+                {/* ================= MOBILE LAYOUT (ACCORDION) ================= */}
                 <div className="lg:hidden flex flex-col gap-4">
                     {curriculumData.map((module, index) => {
                         const isOpen = activeTab === index;
@@ -102,7 +106,7 @@ const CurriculumSection = () => {
                     })}
                 </div>
 
-                {/* DESKTOP LAYOUT (TABS) */}
+                {/* ================= DESKTOP LAYOUT (TABS) ================= */}
                 <div className="hidden lg:flex flex-row gap-12 min-h-[600px]">
                     {/* LEFT SIDE: Navigation */}
                     <div className="w-1/3 flex flex-col gap-3">
@@ -141,6 +145,7 @@ const CurriculumSection = () => {
                     {/* RIGHT SIDE: Content Area */}
                     <div className="w-2/3 relative">
                         <AnimatePresence mode="wait">
+                            {/* Note: We handle the check for activeTab >= 0 for robustness, though on desktop it usually stays valid */}
                             {activeTab >= 0 && (
                                 <motion.div
                                     key={activeTab}

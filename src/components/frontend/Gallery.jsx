@@ -3,20 +3,25 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, ArrowRight, Sparkles } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
 import { eventMemories } from "../../constants/Events";
+// import Divider from "../Helpers/Divider"; // Commented as per source
 
+// --- 1. Reusable Skeleton Component (Shadcn-style) ---
 const Skeleton = ({ className }) => (
     <div className={`animate-pulse rounded-md bg-gray-200 dark:bg-gray-700 ${className}`} />
 );
 
+// --- 2. Optimized Image Component ---
 const ImageWithSkeleton = React.memo(({ src, alt }) => {
     const [isLoaded, setIsLoaded] = useState(false);
 
     return (
         <div className="relative w-full h-full">
+            {/* Skeleton Overlay - Visible only while loading */}
             {!isLoaded && (
                 <Skeleton className="absolute inset-0 w-full h-full z-10" />
             )}
 
+            {/* Actual Image */}
             <img
                 src={src}
                 alt={alt}
@@ -32,6 +37,7 @@ const ImageWithSkeleton = React.memo(({ src, alt }) => {
     );
 });
 
+// --- 3. Memoized Card Component ---
 const GalleryCard = React.memo(({ event }) => {
     return (
         <motion.div
@@ -63,6 +69,7 @@ const GalleryCard = React.memo(({ event }) => {
     );
 });
 
+// --- 4. Main Component ---
 const categories = ["All", "Mumbai", "Bangalore", "Chennai"];
 
 const Gallery = () => {
@@ -111,6 +118,7 @@ const Gallery = () => {
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6 }}
+                            /* TYPOGRAPHY SCALING: Smoother steps for Tablet/iPad */
                             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-[1.1]"
                         >
                             <span className="block leading-[1.2]">Moments that</span>

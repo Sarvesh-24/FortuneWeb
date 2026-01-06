@@ -16,7 +16,7 @@ const Course = () => {
         >
             <div className="max-w-7xl mx-auto">
 
-                {/* BASICS */}
+                {/* -------------------- SECTION 1: BASICS -------------------- */}
 
                 {/* Header */}
                 {/*<div className="text-center max-w-3xl mx-auto mb-16">*/}
@@ -73,13 +73,13 @@ const Course = () => {
                 {/*    />*/}
                 {/*</div>*/}
 
-                {/*  CURRICULUM */}
+                {/* 3. CURRICULUM */}
                 <CurriculumSection />
 
                 {/* Divider */}
                 <div className="my-20 left-0 absolute w-full h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
 
-                {/* TIME TRADING */}
+                {/* -------------------- SECTION 2: TIME TRADING -------------------- */}
 
                 {/* Header */}
                 <div className="text-center mb-16 pt-32">
@@ -141,7 +141,7 @@ const Course = () => {
                     />
                 </div>
 
-                {/* PREMIUM BONUS */}
+                {/* -------------------- PREMIUM BONUS -------------------- */}
 
                 <div className="mt-24 relative group">
                     {/* Decorative gradient blur behind the card */}
@@ -191,6 +191,7 @@ const Course = () => {
     );
 };
 
+// -------------------- SUB-COMPONENTS for Clean Code --------------------
 
 const CourseCard = ({ icon, title, points }) => (
     <div className="group relative p-8 bg-white dark:bg-slate-900/50 rounded-2xl border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">

@@ -1,0 +1,23 @@
+                                <ContactItem
+                                    icon={<MapPin size={20} />}
+                                    label="Headquarters"
+                                    text="3903, 39th Floor, Kohinoor Square, Dadar West, 400028"
+                                    href="https://maps.app.goo.gl/BLGe3qoBhqef4tb26"
+                                />
+                                <ContactItem
+                                    icon={<Mail size={20} />}
+                                    label="Email Us"
+                                    text="info@fortuneadvisorz.com"
+                                    href="info@fortuneadvisorz.com"
+                                />
+                                <ContactItem
+                                    icon={<Phone size={20} />}
+                                    label="Call Us"
+                                    text="+91 9699613407"
+                                    href="tel:+919699613407"
+                                />
+                                <ContactItem
+                                    icon={<Clock size={20} />}
+                                    label="Working Hours"
+                                    text="Mon – Sat: 9:00 AM – 7:00 PM"
+                                />

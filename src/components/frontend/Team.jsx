@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { ArrowUpRight, Users } from "lucide-react";
 import { teamMembers } from "../../constants/Team";
+// import Divider from "../Helpers/Divider";
 
+// Staggered Animation Variants
 const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -32,6 +34,8 @@ const Team = () => {
                 overflow-hidden
             "
         >
+            {/* Top Decorative Line (Gradient) */}
+            {/*<Divider/>*/}
             <div
                 className="
                     relative z-10
@@ -106,6 +110,7 @@ const Team = () => {
     );
 };
 
+// Extracted Button Component for reuse
 const ViewAllButton = ({ onClick }) => (
     <button
         onClick={onClick}

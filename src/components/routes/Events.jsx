@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 
 const Events = ({ events = [] }) => {
+    // Helper to split date for the visual badge
     const getDateParts = (dateString) => {
         const date = new Date(dateString);
         return {
@@ -20,7 +21,7 @@ const Events = ({ events = [] }) => {
         <section className="relative w-full py-32 px-4 sm:px-10 lg:px-20 overflow-hidden">
             <div className="max-w-7xl mx-auto">
 
-                {/*  Section Header  */}
+                {/* --- Section Header --- */}
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                     <div className="max-w-2xl">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary dark:text-secondary dark:bg-secondary/10 text-xs font-bold uppercase tracking-wider mb-4">
@@ -43,7 +44,7 @@ const Events = ({ events = [] }) => {
                     )}
                 </div>
 
-                {/*  Content Area  */}
+                {/* --- Content Area --- */}
                 {!hasEvents ? (
                     <EmptyState />
                 ) : (
@@ -81,11 +82,13 @@ const Events = ({ events = [] }) => {
                                                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
                                             />
                                         ) : (
+                                            // Fallback Gradient
                                             <div className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
                                                 <Ticket className="w-12 h-12 text-white/20" />
                                             </div>
                                         )}
 
+                                        {/* Gradient Overlay for Text Readability if needed, or style */}
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                     </div>
 
@@ -96,6 +99,7 @@ const Events = ({ events = [] }) => {
                                                 {event.title}
                                             </h3>
 
+                                            {/* Meta Data Row */}
                                             <div className="flex items-center gap-4 mt-3 text-xs sm:text-sm text-dark/60 dark:text-light/60 font-medium">
                                                 <div className="flex items-center gap-1.5">
                                                     <Clock className="w-4 h-4 text-primary dark:text-secondary" />
@@ -133,7 +137,7 @@ const Events = ({ events = [] }) => {
     );
 };
 
-//  Sub-components for cleaner file structure 
+// --- Sub-components for cleaner file structure ---
 
 const EmptyState = () => (
     <div className="flex justify-center">

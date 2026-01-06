@@ -9,6 +9,7 @@ import {
     Calendar,
     Sparkles, ArrowRight,
 } from "lucide-react";
+// import Divider from "../Helpers/Divider";
 import {useNavigate} from "react-router-dom";
 
 const Book = () => {
@@ -24,6 +25,7 @@ const Book = () => {
             "
         >
 
+            {/*<Divider />*/}
             {/* Glowing Blob behind the book (Right side positioning) */}
             <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-primary/10 rounded-full blur-[100px] md:blur-[120px] pointer-events-none"></div>
 
@@ -39,7 +41,7 @@ const Book = () => {
                     items-center
                 "
             >
-                {/*  LEFT — CONTENT  */}
+                {/* ---------------- LEFT — CONTENT ---------------- */}
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}

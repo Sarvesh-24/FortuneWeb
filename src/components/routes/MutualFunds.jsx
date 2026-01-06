@@ -15,8 +15,10 @@ import {
 } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
 
+// Register ChartJS components
 ChartJS.register(ArcElement, ChartTooltip, Legend);
 
+// --- Sub-Components ---
 
 const SectionHeading = ({ children, subtitle }) => (
     <div className="mb-12 text-center">
@@ -92,8 +94,10 @@ const BenefitCard = ({ icon: Icon, title, desc, delay }) => (
     </motion.div>
 );
 
+// --- Main Component ---
 
 const MutualFunds = () => {
+    // Calculator State
     const [calcType, setCalcType] = useState('sip');
     const [amount, setAmount] = useState(5000);
     const [rate, setRate] = useState(12);
@@ -102,6 +106,7 @@ const MutualFunds = () => {
 
     const navigate = useNavigate();
 
+    // Calculator Logic
     useEffect(() => {
         let investedVal = 0;
         let totalVal = 0;
@@ -123,14 +128,15 @@ const MutualFunds = () => {
         });
     }, [calcType, amount, rate, years]);
 
+    // 2. Chart.js Data Configuration
     const chartData = {
         labels: ['Invested Amount', 'Est. Returns'],
         datasets: [
             {
                 data: [results.invested, results.returns],
                 backgroundColor: [
-                    '#94a3b8',
-                    '#2563eb',
+                    '#94a3b8', // Slate 400 (Grey)
+                    '#2563eb', // Blue 600 (Primary)
                 ],
                 borderWidth: 0,
                 hoverOffset: 4,
@@ -141,7 +147,7 @@ const MutualFunds = () => {
     const chartOptions = {
         responsive: true,
         maintainAspectRatio: false,
-        cutout: '70%',
+        cutout: '70%', // Makes it a donut
         plugins: {
             legend: {
                 position: 'bottom',
@@ -179,6 +185,7 @@ const MutualFunds = () => {
         { name: "Balanced Advantage", category: "Hybrid", return3Y: 12.8, risk: "Low" }
     ];
 
+    // Helper to handle manual input changes safely
     const handleInputChange = (setter, value, min, max) => {
         const val = Number(value);
         if (value === '') return setter('');
@@ -354,6 +361,7 @@ const MutualFunds = () => {
                             {/* Result Side */}
                             <div className="bg-blue-50/50 dark:bg-slate-900/50 p-8 md:p-12 flex flex-col items-center justify-center border-l border-gray-100 dark:border-white/5">
                                 <div className="h-64 w-full relative mb-6">
+                                    {/* 3. Render React-Chartjs-2 Doughnut */}
                                     <Doughnut data={chartData} options={chartOptions} />
 
                                     {/* Center Text */}
@@ -402,6 +410,7 @@ const MutualFunds = () => {
                 {/*    </div>*/}
                 {/*</section>*/}
 
+                {/* 5. TALK TO EXPERT SECTION */}
                 <section className="pb-8">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
@@ -417,9 +426,11 @@ const MutualFunds = () => {
                             p-8 md:p-12
                         "
                     >
+                        {/* Decorative background circles */}
                         <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-500/30 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2" />
 
                         <div className="flex flex-col md:flex-row items-center gap-10 relative z-10">
+                            {/* Expert Image with Badge */}
                             <div className="relative shrink-0">
                                 <div className="w-32 h-32 md:w-40 md:h-40 rounded-full p-1 bg-white/20 backdrop-blur-sm shadow-xl">
                                     <img
@@ -434,6 +445,7 @@ const MutualFunds = () => {
                                 </div>
                             </div>
 
+                            {/* Expert Details */}
                             <div className="flex-1 text-center md:text-left">
                                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/30 border border-blue-400/50 text-xs font-semibold uppercase tracking-wider mb-4">
                                     <UserCheck size={14} /> Certified Wealth Planner
