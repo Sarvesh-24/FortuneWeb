@@ -5,7 +5,7 @@ import Aboutus from "./components/routes/About";
 import Progress from "./components/frontend/Progress";
 import Program from "./components/frontend/Program";
 import Services from "./components/frontend/Services";
-import Book from "./components/frontend/Book";
+// import Book from "./components/frontend/Book";
 import FAQ from "./components/frontend/FAQ";
 import Contact from "./components/frontend/Contact";
 import Footer from "./components/frontend/Footer";
@@ -49,8 +49,8 @@ function App() {
                           <Progress />
                           <Program />
                           <Services />
-                          <Book />
-                          <Gallery />
+                          {/* <Book /> */}
+                          <Gallery /> 
                           <Team />
                           <FAQ />
                           <Contact />
