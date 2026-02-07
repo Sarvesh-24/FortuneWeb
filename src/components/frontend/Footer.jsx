@@ -21,25 +21,19 @@ const Footer = () => {
     ];
     return (
         <footer className="relative w-full bg-bg-dark-1 text-light overflow-hidden font-poppins">
+            {/* Top Decorative Line */}
+            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
 
-            {/*<Divider />*/}
+            <div className="w-full pt-16 pb-12 px-5 sm:px-8 md:px-12 lg:px-20 xl:px-24">
 
-            <div className="w-full pt-16 md:pt-20 pb-12 px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20">
-                <div
-                    className="
-                        max-w-[1440px] mx-auto
-                        grid grid-cols-1
-                        md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-12
-                        gap-10 md:gap-y-12 md:gap-x-8 lg:gap-10 xl:gap-8
-                    "
-                >
+                <div className="max-w-[1600px] mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-12 gap-x-8 gap-y-12 xl:gap-8">
 
                     {/* ------------------------------------------------ */}
                     {/* COL 1: BRANDING */}
                     {/* ------------------------------------------------ */}
                     <div
                         className="
-                            space-y-6 md:space-y-8
+                            space-y-6 md:space-y-5
                             md:col-span-2 lg:col-span-4 xl:col-span-4
                         "
                     >
@@ -48,25 +42,16 @@ const Footer = () => {
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
-                            className="h-[6rem] sm:h-[7rem] md:h-[8.8rem] w-auto relative"
                         >
-                            {/* Light Mode Logo */}
-                            <img
-                                src="/assets/logo/FA_Light_Logo_TM.png"
-                                alt="Fortune Signals Logo Light"
-                                className="h-full w-auto object-contain block dark:hidden transition-transform duration-300 origin-left"
-                            />
-
-                            {/* Dark Mode Logo */}
                             <img
                                 src="/assets/logo/FA_Dark_Logo_TM.png"
-                                alt="Fortune Signals Logo Dark"
-                                className="h-full w-auto object-contain hidden dark:block transition-transform duration-300 origin-left"
+                                alt="Fortune Signals Logo"
+                                className="w-32 sm:w-36 md:w-40 h-auto object-contain brightness-0 invert"
                             />
                         </motion.div>
 
 
-                        <p className="text-light/60 text-sm leading-7 max-w-sm">
+                        <p className="text-light/60 text-sm leading-7 max-w-sm mt-0">
                             Empowering traders with time-based mentorship that adapts to all market conditions. Simplify your trading journey with Fortune Signals.
                         </p>
 
@@ -100,10 +85,10 @@ const Footer = () => {
                         <FooterColumn
                             title="Company"
                             links={[
-                                { label: "About Us", url: "#about" },
-                                { label: "Our Services", url: "#services" },
-                                { label: "Meet the Team", url: "#team" },
-                                { label: "Book a Session", url: "/#book" },
+                                { label: "About Us", url: "/#about" },
+                                { label: "Our Services", url: "/#services" },
+                                { label: "Meet the Team", url: "/#team" },
+                                // { label: "Book a Session", url: "/#book" },
                             ]}
                         />
                     </div>

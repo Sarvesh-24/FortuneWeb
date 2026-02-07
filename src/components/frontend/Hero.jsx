@@ -38,7 +38,7 @@ const Hero = () => {
             relative w-full
             min-h-[100dvh]
             flex items-center justify-center
-            pt-20 pb-10 sm:pt-24 sm:pb-12 lg:pt-28 lg:pb-0
+            pt-20 pb-10 sm:pt-24 sm:pb-12 lg:pt-0 lg:pb-0
             px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24
             overflow-hidden
             "
@@ -155,10 +155,7 @@ const Hero = () => {
                         <div className="flex items-center justify-between mb-3 sm:mb-4">
                             <div>
                                 <p className="text-[10px] sm:text-xs uppercase tracking-wide text-dark/50 dark:text-light/50">
-                                    Proprietary Strategy
-                                </p>
-                                <p className="text-xs sm:text-sm font-bold text-dark dark:text-light">
-                                    ALGO SIGNAL PREVIEW
+                                    Proprietary Indicators
                                 </p>
                             </div>
                             <div className="flex items-center gap-1.5">

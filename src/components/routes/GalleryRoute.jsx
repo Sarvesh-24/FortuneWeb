@@ -3,7 +3,7 @@ import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 import { X, ZoomIn, Camera } from "lucide-react";
 
 // --- CONFIGURATION ---
-const categories = ["All", "Bangalore", "Mumbai", "Chennai"];
+const categories = ["All","Mumbai", "Bangalore", "Chennai"];
 
 // --- DATA ---
 const galleryItems = [

@@ -159,7 +159,7 @@ const Contact = () => {
                 </div>
             </div>
 
-            <style jsx global>{`
+            <style jsx="true" global="true">{`
                 /* Library Overrides */
                 .PhoneInput {
                     width: 100%;

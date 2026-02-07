@@ -412,7 +412,7 @@ const Aboutus = () => {
             {/*</section>*/}
 
             {/* ==================== SECTION 4: CTA ==================== */}
-            <GetInTouch />
+                <GetInTouch />
             {/* ==================== MEMBER DETAIL MODAL ==================== */}
             <AnimatePresence>
                 {selectedMember && (
